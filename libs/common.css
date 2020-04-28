@@ -1,0 +1,643 @@
+body {
+    background: #f2f6f7;
+}
+
+.content {
+    background: #F2F6F7;
+}
+
+/*二级菜单样式*/
+.nav-children {
+    background: #ffffff;
+}
+
+.nav-children a {
+    color: #404040;
+}
+
+.nav-children a:hover {
+    color: #86b22f;
+}
+
+.nav-children .active {
+    color: #86b22f;
+    border-bottom: 2px solid #86b22f;
+}
+
+/*二级菜单  end*/
+/*框架左边背景色*/
+.layout-left {
+    background: #3E3A39;
+}
+
+.nav-left {
+    background: transparent;
+    color: #b3bbbb;
+}
+
+.nav-left i {
+    background: transparent;
+}
+
+.nav-active {
+    background: #85B230 !important;
+    color: #ffffff;
+}
+
+.nav-active .nav-left{
+    color: #ffffff;
+}
+
+.nav-active i {
+    background: #85B230;
+}
+
+/*搜索按钮颜色 */
+.search {
+    color: #ffffff;
+    background: #86b22f;
+}
+
+.search:hover {
+    color: #ffffff;
+    background: #86b22f;
+}
+
+/*确定按钮颜色*/
+.determine {
+    color: #ffffff;
+    background: #86b22f;
+    font-size: 16px;
+}
+
+.determine:hover {
+    color: #ffffff;
+    background: #50B220;
+}
+
+/*取消按钮颜色*/
+.cancel {
+    color: #ffffff;
+    background: #A1B0B3;
+}
+
+.cancel:hover {
+    color: #ffffff;
+    background: #8a999c;
+}
+/* 打印按钮颜色 */
+.dayin{
+    color: #ffffff;
+    background: #24b0fc;
+}
+.dayin:hover{
+    color: #ffffff;
+    background: #2499db;
+}
+/*驳回按钮颜色*/
+.boHui {
+    color: #ffffff;
+    background: #ea3d48;
+}
+
+.boHui:hover {
+    color: #ffffff;
+    background: #d13843;
+}
+
+/*标题选中样式*/
+.headActive {
+    color: #86b22f;
+    border-bottom: 2px solid #86b22f;
+}
+
+/*字体选中样式*/
+.fontActive {
+    color: #86b22f;
+}
+
+/*按钮选中样式*/
+.buttonActive {
+    color: #ffffff;
+    background: #86b22f;
+}
+
+/*查看附件字体样式*/
+.lookFuJian {
+    color: #86b22f;
+}
+
+.lookFuJian:hover {
+    color: #02a38b;
+}
+
+/*快速入口*/
+.nav-quickEntry a {
+    color: #ffffff;
+    background: #85B230;
+}
+
+.nav-quickEntry a:hover {
+    color: #ffffff;
+    background: #50B220;
+}
+
+.convenient li:hover {
+    background: #86b22f;
+    color: #ffffff;
+}
+
+/*退出*/
+.personalCenter-exit:hover {
+    background: #F2F2F2;
+}
+/*集中楼栋颜色*/
+.house_lh {
+    color: #86b22f;
+    background: #FFFFFF;
+    border: 1px solid #86b22f;
+}
+.house_show {
+    color: #FFFFFF;
+    background: #86b22f;
+}
+
+/*租客*/
+.zuke_screenCondition a {
+    color: #999999;
+}
+
+.zuke_screenCondition a:hover {
+    color: #86b22f;
+}
+
+.zuke_screenCondition .active {
+    color: #86b22f;
+}
+
+.zuke_info {
+    color: #404040;
+}
+
+.zuke_info dt strong a {
+    color: #ffffff;
+}
+
+.zuke_xinxi li:hover {
+    background: #86b22f;
+    color: #ffffff;
+}
+.zukeCaoZuo ul li:hover {
+    background: #86b22f;
+    color: #ffffff;
+}
+.zuke_caoZuo:hover {
+    border-color: #86b22f;
+    color: #86b22f;
+}
+.zuke_caoZuo:hover span {
+    border-top: 5px solid #86b22f;
+}
+/*房源录入*/
+.entire-active {
+    color: #86b22f;
+    background: #F2F6F7;
+    border-top: 2px solid #86b22f;
+}
+/*房源照片分类*/
+.house_sh:hover {
+    background: #86b22f;
+}
+
+.house-star {
+    color: #86b22f;
+}
+
+.house_jia {
+    color: #86b22f;
+}
+
+/*所有公共样式*/
+.fontPublicStyle {
+    color: #404040;
+}
+
+.fontPublicStyle:hover {
+    color: #86b22f;
+}
+
+.buttonPublicStyle {
+    color: #404040;
+    background: #FFFFFF;
+    border-color: #e6e6e6;
+}
+
+.buttonPublicStyle:hover {
+    color: #86b22f;
+    border-color: #86b22f;
+}
+
+.buttonActive {
+    color: #ffffff;
+    background: #86b22f;
+    border-color: #86b22f;
+}
+
+/*添加,删除按钮*/
+.addDeleteButton {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    background: #86b22f;
+    border-radius: 100%;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.addDeleteButton:hover {
+    color: #ffffff;
+    background: #86b22f;
+}
+
+/*添加按钮  end*/
+/*状态颜色*/
+.pactState {
+    color: #FFFFFF;
+    background: #24b0fc;
+}
+
+.pactState02 {
+    color: #FFFFFF;
+    background: #fc3c3c;
+}
+
+/*已预定，待收款*/
+.stateYuDai {
+    color: #FFFFFF;
+    background: #24b0fc;
+}
+
+/*待审核，已违约*/
+.stateShenWei {
+    color: #FFFFFF;
+    background: #f5b000;
+}
+
+/*审核失败*/
+.stateShiBai {
+    color: #ffffff;
+    background: #b4b4b4;
+}
+
+/*待打款*/
+.stateDaiDaKuan {
+    color: #ffffff;
+    background: #f36222;
+}
+
+/*已完成,在租中*/
+.stateWanCheng {
+    color: #FFFFFF;
+    background: #01be6a;
+}
+
+/*待付款*/
+.stateFu {
+    color: #FFFFFF;
+    background: #fc3c3c;
+}
+
+/*已退房*/
+.stateTui {
+    color: #FFFFFF;
+    background: #b4b4b4;
+}
+
+/*租客颜色*/
+.zuke {
+    background: #24b0fc;
+}
+
+/*管家颜色*/
+.guanjia {
+    background: #f5b000;
+}
+
+/*业主颜色*/
+.yezhu {
+    background: #fc3c3c;
+}
+
+/*输入框获取焦点改变颜色*/
+.sousuoKuang:focus {
+    border-color: #86b22f;
+}
+
+/*已到期*/
+/*layui重置样式*/
+/*下拉列表框小三角*/
+.layui-form-select .layui-edge {
+    border-width: 4px;
+    margin-top: -2px;
+}
+
+.layui-form-selected .layui-edge {
+    margin-top: -7px;
+}
+
+/*下拉列表框小三角  end*/
+.layui-form-select ul li.layui-this {
+    background-color: #86b22f;
+}
+
+.layui-form-select dl dd.layui-this {
+    background-color: #86b22f;
+}
+
+.layui-form-checked span, .layui-form-checked:hover span {
+    background: #86b22f;
+}
+
+.layui-input {
+    color: #404040;
+}
+
+.layui-form-select ul {
+    border-color: #e6e6e6;
+}
+
+.layui-form-select ul li {
+    color: #404040;
+    font-size: 14px;
+}
+
+/*input 获取焦点时样式*/
+@-webkit-keyframes twinkling{	/*透明度由0到1*/
+    0%{
+        opacity:0.5;				/*透明度为0*/
+    }
+    100%{
+        opacity:1;				/*透明度为1*/
+    }
+}
+@keyframes twinkling{	/*透明度由0到1*/
+    0%{
+        opacity:0.5;				/*透明度为0*/
+    }
+    100%{
+        opacity:1;				/*透明度为1*/
+    }
+}
+/*  动画闪烁颜色  */
+@-webkit-keyframes greenPulse {
+    from { border-color: #e6e6e6; -webkit-box-shadow: 0 0 5px #f1eeec; }
+    50% { border-color: #e6e6e6; -webkit-box-shadow: 0 0 5px #f7f430; }
+    to { border-color: #e6e6e6; -webkit-box-shadow: 0 0 5px #ff8e29; }
+}
+.layui-input:focus, .layui-textarea:focus {
+    border-color: #86b22f !important;
+   /* -webkit-animation-name:greenPulse;-webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;*/
+   /* -webkit-animation: twinkling 2s infinite 0.9s ease-in-out alternate;
+    animation: twinkling 2s infinite 0.9s ease-in-out alternate;*/
+}
+
+input:focus {
+    border-color: #86b22f !important;
+}
+
+/*下拉列表高度*/
+.layui-form-select ul {
+    max-height: 230px;
+    margin-bottom: 0;
+}
+
+/*单选框颜色*/
+.layui-form-radioed i, .layui-form-radio i:hover {
+    color: #86b22f;
+    margin-top: 2px;
+}
+.layui-form-radio i{
+    margin-top: 2px;
+}
+
+/*翻页*/
+.clearfix {
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    clear: both;
+    line-height: 0;
+    display: block;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+* html .clearfix {
+    height: 0;
+    overflow: hidden;
+}
+
+/*弹层遮罩*/
+.odfly-windows {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    cursor: pointer;
+}
+.odfly-windowss {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.odfly-windows-content {
+    width: 0;
+    height: 100%;
+    -webkit-box-shadow: 0 0 10px #999999;
+    -moz-box-shadow: 0 0 10px #999999;
+    box-shadow: 0 0 10px #999999;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+}
+.odfly-windows-contents {
+    width: 0;
+    height: auto;
+    -webkit-box-shadow: 0 0 20px #999999;
+    -moz-box-shadow: 0 0 20px #999999;
+    box-shadow: 0 0 20px #999999;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /*margin:0 auto;*/
+}
+.san{
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -10px;
+    border-top: 8px solid transparent;
+    border-right: 10px solid #fff;
+    border-bottom: 8px solid transparent;
+    /*-webkit-box-shadow: #e2e2e2 0 0 10px;
+    -moz-box-shadow: #e2e2e2 0 0 10px;
+    box-shadow: #e2e2e2 0 0 10px;*/
+    display: none;
+}
+.sans{
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: -8px;
+    border-top: 8px solid transparent;
+    border-left: 10px solid #fff;
+    border-bottom: 8px solid transparent;
+    /*-webkit-box-shadow: #666 0px 0px 10px;
+    -moz-box-shadow: #666 0px 0px 10px;
+    box-shadow: #666 0px 0px 10px;*/
+    display: none;
+}
+.odfly-windows-shade {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    filter: alpha(opacity=0); /* IE */
+    -moz-opacity: 0; /* Moz + FF */
+    opacity: 0; /* 支持CSS3的浏览器（FF 1.5也支持）*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+.odfly-windows-shades {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    filter: alpha(opacity=0); /* IE */
+    -moz-opacity: 0; /* Moz + FF */
+    opacity: 0; /* 支持CSS3的浏览器（FF 1.5也支持）*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.odfly-windows-content > h3 {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #86b22f;
+    text-indent: 1em;
+    background: #ffffff;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.odfly-windows-content > h3 > span {
+    width: 16px;
+    height: 16px;
+    background: url("../images/icon.png") no-repeat 1px -40px;;
+    text-indent: 0;
+    float: right;
+    margin: 12px 10px 0 0;
+    overflow: hidden;
+}
+
+.odfly-windows-content > iframe {
+    width: 100%;
+    height: calc(100% - 41px);
+    position: absolute;
+    top: 41px;
+    right: 0;
+    z-index: 9999;
+}
+.odfly-windows-contents > iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+/*ajax请求 动画 旋转*/
+.fa-spin {
+    margin-right: 15px;
+    /*color: rgb(255, 120, 78);*/
+}
+/*禁用输入框样式*/
+.readonly{ background: #e6e6e6;}
+/*字体图标大小和颜色*/
+.fa{
+    /*font-size: 22px;*/
+    font-size: 16px;
+    cursor: pointer;
+}
+/* 合租中的图标没有信息，不需要pointer */
+.house-box .fa {
+    cursor: auto;
+}
+.house-con .address-detail .fa {
+    cursor: auto;
+}
+
+.fa-plus-circle{ color: #86b22f;}
+.fa-minus-circle{ color: #86b22f;}
+
+
+/*无数据时样式*/
+.noneList{
+    width: 100%;
+    height: calc(100% - 250px);
+    background: #fff;
+    text-align: center;
+    padding: 150px 0 100px 0;
+    float: left;
+}
+.noneList>span{
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    float: left;
+    color: #999;
+    font-size: 16px;
+}
+.noneList>span>i{
+    color: #ccc;
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+/*隐藏弹窗无标题时右上角的关闭按钮*/
+.layui-layer-setwin .layui-layer-close2{
+    display: none;
+}
+/*必填项样式*/
+.mustFillIn{
+    color: #f61c3a;
+    position: absolute;
+    left: 3px;
+    top:3px;
+    display: inline-block;
+    z-index: 9;
+    line-height: normal;
+}
+

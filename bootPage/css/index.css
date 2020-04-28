@@ -1,0 +1,205 @@
+.clearfix:after {
+  height: 0;
+  width: 0;
+  display: block;
+  overflow: hidden;
+  clear: both; }
+
+/* 透明灰色背景 */
+#mark {
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  display: none; }
+
+/* 选择角色框 */
+#dialog {
+  z-index: 99991;
+  width: 500px;
+  height: 590px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  display: none;
+  /* 关闭按钮 */
+  /* 标题 */ }
+  #dialog .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    text-indent: -99999px;
+    overflow: hidden;
+    font-size: 0;
+    cursor: pointer;
+    background: url("../images/1366/selectRole/close_03.png") no-repeat 15px; }
+  #dialog .title {
+    width: 100%;
+    margin: 40px 0 20px 0;
+    text-align: center;
+    font-size: 20px; }
+
+#selectRole {
+  width: 100%;
+  height: 510px;}
+  #selectRole li {
+  	width: 76%;
+    margin: 0 12%;
+    cursor: pointer;
+    height: 130px;
+    background: #f2f2f2;
+    margin-top: 20px;
+    border-radius: 15px;}
+    #selectRole li img {
+      height: 90px;
+      width: 90px;
+      margin: 20px;
+	  display: block;
+      float: left; }
+    #selectRole li > div {
+      margin-top: 40px;
+      float: left;
+      max-width: 240px; }
+      #selectRole li > div span {
+      	line-height: 20px;
+        display: block;
+        width: 100%; }
+    #selectRole li .role {
+      font-size: 20px; }
+    #selectRole li .content {
+    	background:transparent;
+      font-size: 14px;
+      margin-top: 10px;
+      color: #a6a6a6; }
+  #selectRole li:hover {
+    box-shadow: 0 0 25px #ccc; }
+
+/* 动态引导图 */
+#bootPage {
+  z-index: 999999999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y:auto;
+  display: none; }
+  #bootPage > div {
+    display: none; }
+    #bootPage > div img {
+    	display: block;
+      width: 100%; }
+    #bootPage > div .button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 0.34rem;
+      width: 0.7rem;
+      font-size: 0;
+      cursor: pointer; }
+    #bootPage > div .exit {}
+    #bootPage > div .next {}
+
+/* 引导完成显示框 */
+#pointOver {
+  z-index: 99991;
+  width: 700px;
+  height: 500px;
+  background: #fff;
+  position: absolute;
+  border-radius: 15px;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  display: none; }
+  #pointOver .img {
+    margin: 108px 0 40px;
+    width: 100%;
+    height: 60px;
+    position: relative; }
+    #pointOver .img img {
+      position: absolute;
+      left: 50%;
+      margin-left: -30px;
+      height: 60px;
+      width: 60px; }
+  #pointOver .close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../images/1366/selectRole/close_03.png") no-repeat 20px;
+    font-size: 0;
+    cursor: pointer; }
+  #pointOver .tit {
+    font-size: 20px;
+    text-align: center; }
+  #pointOver .content {
+    margin-top: 18px;
+    text-align: center;
+    background:transparent;
+    font-size: 16px;
+    color: #999999; }
+  #pointOver ul {
+    width: 170px;
+    margin: 60px auto 0; }
+    #pointOver ul li {
+      cursor: pointer; }
+    #pointOver ul .continue {
+      height: 50px;
+      width: 170px;
+      border-radius: 25px;
+      border: 1px solid #25c37a;
+      color: #25c37a;
+      font-size: 16px;
+      line-height: 50px;
+      text-align: center; }
+    #pointOver ul .exit {
+      text-align: center;
+      font-size: 14px;
+      text-decoration: underline;
+      margin-top: 24px; }
+
+/* 静态引导页 */
+#subsequent {
+  z-index: 99991;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y:auto;
+  display: none; }
+  #subsequent img {
+    width: 100%; }
+  #subsequent #know {
+    position: absolute;
+    z-index: 6666;
+    top: 4.78rem;
+    left: 6.06rem;
+    height: 0.6rem;
+    width: 1.5rem;
+    line-height: 0.6rem;
+    text-align: center;
+    cursor: pointer;
+    border:1px solid #fff;
+    font-size: 0.16rem;
+    border-radius: 0.3rem;
+    color: #fff;}
+
+/*# sourceMappingURL=index.css.map */

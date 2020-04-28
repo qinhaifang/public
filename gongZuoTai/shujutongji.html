@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据统计</title>
+    <link rel="stylesheet" href="../libs/ext/layui/css/layui.css"/>
+    <link rel="stylesheet" href="../libs/public.css"/>
+    <link rel="stylesheet" href="../libs/common.css"/>
+    <link rel="stylesheet" href="css/shujutongji.css"/>
+</head>
+<body>
+<div class="shujuTongji">
+    <div class="tongji-title">
+        <h2>
+            <strong>财务统计</strong>
+            <a href="javaScript:;">查看财务流水</a>
+        </h2>
+        <div class="tongji-shuju">
+            <p class="shouru-left">
+                <label>实际收入</label>
+                <span>￥ 34280.00</span>
+            </p>
+            <p class="shouru-right">
+                <label>收入（含预计收入）</label>
+                <span>￥ 34280.00</span>
+            </p>
+        </div>
+        <div class="tongji-shuju">
+            <p class="shouru-left">
+                <label>实际支出</label>
+                <span>￥ 34280.00</span>
+            </p>
+            <p class="shouru-right">
+                <label>支出（含预计支出）</label>
+                <span>￥ 34280.00</span>
+            </p>
+        </div>
+        <div class="zongji-shuju">
+            <p class="shuju-zongji-left">
+                <label>6月实际利润</label>
+                <span>￥ 34280.00</span>
+            </p>
+            <p class="shuju-zongji-right">
+                <label>6月利润</label>
+                <span>￥ 34280.00</span>
+            </p>
+        </div>
+    </div>
+    <div class="shuju-content">
+        <dl class="shuju-chufang">
+            <dt>出房数据</dt>
+            <dd>昨日出房<strong>2</strong>间</dd>
+            <dd>本周出房<strong>2</strong>间</dd>
+            <dd>本月出房<strong>2</strong>间</dd>
+        </dl>
+        <dl class="shuju-shoufang">
+            <dt>收房数据</dt>
+            <dd>昨日收房<strong>2</strong>间</dd>
+            <dd>本周收房<strong>2</strong>间</dd>
+            <dd>本月收房<strong>2</strong>间</dd>
+        </dl>
+        <dl class="shuju-tuizu">
+            <dt>退租数据</dt>
+            <dd>昨日退租<strong>2</strong>间</dd>
+            <dd>本周退租<strong>2</strong>间</dd>
+            <dd>本月退租<strong>2</strong>间</dd>
+        </dl>
+        <dl class="shuju-xuzu">
+            <dt>续租数据</dt>
+            <dd>昨日续租<strong>2</strong>间</dd>
+            <dd>本周续租<strong>2</strong>间</dd>
+            <dd>本月续租<strong>2</strong>间</dd>
+        </dl>
+    </div>
+    <div class="lirunbiao">
+
+    </div>
+</div>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: 1000px;height:400px;"></div>
+
+
+<script src="../libs/ext/layui/layui.all.js"></script>
+<script src="../libs/jquery-1.8.0.min.js"></script>
+<script src="../libs/ext/echarts/echarts.js"></script>
+<script src="../libs/public.js?v=2017101601"></script>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: '本年度实际收支利润报表'
+        },
+        tooltip: {},
+        legend: {
+            data:['利润']
+        },
+        xAxis: {
+            data: ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"]
+        },
+        yAxis: {},
+        series: [{
+            name: '利润',
+            type: 'bar',
+            data: [5, 20, 36, 10, 10, 20, 5, 20, 36, 10, 10, 20]
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</body>
+</html>

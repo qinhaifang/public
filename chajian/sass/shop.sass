@@ -1,0 +1,142 @@
+@import "color"
+$m10:10px
+$p20: 20px
+$border: 1px solid #d2d2d2
+$h25:25px
+$h30:30px
+$h50:50px
+$w100:100px
+$w120:120px
+$f14:14px
+$f16:16px
+$f18:18px
+$f22:22px
+$url:'../font/font_8x4e1hxo7go/'
+#shopOrder
+  overflow: scroll
+  padding: $p20
+  width: 93%
+#shop td
+  span
+    display: inline-block
+    float: left
+    width: $p20
+    height: $p20
+    border: $border
+    text-align: center
+    line-height: $p20
+    cursor: pointer
+  input
+    border: $border
+    width: $w100
+    height: $p20
+    line-height: $p20
+    text-align: center
+    float: left
+    border-left: 0
+    border-right: 0
+
+.reSty
+  color: #cbcbcb
+.total
+  background: #e5e5e5
+  height: $h50
+  line-height: $h50
+  font-size: $f16
+  ul li
+    float: right
+    margin-left: $p20
+  li.orderBtn
+    width: $w120
+    height: $h50
+    line-height: $h50
+    background: #B0B0B0
+    color: #fff
+    text-align: center
+  span
+    color: $red
+.layui-form-checkbox
+    width: $p20
+    height: $p20
+    line-height: $p20
+    padding-right: 0
+    i
+      width: $p20
+      height: $p20
+      line-height: $p20
+      padding-right: 0
+      border-left: $border
+
+@font-face
+  font-family: 'iconfont'
+  src: url($url + 'iconfont.eot')
+  src: url($url + 'iconfont.eot?#iefix') format('embedded-opentype'), url($url + 'iconfont.woff2') format('woff2'), url($url + 'iconfont.woff') format('woff') ,url($url + 'iconfont.ttf') format('truetype') ,url($url + 'iconfont.svg#iconfont') format('svg')
+.iconfont
+  font-family: "iconfont"
+  font-size: $f22
+  font-style: normal
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  color: $green
+.iconfont.css
+  position: absolute
+  left: 4%
+.shopJs
+  ul
+    display: flex
+    font-size: $f14
+    li
+      height: $h50
+      line-height: $h50
+      width: 15%
+      text-align: center
+      float: left
+      justify-content: flex-start
+      border-bottom: $border
+    li:nth-child(2)
+      width: 30%
+    li.name
+      width: 30%
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+    li .cut,li .plus
+      width: $h25
+      height: $h25
+      line-height: $h25
+      text-align: center
+      display: inline-block
+      border: $border
+      float: left
+      margin-top: $m10
+      cursor: pointer
+    li input
+      width: $w100
+      height: $h25
+      line-height: $h25
+      text-align: center
+      float: left
+      border-bottom: $border
+      border-top: $border
+      margin-top: $m10
+    li input[type=checkbox]
+      opacity: 0
+.bar-wrapper
+  width: 100%
+  height: $h50
+  line-height: $h50
+  background: $green
+  color: #fff
+  .bar-right div
+    float: right
+    width: $w100
+    text-align: center
+
+
+
+
+
+
+
+
+

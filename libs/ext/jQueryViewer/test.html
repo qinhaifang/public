@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<title>图片放大</title>
+<link rel="stylesheet" href="css/viewer.min.css">
+<style>
+* { margin: 0; padding: 0;}
+#jq22 { width: 700px; margin: 0 auto; font-size: 0;}
+#jq22 li { display: inline-block; width: 32%; margin-left: 1%; padding-top: 1%;}
+#jq22 li img { width: 100%;}
+</style>
+</head>
+
+<body>
+<h1>Ĭdemo</h1>
+<div id="demo">
+	<img data-original="img/1.jpg" src="img/1.jpg" alt="ͼƬ1" style="width:100px;height:100px;">
+	<img data-original="img/tibet-2.jpg" src="img/thumbnails/tibet-2.jpg" alt="ͼƬ2">
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/viewer.min.js"></script>
+<script>
+var viewer = new Viewer(document.getElementById('demo'), {
+	url: 'data-original',
+	navbar:'false',
+	toolbar:'false'
+});
+</script>

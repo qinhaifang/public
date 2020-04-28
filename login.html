@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <link rel="stylesheet" href="libs/ext/layui/css/layui.css">
+    <link rel="stylesheet" href="libs/ext/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="libs/public.css">
+    <link rel="stylesheet" href="libs/common.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div id="loginCon" class="login-user">
+        <div id="lunbo" class="construct">
+            <div class="lunbo_img" id="lunbo_img1"></div>
+            <div class="lunbo_img" id="lunbo_img2"></div>
+            <div class="lunbo_img" id="lunbo_img3"></div>
+        </div>
+        <div class="container">
+            <div id="lunbo_num">
+                <span class="lunbo_num_l"></span>
+                <span class="lunbo_num"></span>
+                <span class="lunbo_num"></span>
+            </div>
+        </div>
+        <div class="user-bg">
+            <div class="user-wraper">
+                <!-- 用户名登录 -->
+                <div class="user-main">
+                    <div class="titleBox">
+                        <!--<span class="user-mt-title">用户名登录</span>-->
+                        <div class="titleLogo"></div>
+                    </div>
+                    <!--logo-->
+                    <div class="mainLogo">
+
+                    </div>
+                    <div id="login" class="user-mmain">
+                        <div class="inputBox">
+                            <input id="anQuanMa" class="user-aqm-input" tabindex="1" type="text" placeholder="请输入安全码" mustField="请输入安全码" value="" onkeyup="checkVerify('int',10)"/>
+                            <span class="anQuanMa">安全码</span>
+                        </div>
+                        <div class="inputBox">
+                            <input id="userName" class="user-user-input" tabindex="2" type="text" autocomplete="off" placeholder="请输入登录名" mustField="请输入登录名" value="" onkeyup="checkVerify('string',30)"/>
+                            <span class="userName">用户名</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" style="height: 0; border: 0; margin: 0;" />
+                            <input id="passWord" class="user-pwd-input" tabindex="3" type="password" autocomplete="off" placeholder="请输入登录密码" mustField="请输入登录密码" value="" onkeyup="checkVerify('string',30)"/>
+                            <span class="passWord">密&nbsp;&nbsp;码</span>
+                        </div>
+                        <button class="user-submit determine" tabindex="4" onclick="login()">登&nbsp;&nbsp;录</button>
+                    </div>
+                    <div class="user-mt-img">扫码登录&nbsp;></div>
+                </div>
+
+                <!-- 二维码登录 -->
+                <div class="qrCode-main">
+                    <!--<div class="qrCode-mtitle">-->
+                    <!--<span class="qrCode-mt-title">二维码登录</span>-->
+                    <!--</div>-->
+                    <!--logo-->
+                    <div class="titleBox">
+                        <!--<span class="user-mt-title">用户名登录</span>-->
+                        <div class="titleLogo"></div>
+                    </div>
+                    <div class="mainLogo">
+
+                    </div>
+                    <!-- 二维码 -->
+                    <div name="erweima" class="qrCode-mmain">
+                        <div name="ewmCode" class="erweimashengcheng" id="ewmCode">
+                            <!--<img class="qrCode-ewm" src="images/login_erweima.png" alt="">-->
+                        </div>
+                        <p class="qrCode-place">请用管家助手APP，扫描二维码登录</p>
+                        <div name="showMaGuoQi" class="erweiMatimeOut">
+                            <p class="zheZhaoCeng"></p>
+                            <div class="guoqiMa">
+                                <h3>二维码已过期</h3>
+                                <button onclick="showNewMa()" class="determine" style="background-color:#404040;">请刷新</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 二维码 end-->
+                    <!-- 扫码成功 -->
+                    <div class="shaoma" name="shaoma">
+                        <img src="images/login_phoneb.png" />
+                        <h3>扫描成功</h3>
+                        <p>请在手机端点击确认登录</p>
+                        <a onclick="showErWeiMa(this)" href="javaScript:;">返回二维码登录>></a>
+                    </div>
+                    <div class="qrCode-mt-img"><&nbsp;用户名登陆</div>
+                    <!-- 扫码成功 end-->
+                </div>
+                <!-- 二维码登录 end-->
+            </div>
+        </div>
+    </div>
+    <!--获取计算机IP地址-->
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script src="libs/jquery-1.8.0.min.js"></script>
+    <script src="libs/ext/layui/layui.all.js"></script>
+    <script src="libs/lunbo.js"></script>
+    <script src="libs/public.js?v=20171109"></script>
+    <!--提示框插件-->
+    <script src="libs/tips.js"></script>
+    <script src="libs/qrcode.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/api/loginApi.js"></script>
+</body>
+</html>

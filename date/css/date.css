@@ -1,0 +1,147 @@
+/*新增日历*/
+#datepicker{
+    width: 300px;
+    padding: 10px;
+    border:1px solid #1296db;
+}
+#datepicker img{
+    width: 20px;
+    float:right;
+}
+.wrapper{
+    margin:0 auto;
+    color:#555555;
+    font-family:Tahoma,Verdana,sans-serif;
+    line-height:1.5;
+    font-size:14px;
+    position: fixed;
+    z-index: 20;
+    top: 30%;
+    left: 24%;
+    top:50%!important;
+    left:50%!important;
+    margin-left: -432px;
+    margin-top: -260px;
+    background: #F7F7FA;
+    font-size: 18px;
+    display: none;
+}
+.demo { margin:30px 0;}
+.date-picker-wrapper .month-wrapper table .day.lalala { background-color:orange; }
+.options { display:none; border-left:6px solid #8ae; padding:10px; font-size:12px; line-height:1.4; background-color:#eee; border-radius:4px;}
+.date-picker-wrapper.date-range-picker19 .day.first-date-selected { background-color: red !important; }
+.date-picker-wrapper.date-range-picker19 .day.last-date-selected { background-color: orange !important; }
+
+.alert_block{
+    text-align: right;
+    margin-right: 20px;
+    position: absolute;
+    right: 0;
+}
+.alert_block img{
+    width: 30px;
+    height: 30px;
+    margin-top: 7px;
+    margin-left: 20px;
+}
+.wrapper .dataTab ul li,.wrapper4 .dataTab ul li{
+    padding: 0;
+    /*float: left;
+    padding: 10px 20px;*/
+}
+.wrapper .dataTab ul li label,.wrapper4 .dataTab ul li label{
+    width: 92px;
+    height: 50px;
+    border: 1px solid #2699de;
+    color: #2699de;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    border-right: 0;
+    margin-top: 15%;
+    margin-left: 20%;
+    font-size: 18px;
+}
+.dataTab{
+    height: 40px;
+}
+.wrapper p,.wrapper4 p{
+    padding: 0px 0 10px 10px
+}
+#pickerContainer{
+    /*padding-left: 10px;*/
+}
+.date-picker-wrapper.no-shortcuts{
+    background: #F7F7FA;
+    border: none;
+}
+.date-picker-wrapper .month-wrapper{
+    border: none!important;
+    /*width: 245px!important;*/
+    height: 200px!important;
+}
+.date-picker-wrapper table .caption{
+    border-bottom: 1px solid #f7f7f7;
+}
+.date_text{
+    width: 80%;
+    float: left;
+    text-align: right;
+    line-height: 47px;
+}
+.dataTab button{
+    width: 150px;
+    height: 44px;
+    border-radius: 4px;
+    border:0;
+    float: right;
+    margin-right: 30px;
+    outline: 0;
+    background: #2699de;
+    color: #fff;
+    margin-top: -63px;
+}
+.dataTab ul{
+    display: -webkit-box;
+    height: 80px;
+    background: #fff;
+}
+.icondate{
+    display: none;
+}
+.wrapper .dataTab ul li label input,.wrapper4 .dataTab ul li label input{
+    display: none;
+}
+.wrapper .dataTab ul li label.active,.wrapper4 .dataTab ul li label.active{
+    /*border: 1px solid #2699de;*/
+    background: #2699de;
+    color: #fff;
+}
+.shopForce img{
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 48%;
+    right: 9%;
+}
+.date-picker-wrapper .month-wrapper{
+    border: none!important;
+    padding: 4px!important;
+    height: 391px!important;
+}
+.date-picker-wrapper .month-wrapper table, .date-picker-wrapper .month-wrapper table.month2{
+    width: 370px!important;
+    height: 391px!important;
+}
+.date-picker-wrapper .month-wrapper table .day{
+    font-size: 18px!important;
+}
+.date-picker-wrapper .gap{
+    width: 40px!important;
+}
+
+.title{
+    font-size: 20px;
+    padding: 10px 0;
+}

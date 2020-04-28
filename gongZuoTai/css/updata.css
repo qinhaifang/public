@@ -1,0 +1,59 @@
+.updata{
+    background: rgba(0,0,0,0.3);
+    width:100%;
+    position: relative;
+}
+.fei{
+    width: 600px;
+    height: 500px;
+    background: url(../images/updatabg.png) no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.title{
+    padding: 10px 0;
+    font-size: 24px;
+    width:100%;
+    text-align: center;
+    margin-top: 196px;
+    float: left;
+    background: #fff;
+}
+.layui-textarea{
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    border: none;
+    cursor: inherit;
+}
+.btn{
+    width: 100%;
+    background: #fff;
+    cursor: pointer;
+    color: #86b22f;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+}
+.updataclose{
+    position: absolute;
+    cursor: pointer;
+    right: -15px;
+    top: 34px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

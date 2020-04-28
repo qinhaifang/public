@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间选择</title>
+    <link rel="stylesheet" href="dist/daterangepicker.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/date.css">
+
+</head>
+<body>
+<div >
+    <h3>获取时分秒</h3>
+    <div id="time"></div>
+</div>
+<div class="block1">
+    <h3 class="title">日/周/月/自定义</h3>
+    <div id="datepicker">
+        <span class="startDate"></span>
+        <span class="icondate">/</span>
+        <span class="endDate"></span>
+        <img src="image/date.png" alt="">
+    </div>
+    <div class="wrapper">
+        <div class="dataTab">
+            <ul>
+                <li id="dp-day">
+                    <label for="mode_day" class="active">
+                        <input name="mode" type="radio" value="day" id="mode_day">日
+                    </label>
+                </li>
+                <li id="dp-week">
+                    <label for="mode_week">
+                        <input name="mode" type="radio" value="week" id="mode_week">周
+                    </label>
+                </li>
+                <li id="dp-month">
+                    <label for="mode_month">
+                        <input name="mode" type="radio" value="month" id="mode_month">月
+                    </label>
+                </li>
+                <li id="dp-range">
+                    <label for="mode_range" style="border-right:1px solid #1296db">
+                        <input name="mode" type="radio" value="customize" id="mode_range">自定义
+                    </label>
+                </li>
+            </ul>
+            <button class="btn">确定</button>
+        </div>
+        <div class="picker" style="width:850px" id="pickerBox">
+            <div style="float:left;width:100%">
+                <div id="pickerContainer"></div>
+                <div class="shopForce"><img src="image/Group.png"/></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block2">
+        <h1>一周</h1>
+        <div class="ant-col-18 tab tab3">
+            <ul class="input_date">
+                <li class="jiantou prev" data-type={{prevEnd}} ng-click="datePrev()">
+                    <img data-type={{prevEnd}} src="image/left.png" />
+                </li>
+                <li style="top: 8%;"><span style="margin-right: 10px;">{{startDate}}</span>至<span style="margin-left: 10px;">{{endDate}}</span></li>
+                <li class="jiantou next hide" ng-click="dateNext()" data-type={{nextStart}} style="left: -4%;"><img data-type={{nextStart}} src="image/right.png" /></li>
+                <li class="jiantou show" style="left: -4%;"><img src="image/right_hui.png" /></li>
+                <li style="left: -4%; padding: 0px 10px;"></li>
+                <li class="search">查询</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="../libs/jquery-1.8.0.min.js"></script>
+<script src="dist/moment.min.js" type="text/javascript"></script>
+<script src="dist/jquery.daterangepicker.min.js"></script>
+<script src="../libs/public.js"></script>
+<script src="js/date.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

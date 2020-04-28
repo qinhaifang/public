@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全局数据</title>
+    <link rel="stylesheet" href="../libs/ext/layui/css/layui.css"/>
+    <link rel="stylesheet" href="../libs/public.css"/>
+    <link rel="stylesheet" href="../libs/common.css"/>
+    <link rel="stylesheet" href="css/quanjushuju.css?v=20171016"/>
+</head>
+<body>
+<div id="quanjushuju" class="quanjushuju">
+    <div class="quanju-title">
+        <a class="titleActive" href="quanjushuju.html" roleAccess="fq_sj_qjsj">全局数据</a>
+        <a href="yeWuTongJi.html" roleAccess="fq_sj_ywtj">业务统计</a>
+        <a href="kongZhiTongJi.html" roleAccess='fq_sj_kztj'>空置统计</a>
+         <div class="shuju-time">
+             <input name="dateTime" type="text" onclick="laydate({istime: true, format: 'YYYY-MM-DD' ,max: getTime(),
+             choose:function(datas) {showTime(datas);} ,
+             clear:function() {clearTime();}
+             /*nowtime:function(){nowTime()}    确定时间、今天时间*/
+             })" />
+         </div>
+    </div>
+    <!--全局数据-->
+    <div class="quanju-tongji">
+        <div class="tongjiCon tongji-left">
+        		<div class="layui-form account">
+	            <select id="corporateAccount" name="account" lay-filter="account">
+	                <option value="0">全部账户总额</option>
+	            </select>
+	        </div>
+            <!--<h2 class="tongji-title"><span name="shujuTime" id="shujuTime"></span>账户余额</h2>-->
+            <!--历史数据的修改-->
+            <h2 class="tongji-title"><span id="shujuTime"></span>账户余额</h2>
+            <ul class="left-shiji">
+                <!--新增初始余额-->
+                <li><label>初始余额</label><a id="endTime" name="endTime" style="float: left;font-size: 12px;color: #909090;margin-left: 5px;"></a><span name="chuShiYuE">￥0.00</span></li>
+                <li><label>实际收入</label><span name="shijiShouRu">￥0.00</span></li>
+                <li><label>实际支出</label><span name="shijiZhiChu">￥0.00</span></li>
+            </ul>
+            <p class="left-yuE">
+                <label>当前账户余额</label>
+                <span name="dangQianYuE">￥0.00</span>
+            </p>
+        </div>
+        <div class="tongjiCon tongji-right">
+            <h2 class="tongji-title">当前累计空置（<span name="zongTao">0</span>间）</h2>
+
+            <div class="rightCon">
+                <dl>
+                    <dt name="tongjiSeven">0</dt>
+                    <dd>0-7天</dd>
+                </dl>
+                <dl>
+                    <dt name="tongjiFifteen">0</dt>
+                    <dd>8-15天</dd>
+                </dl>
+                <dl>
+                    <dt name="tongjiTwenty">0</dt>
+                    <dd>16-20天</dd>
+                </dl>
+                <dl>
+                    <dt name="tongjiThirfy">0</dt>
+                    <dd>21-30天</dd>
+                </dl>
+                <dl>
+                    <dt name="tongjiFifty">0</dt>
+                    <dd>31-50天</dd>
+                </dl>
+                <dl>
+                    <dt name="tongjiOthers">0</dt>
+                    <dd>51天以上</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <!--全局数据 end-->
+    <!--昨日报表-->
+    <div class="quanjuBaobiao">
+        <h2 class="tongji-title"><span name="shujuTime"></span>业务报表</h2>
+        <dl class="baobiaoCon">
+            <dt><span name="shujuTime"></span>新租</dt>
+            <dd><label>合租</label><span name="newHe">0</span><label>间，本月累计</label><strong
+                    name="newCountHe">0</strong><label>间</label>
+            </dd>
+            <dd><label>整租</label><span name="newZheng">0</span><label>套，本月累计</label><strong
+                    name="newCountZheng">0</strong><label>套</label></dd>
+            <dd><label>集中</label><span name="newJi">0</span><label>间，本月累计</label><strong
+                    name="newCountJi">0</strong><label>间</label>
+            </dd>
+        </dl>
+        <p></p>
+        <dl class="baobiaoCon">
+            <dt><span name="shujuTime"></span>新收</dt>
+            <dd><label>整租</label><span name="newShouZheng">0</span><label>套，本月累计</label><strong
+                    name="newShouCountZheng">0</strong><label>套</label></dd>
+            <dd><label>集中</label><span name="newShouJi">0</span><label>间，本月累计</label><strong
+                    name="newShouCountJi">0</strong><label>间</label></dd>
+        </dl>
+        <p></p>
+        <dl class="baobiaoCon baobiao-yuding">
+            <dt><span name="shujuTime"></span>预定</dt>
+            <dd><label>合租</label><span name="newYuHe">0</span><label>间</label></dd>
+            <dd><label>整租</label><span name="newYuZheng">0</span><label>套</label></dd>
+            <dd><label>集中</label><span name="newYuJi">0</span><label>间</label></dd>
+        </dl>
+    </div>
+    <!--昨日报表 end-->
+    <!--昨日租客-->
+    <div class="quanju-zuke">
+        <div class="zuke-left">
+            <!-------昨日租客续约-------->
+            <div class="zuke-left-con">
+                <h2 class="tongji-title"><span name="shujuTime"></span>租客续约</h2>
+                <dl class="fontLv">
+                    <dt name="zukeXuYue">0</dt>
+                    <dd>租客续约</dd>
+                </dl>
+                <dl class="fontLan">
+                    <dt name="zukeBenYue">0</dt>
+                    <dd>本月累计续约</dd>
+                </dl>
+                <dl class="fontHong">
+                    <dt name="zukeTuiFang">0</dt>
+                    <dd>本月应退房</dd>
+                </dl>
+                <dl class="fontLv">
+                    <dt name="xuqianLv">0%</dt>
+                    <dd>本月续约率</dd>
+                </dl>
+            </div>
+            <!-------昨日租客续约 end-------->
+            <!-------昨日租客缴费逾期-------->
+            <div class="zuke-left-con">
+                <h2 class="tongji-title"><span name="shujuTime"></span>租客缴费逾期</h2>
+                <dl class="fontLan">
+                    <dt name="weijiao">0</dt>
+                    <dd>未交房租</dd>
+                </dl>
+                <dl class="fontHong">
+                    <dt name="yuqiThree">0</dt>
+                    <dd>逾期1-3天</dd>
+                </dl>
+                <dl class="fontHong">
+                    <dt name="yuqiSeven">0</dt>
+                    <dd>逾期4-7天</dd>
+                </dl>
+                <dl class="fontHong">
+                    <dt name="yuqiOthers">0</dt>
+                    <dd>逾期8天以上</dd>
+                </dl>
+            </div>
+            <!-------昨日租客缴费逾期  end-------->
+            <!-------昨日租客退房逾期-------->
+            <div class="zuke-left-con zuke-tuiFang">
+                <h2 class="tongji-title"><span name="shujuTime"></span>租客退房逾期</h2>
+                <dl class="fontLan">
+                    <dt name="tuifangCount">0</dt>
+                    <dd>应退房</dd>
+                </dl>
+                <dl class="fontHong">
+                    <dt name="tuifangThree">0</dt>
+                    <dd>逾期1-3天</dd>
+                </dl>
+                <dl class="fontHong">
+                    <dt name="tuifangSeven">0</dt>
+                    <dd>逾期4-7天</dd>
+                </dl>
+                <dl class="fontHong">
+                    <dt name="tuifangOthers">0</dt>
+                    <dd>逾期8天以上</dd>
+                </dl>
+            </div>
+            <!-------昨日租客退房逾期  end-------->
+        </div>
+        <!-----当前房间总数----->
+        <div class="houseZongShu">
+            <h2 class="tongji-title">当前房间总数</h2>
+            <!--合租房间总数-->
+            <!--1：可租， 2：配置， 3：预定， 4：成租， 5：不可租-->
+            <div class="houseInfo">
+                <div class="houseInfo-title">
+                    <h3>合租</h3>
+                    <p>当前空置率：<label name="heKongLv">0.00%</label></p>
+                </div>
+                <div class="houseInfo-con">
+                    <dl onclick="showHeZu('1')" class="kezuFont">
+                        <dt name="heKeZu">0</dt>
+                        <dd>可租</dd>
+                    </dl>
+                    <dl onclick="showHeZu('2')" class="peizhiFont">
+                        <dt name="hePeiZhi">0</dt>
+                        <dd>配置</dd>
+                    </dl>
+                    <dl onclick="showHeZu('3')" class="yudingFont">
+                        <dt name="heYuDing">0</dt>
+                        <dd>预定</dd>
+                    </dl>
+                    <dl onclick="showHeZu('4')" class="chengzuFont">
+                        <dt name="heChengZu">0</dt>
+                        <dd>已租</dd>
+                    </dl>
+                    <dl onclick="showHeZu('5')" class="bukezuFont">
+                        <dt name="heBuKeZu">0</dt>
+                        <dd>不可租</dd>
+                    </dl>
+                </div>
+            </div>
+            <!--合租房间总数  end-->
+            <!--整租房间总数-->
+            <div class="houseInfo">
+                <div class="houseInfo-title">
+                    <h3>整租</h3>
+                    <p>当前空置率：<label name="zhengKongLv">0.00%</label></p>
+                </div>
+                <div class="houseInfo-con">
+                    <dl onclick="showZhengZu('1')" class="kezuFont">
+                        <dt name="zhengKeZu">0</dt>
+                        <dd>可租</dd>
+                    </dl>
+                    <dl onclick="showZhengZu('2')" class="peizhiFont">
+                        <dt name="zhengPeiZhi">0</dt>
+                        <dd>配置</dd>
+                    </dl>
+                    <dl onclick="showZhengZu('3')" class="yudingFont">
+                        <dt name="zhengYuDing">0</dt>
+                        <dd>预定</dd>
+                    </dl>
+                    <dl onclick="showZhengZu('4')" class="chengzuFont">
+                        <dt name="zhengChengZu">0</dt>
+                        <dd>已租</dd>
+                    </dl>
+                    <dl onclick="showZhengZu('5')" class="bukezuFont">
+                        <dt name="zhengBuKeZu">0</dt>
+                        <dd>不可租</dd>
+                    </dl>
+                </div>
+            </div>
+            <!--整租房间总数 end-->
+            <!--集中房间总数-->
+            <div class="houseInfo">
+                <div class="houseInfo-title">
+                    <h3>集中</h3>
+                    <p>当前空置率：<label name="jiKongLv">0.00%</label></p>
+                </div>
+                <div class="houseInfo-con">
+                    <dl onclick="showJiZhong('1')" class="kezuFont">
+                        <dt name="jiKeZu">0</dt>
+                        <dd>可租</dd>
+                    </dl>
+                    <dl onclick="showJiZhong('2')" class="peizhiFont">
+                        <dt name="jiPeiZhi">0</dt>
+                        <dd>配置</dd>
+                    </dl>
+                    <dl onclick="showJiZhong('3')" class="yudingFont">
+                        <dt name="jiYuDing">0</dt>
+                        <dd>预定</dd>
+                    </dl>
+                    <dl onclick="showJiZhong('4')" class="chengzuFont">
+                        <dt name="jiChengZu">0</dt>
+                        <dd>已租</dd>
+                    </dl>
+                    <dl onclick="showJiZhong('5')" class="bukezuFont">
+                        <dt name="jiBuKeZu">0</dt>
+                        <dd>不可租</dd>
+                    </dl>
+                </div>
+            </div>
+            <!--集中房间总数 end-->
+        </div>
+        <!-----当前房间总数 end----->
+    </div>
+    <!--昨日租客 end-->
+</div>
+
+<script src="../libs/jquery-1.8.0.min.js"></script>
+<script src="../libs/ext/layui/layui.all.js"></script>
+<script src="ext/laydate/laydate.js"></script>
+<script src="../libs/public.js?v=20171015"></script>
+<script src="js/quanjushuju.js?v=20171205"></script>
+<script src="js/api/quanjushujuApi.js?v=20171204_01"></script>
+</body>
+</html>

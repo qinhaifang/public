@@ -1,0 +1,170 @@
+.yewutongji{
+    width: calc(100% - 40px);
+    min-width: 1060px;
+    height: auto;
+    padding: 20px;
+    overflow-y: scroll;
+}
+.yewu-title{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.yewu-title a{
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #999999;
+    padding-right: 22px;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+}
+.yewu-title a:hover{
+    color: #404040;
+}
+.yewu-title .titleActive{
+    color: #86b22f;
+}
+.yewu-title .titleActive:hover{
+    color: #86b22f;
+}
+.house-status{
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    overflow: hidden;
+}
+.house-status span{
+    width: auto;
+    height: auto;
+    color: #999999;
+    float: left;
+    margin-left: 30px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.house-status span:hover{
+    color: #404040;
+}
+.house-status .houseActive{
+    color: #86b22f;
+}
+.house-status .houseActive:hover{
+    color: #86b22f;
+}
+.kongzhi-con{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+/* 上半部分 */
+.yewuTopBox{
+    width: 100%;
+    height: 160px;
+}
+.yewuTopBox > div{
+    border-radius: 5px;
+    float: left;
+}
+/* contDiv */
+.contDivFirst{
+    height: 68px;
+    line-height: 68px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+.contDivBehind{
+    float: left;
+    height:90px;
+    width: 50%;
+}
+.contDivBehind h3{
+    height: 44px;
+    line-height: 44px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+.contDivBehind p{
+    height: 26px;
+    line-height: 26px;
+    color: #eee;
+    font-size: 16px;
+    text-align: center;
+}
+.chufang{
+    width: calc(25% - 15px);
+    height: 100%;
+    background-color: #5ccf91;
+    margin-right: 20px;
+}
+.shoufang{
+    width: calc(25% - 15px);
+    height: 100%;
+    background-color: #55abe6;
+    margin-right: 20px;
+}
+.yuding{
+    width: calc(25% - 15px);
+    height: 100%;
+    background-color: #f48e5f;
+    margin-right: 20px;
+}
+.zukexuyue{
+    width: calc(25% - 15px);
+    height: 100%;
+    background-color: #ef7578;
+}
+
+/* 图表部分 */
+.yewuMiddleBox{
+    width: 100%;
+    height: 385px;
+    margin-top: 20px;
+}
+.yewuMiddleBox > div > h2{
+    width: calc(100% - 12px);
+    height: 18px;
+    line-height: 18px;
+    font-size: 16px;
+    color: #86b22f;
+    border-left: 2px solid #86b22f;
+    padding-left: 10px;
+    margin: 20px 0 30px 0;
+    overflow: hidden;
+}
+.yewuMiddleBox > div{
+    padding-left: 20px;
+}
+/* 俩图表 */
+.yewuMiddleBox > div > div{
+    width: 100%;
+    height: 325px;
+    margin-top: 10px;
+}
+    /* 左侧 */
+.chufangShowBox{
+    width: calc(50% - 30px);
+    height: 100%;
+    background-color: white;
+    border: 1px solid #ecf0f1;
+    border-radius: 4px;
+    float: left;
+    overflow: hidden;
+}
+/* 右侧 */
+.shoufangShowBox{
+    width: calc(50% - 30px);
+    height: 100%;
+    background-color: white;
+    border: 1px solid #ecf0f1;
+    border-radius: 4px;
+    float: right;
+    overflow: hidden;
+}

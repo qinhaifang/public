@@ -1,0 +1,49 @@
+body{
+    background: #fff;
+}
+.addRiCheng{
+    width: 350px;
+    padding: 20px;
+}
+.ding{
+    width: 350px;
+    height: 36px;
+    line-height: 36px;
+    position: relative;
+    float: left;
+    margin-bottom: 15px;
+}
+.span{
+    position: absolute;
+    left: 10px;
+}
+.layui-input{
+    position: absolute;
+    padding-left: 80px;
+    background: url("../../images/house_date.png") 320px no-repeat;
+}
+.textarea{
+    width: 350px;
+    float: left;
+}
+.btn{
+    margin-top: 15px;
+    width: 350px;
+    float: left;
+    text-align: right;
+}
+.determine{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    float: right;
+}
+
+
+
+
+
+

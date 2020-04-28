@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul,
+ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0;border:0;  list-style:none;  font-style:normal; }
+body, button, input, select, textarea { font: 12px/1.5 "微软雅黑", sans-serif; background:#FFF; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-family: "微软雅黑", sans-serif;}
+address, cite, dfn, em, var {font-style: normal; }
+small { font-size: 12px; }
+ul, ol, dl { list-style: none; }
+img { border: 0; vertical-align: middle; }
+button, input, select, textarea { font-size: 100%; }
+table { border-collapse: collapse; border-spacing: 0;}
+textarea { resize: vertical; }
+html,body,div,p,form,label,ul,li,dl,dt,dd,ol,img,button,b,em,strong,small,h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding:0;
+    border:0;
+    list-style:none;
+    font-style:normal;
+}
+body{
+    font-family:SimHei,'Helvetica Neue',Arial,'Droid Sans',sans-serif;
+    font-size:0.14rem;
+    color:#333;
+    background:#f2f2f2;
+}
+a, a.link{
+    color:#666;
+    text-decoration:none;
+    font-weight:500;
+}
+a, a.link:hover{
+    color:#666;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+.cf:before, .cf:after { content: ""; display: block; }
+.cf:after { clear:both; }
+.hideDiv{
+    display: none;
+}
+.hideDivOpacity{
+    opacity: 0;
+    display: none;
+}
+/*  主颜色 */
+.fontColor{
+    color: #fbb174;
+}
+/* 主文字颜色 */
+.textColor{
+    color: #444444;
+}
+.green{
+    color: #93b846;
+}
+/* 副文字颜色 */
+.futextColor{
+    color: #999999;
+}
+.grey{
+    color: #676767;
+}
+.hidden{
+    display: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+

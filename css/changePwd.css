@@ -1,0 +1,71 @@
+.changeMain{
+    width: 450px;
+    margin: 0 auto;
+}
+.change-main{
+    margin-top: 20px;
+}
+.main-div{
+    width: 450px;
+    height: 38px;
+    line-height: 38px;
+    position: relative;
+    margin-top: 10px;
+}
+.main-div input,
+.main-div span{
+    position: absolute;
+}
+.main-div input{
+    padding: 0 5px 0 0;
+}
+.main-div input.oldPwd{
+    padding-left: 70px;
+}
+.main-div input.newPwd{
+    padding-left: 85px;
+}
+.main-div span{
+    left: 10px;
+}
+.btn{
+    margin-top: 20px;
+}
+.btn button {
+    float: right;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.okMain{
+    margin: 20px 0;
+    width: 100%;
+}
+.okMain span img{
+    margin-bottom: 10px;
+}
+.okMain span{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin-top: 15px;
+}
+.btns button{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.jiu{
+    color: #999;
+}
+

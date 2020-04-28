@@ -1,0 +1,96 @@
+body{
+    background: #fff;
+}
+.toOther{
+    width: 460px;
+    margin: 20px 0 20px 20px;
+    float: left;
+    overflow: hidden;
+}
+/*被分享人*/
+.names{
+    float: left;
+    width: 100%;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+/*搜索*/
+.report-part{
+    width: 150px;
+    margin-right: 10px;
+    float: left;
+    position: relative;
+}
+.search-box{
+    width: 300px;
+    float: left;
+    position: relative;
+}
+.search-box .layui-input{
+    width: 238px;
+    float: left;
+    margin-right: -2px;
+}
+/*列表*/
+.list{
+    float: left;
+    width: 100.5%;
+    margin: 10px 0 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.list-p{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 15px 0;
+    border-bottom: 1px dashed #e2e2e2;
+    width: 100%;
+}
+.p-img{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+.p-name{
+    font-size: 16px;
+    float: left;
+}
+.p-det{
+    color: #999;
+    float: right;
+}
+.layui-form-checkbox{
+    float: right;
+}
+.layui-form-checkbox[lay-skin=primary] i {
+    margin: 11px 10px 0 20px;
+}
+.layui-form-checked[lay-skin=primary] i,.layui-form-checkbox[lay-skin=primary]:hover i {
+    border-color: #86b22f!important;
+    background-color: #86b22f!important;
+    color: #fff;
+}
+/*按钮*/
+.btn{
+    width: 100%;
+    float: left;
+    text-align: right;
+}
+.btn button{
+    height: 38px;
+    line-height: 38px;
+    width:80px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/*清空按钮*/
+.nothing{
+    cursor: pointer;
+    position: absolute;
+    right: 75px;
+    top: 11px;
+    display: none;
+}

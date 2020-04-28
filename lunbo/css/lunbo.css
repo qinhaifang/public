@@ -1,0 +1,12 @@
+div[carousel-item]>*{text-align: center; line-height: 280px; color: #fff;}
+div[carousel-item]>*:nth-child(2n){background-color: #009688;}
+div[carousel-item]>*:nth-child(2n+1){background-color: #5FB878;}
+#test2 div[carousel-item]>*{line-height: 120px;}
+#lunbo{
+    overflow: scroll;
+}
+
+
+
+/*打开qq   CTRL+ALT+Z*/
+/*关闭qq   alt+c*/

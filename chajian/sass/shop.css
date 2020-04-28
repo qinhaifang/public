@@ -1,0 +1,125 @@
+#shopOrder {
+  overflow: scroll;
+  padding: 20px;
+  width: 93%; }
+
+#shop td span {
+  display: inline-block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d2d2d2;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer; }
+#shop td input {
+  border: 1px solid #d2d2d2;
+  width: 100px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  float: left;
+  border-left: 0;
+  border-right: 0; }
+
+.reSty {
+  color: #cbcbcb; }
+
+.total {
+  background: #e5e5e5;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px; }
+  .total ul li {
+    float: right;
+    margin-left: 20px; }
+  .total li.orderBtn {
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    background: #B0B0B0;
+    color: #fff;
+    text-align: center; }
+  .total span {
+    color: #ff0000; }
+
+.layui-form-checkbox {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  padding-right: 0; }
+  .layui-form-checkbox i {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    padding-right: 0;
+    border-left: 1px solid #d2d2d2; }
+
+@font-face {
+  font-family: "iconfont";
+  src: url("../font/font_8x4e1hxo7go/iconfont.eot");
+  src: url("../font/font_8x4e1hxo7go/iconfont.eot?#iefix") format("embedded-opentype"), url("../font/font_8x4e1hxo7go/iconfont.woff2") format("woff2"), url("../font/font_8x4e1hxo7go/iconfont.woff") format("woff"), url("../font/font_8x4e1hxo7go/iconfont.ttf") format("truetype"), url("../font/font_8x4e1hxo7go/iconfont.svg#iconfont") format("svg"); }
+.iconfont {
+  font-family: "iconfont";
+  font-size: 22px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #5fb878; }
+
+.iconfont.css {
+  position: absolute;
+  left: 4%; }
+
+.shopJs ul {
+  display: flex;
+  font-size: 14px; }
+  .shopJs ul li {
+    height: 50px;
+    line-height: 50px;
+    width: 15%;
+    text-align: center;
+    float: left;
+    justify-content: flex-start;
+    border-bottom: 1px solid #d2d2d2; }
+  .shopJs ul li:nth-child(2) {
+    width: 30%; }
+  .shopJs ul li.name {
+    width: 30%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .shopJs ul li .cut, .shopJs ul li .plus {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #d2d2d2;
+    float: left;
+    margin-top: 10px;
+    cursor: pointer; }
+  .shopJs ul li input {
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    float: left;
+    border-bottom: 1px solid #d2d2d2;
+    border-top: 1px solid #d2d2d2;
+    margin-top: 10px; }
+  .shopJs ul li input[type=checkbox] {
+    opacity: 0; }
+
+.bar-wrapper {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #5fb878;
+  color: #fff; }
+  .bar-wrapper .bar-right div {
+    float: right;
+    width: 100px;
+    text-align: center; }
+
+/*# sourceMappingURL=shop.css.map */

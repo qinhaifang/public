@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改密码</title>
+    <link rel="stylesheet" href="libs/ext/layui/css/layui.css">
+    <link rel="stylesheet" href="libs/public.css">
+    <link rel="stylesheet" href="libs/common.css">
+    <link rel="stylesheet" href="css/changePwd.css">
+</head>
+<body style="background: #fff;">
+<div id="changPwd" class="layui-form">
+    <div id="changeMain" class="changeMain">
+        <div class="change-main">
+            <div class="main-div">
+                <input id="oldPassword" class="layui-input oldPwd" type="password" mustField="请输入旧密码">
+                <span>旧密码：</span>
+            </div>
+            <div class="main-div">
+                <input id="isFilter" class="layui-input oldPwd" type="password" mustField="请输入新密码">
+                <span>新密码：</span>
+            </div>
+            <div class="main-div">
+                <input id="accountPwd" class="layui-input newPwd" type="password" mustField="请确认新密码">
+                <span>确认密码：</span>
+            </div>
+        </div>
+        <div class="btn">
+            <button class="layui-btn determine" onclick="saveCancel()">保存</button>
+            <button class="layui-btn cancel" onclick="onCancel()">取消</button>
+        </div>
+    </div>
+    <div id="okMain" class="changeMain okMain" style="display: none;">
+        <span><img src="images/dui_yuan.png" alt=""></span>
+        <span>修改成功</span>
+        <span class="jiu">密码修改成功，请重新登录</span>
+        <span class="btns"><button class="layui-btn determine" onclick="saveChange()">确定</button></span>
+    </div>
+</div>
+<script src="libs/jquery-1.8.0.min.js?v=20170527"></script>
+<script src="libs/ext/layui/layui.all.js?v=20170527"></script>
+<script src="libs/public.js?v=20170527"></script>
+<script src="js/changePwd.js"></script>
+<script src="js/api/changePwdApi.js"></script>
+</body>
+</html>

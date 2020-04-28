@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提醒列表</title>
+    <link rel="stylesheet" href="../libs/ext/layui/css/layui.css"/>
+    <link rel="stylesheet" href="../libs/ext/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../libs/public.css"/>
+    <link rel="stylesheet" href="../libs/common.css"/>
+    <link rel="stylesheet" href="css/remindList.css?v=2017092601"/>
+</head>
+<body id="remindList">
+<div class="tips-title">
+    <span>待办列表</span>
+    <div id="tipsImg">
+        <img src="images/tips1.png" alt="">
+        <div id="showTips" class="layui-form tips">
+            <div class="tips-line">
+                <input type="checkbox" title="完成" disabled>
+                <span>未完成</span>
+            </div>
+            <div class="tips-line">
+                <input type="checkbox" title="已完成" checked disabled>
+                <span>已完成</span>
+            </div>
+            <div class="tips-line">
+                <div class="line-span">
+                    <img src="images/tips2.png" alt="">
+                    <span>未置顶</span>
+                </div>
+                <div class="line-span">
+                    <img src="images/tips3.png" alt="">
+                    <span>已置顶</span>
+                </div>
+            </div>
+            <div class="tips-line">
+                <div class="line-span">
+                    <img src="images/tips4.png" alt="">
+                    <span>共享待办</span>
+                </div>
+                <div class="line-span">
+                    <img src="images/tips5.png" alt="">
+                    <span>他人共享</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="images/close.png" class="closeImg" alt="" onclick="closeRemind()">
+</div>
+<div class="layui-form tiXing">
+    <div class="left">
+        <div class="sousuo">
+            <div class="selectDiv">
+                <select name="searchDates" lay-filter="searchDates">
+                    <option value="0">全部</option>
+                    <option value="1" selected>未完成</option>
+                    <option value="2">已完成</option>
+                </select>
+            </div>
+            <!--<div class="selectDiv">
+                <select name="searchDate" lay-filter="searchDate">
+                    <option value="0">所有</option>
+                    <option value="1">今天</option>
+                    <option value="2">本周</option>
+                    <option value="3">本月</option>
+                </select>
+            </div>-->
+            <div class="timeGroup">
+                <div class="search-zhouqi">
+                    <input id="startDate" name="startTime" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" />
+                    <label>-</label>
+                    <input id="endDate" name="endTime" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" />
+                </div>
+            </div>
+            <div class="guanjianzi">
+                <input id="likeName" class="layui-input sousuoKuangs" type="text" placeholder="关键字"/>
+                <button class="zuke_souSuoButton search" onclick="getTodayReminList()"><i class="fa fa-search"></i></button>
+                <img src="images/nothing.png" alt="" class="nothing" onclick="noThing()">
+            </div>
+            <div class="addRi">
+                <button class="layui-btn search" onclick="addRiChengs()">添加日程</button>
+            </div>
+        </div>
+        <div id="newListAll">
+            <div id="noList">
+                <p id="noListTil" class="totop">未完成</p>
+                <div id="newList" class="newList">
+                    <!--列表-->
+                </div>
+            </div>
+            <div id="successList">
+                <p id="successListTil" class="totop">已完成</p>
+                <div id="newLists" class="newList">
+                    <!--列表-->
+                </div>
+                <div id="pageSize">
+                    <!----翻页---->
+                    <div class="clearfix"></div>
+                    <div class="pages" style="float: left;margin-left: 340px;">
+                        <div id="tenantPages" class="page"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="look">
+            <span class="look-suc" onclick="openSuccess()">查看已完成待办列表</span>
+        </div>-->
+    </div>
+    <div class="right">
+        <div class="riqi">
+            <!--<input name="save" conId="" conNum="" lay-filter="newTextChange" type="checkbox" lay-skin="primary">-->
+            <div class="linger">
+                <!--<img src="images/naoLing.png" alt="">-->
+                <input id="remindDate" attrIsn="0" class="layui-input" style="height: 60px!important;" placeholder="设置待办提醒时间" type="text" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:ss',choose: function(datas){ //选择日期完毕的回调
+                                       $date = datas;
+                                  }})">
+            </div>
+        </div>
+        <div class="con">
+            <textarea id="content" conId="" conNum="" class="layui-textarea" placeholder="请在此处编辑提醒内容, 可同时按Ctrl+S键 保存内容，或者点击保存按钮" onKeyDown="LimitTextArea(this)" onKeyUp="LimitTextArea(this)" onkeypress="LimitTextArea(this)"></textarea>
+            <div class="bot">
+                <span id="conEt" class="tishis"></span>
+                <span class="shuzi">
+                    <span id="textNum">0</span>/<span>500</span>
+                </span>
+            </div>
+            <div id="botheight" class="bot botop">
+                <span class="tishis">
+                    <span id="shareTime" class="mright"></span>
+                    <span id="shareMan" class="mright"></span>
+                    <span class="mright">共享</span>
+                </span>
+                <span class="allnames">参与者：</span>
+                <span id="crowdedName" class="allname"></span>
+            </div>
+        </div>
+        <div class="bots">
+            <button id="save" class="layui-btn save" onclick="saveRemindDatas()">保存</button>
+            <span class="tishi">可同时按Ctrl+S键 保存内容</span>
+        </div>
+    </div>
+</div>
+
+
+<script src="../libs/jquery-1.8.0.min.js"></script>
+<script src="../libs/ext/layui/layui.all.js"></script>
+<script src="../libs/ext/laydate/laydate.js"></script>
+<script src="../libs/public.js?v=2017092601"></script>
+<script src="../libs/date.js?v=2017092601"></script>
+<script src="js/remindList.js?v=20171031"></script>
+<script src="js/api/remindListApi.js?v=20171031"></script>
+</body>
+</html>

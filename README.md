@@ -1,0 +1,2 @@
+全屏视频背景插件--BIDEO.JS详解
+masterSlider插件支持动态加载数据

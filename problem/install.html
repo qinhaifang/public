@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>安装步骤</title>
+    <link rel="stylesheet" href="../libs/ext/layui/css/layui.css" />
+    <link rel="stylesheet" href="sass/problem.css">
+</head>
+<body>
+<div id="problem">
+    <div class="layui-form">
+        <table class="layui-table">
+            <colgroup>
+                <col width="150">
+                <col width="150">
+                <col width="200">
+                <col>
+            </colgroup>
+            <thead>
+            <tr>
+                <th>软件名</th>
+                <th>安装步骤</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>sass</td>
+                    <td> 1.安装ruby                https://rubyinstaller.org/downloads/
+                        2.gem sources --remove https://rubygems.org/
+                        替换  gem sources --add http://gems.ruby-china.com/
+                        3.检查是否替换了  gem sources -1
+                        4.gem install sass
+                        5.gem install compass
+                        6.检查  compass -v   sass -v
+                        7.(1) 在文件中新增文件夹sass
+                        (2) 新建.sass文件
+                        （3）在控制台指定的文件夹下输入sass --watch sass命令(sass --watch sass --style compact)
+                        （ps:E:\Qhf20190807\qhfModel\demo\chajian>sass --watch sass）</td>
+                </tr>
+                <tr>
+                    <td>sourcetree</td>
+                    <td>1.先进行安装（安装SourceTree）
+                        <br>把accounts.json  放到%LocalAppData%\Atlassian\SourceTree\目录下（C:\Users\Administrator\AppData\Local\Atlassian\SourceTree）</td>
+                </tr>
+                <tr>
+                    <td>git常用命令</td>
+                    <td>1.先进行安装（安装SourceTree）
+                        把accounts.json  放到%LocalAppData%\Atlassian\SourceTree\目录下（C:\Users\Administrator\AppData\Local\Atlassian\SourceTree）</td>
+                </tr>
+                <tr>
+                    <td>webstorm 许可证</td>
+                    <td>
+                        licence server --> http://idea.iteblog.com/key.php
+                    </td>
+                </tr>
+                <tr>
+                    <td>图片旋转</td>
+                    <td>
+                        JS 版本：https://github.com/fengyuanchen/viewerjs
+                        <br>jQuery 版本：https://github.com/fengyuanchen/viewer
+                        <br>eg:https://blog.csdn.net/aoshilang2249/article/details/51824256
+                    </td>
+                </tr>
+                <tr>
+                    <td>vue安装</td>
+                    <td>
+                        node -v
+                        npm -v
+                        <br>npm install --global vue-cli : 全局安装vue-cli
+                        <br>vue init webpack my-project 命令：  //my-project 写上自己的项目名称
+                        <br>vue -V (在此注意V为大写)
+                        <br>cd  my-project
+                        <br>npm install
+                        <br>npm run dev
+                    </td>
+                </tr>
+                <tr>
+                    <td>HBuilderX 安装</td>
+                    <td>
+                        https://www.dcloud.io/hbuilderx.html
+                        <br>新建vue项目
+                        <br>npm install
+                        <br>npm run serve
+                        <br>npm run build
+                        <br>https://www.cnblogs.com/beyrl-blog/p/8625145.html(带你初步理解)
+                    </td>
+                </tr>
+                <tr>
+                    <td>安装好node , 把npm 换成cnpm</td>
+                    <td>npm install -g cnpm --registry=https;//registry.npm.taobao.org</td>
+                </tr>
+                <tr>
+                    <td>移动端上拉/下拉刷新插件</td>
+                    <td>http://www.mescroll.com/api.html</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--公安厅 司法局  市场监督管理局   财政局   交通运输局-->
+<script src="../libs/jquery-1.8.0.min.js"></script>
+<script src="../libs/ext/layui/layui.all.js"></script>
+</body>
+</html>

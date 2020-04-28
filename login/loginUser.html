@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <title>登录界面</title>
+    <link rel="stylesheet" href="../common/weui.min.css">
+    <link rel="stylesheet" href="../libs/ext/layui/css/layui.css">
+    <link rel="stylesheet" href="../common/base.css">
+    <link rel="stylesheet" href="css/loginUser.css">
+</head>
+<body>
+<div id="loginPage">
+    <div class="login layui-form">
+        <div class="login-form">
+            <div class="login-inp userName">
+                <label><img src="images/icon-phone-an.png" alt=""></label>
+                <input type="text" placeholder="用户名" id="userName"/>
+            </div>
+            <div class="login-inp">
+                <label><img src="images/icon-phone-an.png" alt=""></label>
+                <input type="number" pattern="[0-9]*" oninput="if(value.length>11)value=value.slice(0,11)" placeholder="手机号" id="userPhone"/>
+            </div>
+            <div class="login-inp pwd">
+                <label>
+                    <img src="images/icon-lock-an.png" alt="">
+                </label>
+                <input type="password" pattern="[0-9]*" oninput="if(value.length>18)value=value.slice(0,18)" placeholder="密码" id="userPwd" />
+            </div>
+            <div class="login-inp zuzhi">
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><img src="images/icon-pwd-an.png" alt=""></label>
+                    <div class="layui-input-block w200">
+                        <select name="interest" lay-filter="zuzhi">
+                            <option value="">组织</option>
+                            <option value="0">写作</option>
+                            <option value="1">阻止</option>
+                            <option value="2">游戏</option>
+                            <option value="3">音乐</option>
+                            <option value="4">旅行</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="login-inp sureLogin">
+                <a href="#" onclick="loginPwd()">登录</a>
+            </div>
+            <div class="login-inp register-btn">
+                <a href="#" onclick="registerPwd()">注册</a>
+            </div>
+            <div class="login-inp forget-btn">
+                <a href="#" onclick="forgetPwd()">保存</a>
+            </div>
+            <div class="login-txt"><a href="#" id="loginDesc"  onclick="changeLogin()"  loginType="1">立即注册>></a></a></div>
+            <!--<div class="login-txt"><a href="#" id="register" onclick="register()">立即注册</a>|<a href="#" onclick="forget()" id="forget">忘记密码？</a></div>-->
+            <!--<div class="login-txt">-->
+            <!--<a href="#" id="loginDesc" onclick="changeLogin()" loginType="1">还没有账号，验证码登录></a>-->
+            <!--</div>-->
+        </div>
+
+    </div>
+</div>
+
+<script src="../libs/jquery-1.8.0.min.js"></script>
+<script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js?v=20171027"></script>
+<script src="../libs/ext/layui/layui.all.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/loginhelper.js"></script>
+<script src="js/loginUser.js"></script>
+<script src="js/api/loginUserApi.js"></script>
+</body>
+</html>

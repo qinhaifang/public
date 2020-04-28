@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/font_w7wfdnh90j/iconfont.eot');
+    src: url('../font/font_w7wfdnh90j/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/font_w7wfdnh90j/iconfont.woff2') format('woff2'),
+    url('../font/font_w7wfdnh90j/iconfont.woff') format('woff'),
+    url('../font/font_w7wfdnh90j/iconfont.ttf') format('truetype'),
+    url('../font/font_w7wfdnh90j/iconfont.svg#iconfont') format('svg');
+}
+#font ul li{
+    width: 100px;
+    font-family: "iconfont";
+    font-size: 30px;
+    float: left;
+    text-align: center;
+}
+#font ul li span{
+    display: block;
+    font-size: 16px;
+}

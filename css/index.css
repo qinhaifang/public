@@ -1,0 +1,1084 @@
+body {
+    width: 100%;
+    height: 1000px;
+    border: #F8F8F8;
+    position: relative;
+    overflow: hidden;
+}
+
+/* SOKAYO 180822 添加权限变更提示退出框样式 B */
+#changePermissions{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    display: none;
+}
+#changePermissions .changePermissionsMark{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.65;
+}
+#changePermissions .changePermissionsTips{
+    width: 430px;
+    height: 290px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -145px;
+    margin-top: -215px;
+    background-color:#fff;
+    border-radius: 2px;
+    text-align: center;
+}
+#changePermissions .changePermissionsTips .changePermissionsIcon{
+    width: 52px;
+    height: 52px;
+    background: #FC3C3C;
+    display: inline-block;
+    color: #fff;
+    line-height: 52px;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom:35px;
+    border-radius: 26px;
+}
+#changePermissions .changePermissionsTips p{
+    font-size: 1.2em;
+    margin-bottom: 12px;
+}
+#changePermissions .changePermissionsTips a{
+    display: inline-block;
+    width: 120px;
+    line-height: 40px;
+    background-color: #86b22f;
+    border-radius:4px;
+    color: #fff;
+    margin-top: 28px;
+}
+/* SOKAYO 180822 添加权限变更提示退出框样式 B */
+
+
+/*左侧功能导航栏 start*/
+.layout-left {
+    width: 180px;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    /*三角箭头的颜色*/
+    scrollbar-arrow-color: #f00;
+    /*滚动条滑块按钮的颜色*/
+    scrollbar-face-color: #ff0;
+    /*滚动条整体颜色*/
+    scrollbar-highlight-color: #333;
+    /*滚动条阴影*/
+    scrollbar-shadow-color: #ccc;
+    /*滚动条轨道颜色*/
+    scrollbar-track-color: #666;
+}
+
+/*logo*/
+.logo {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: center;
+    color: #86b22f;
+    background: #1f323c;
+    display: block;
+    overflow: hidden;
+}
+
+.logo:hover {
+    color: #86b22f;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    overflow: hidden;
+}
+
+/*左侧导航栏*/
+.navigationList {
+    width: 180px;
+    height: auto;
+    margin: 10px 0 0 0;
+    overflow-y:auto;
+    overflow-x: visible;
+    /*三角箭头的颜色*/
+    scrollbar-arrow-color: #263E4A;
+    /*滚动条滑块按钮的颜色*/
+    scrollbar-face-color: #263E4A;
+    /*滚动条整体颜色*/
+    scrollbar-highlight-color: #263E4A;
+    /*滚动条阴影*/
+    scrollbar-shadow-color: #263E4A;
+    /*滚动条轨道颜色*/
+    scrollbar-track-color: #263E4A;
+}
+/*----   2018-1-18 修改  ----*/
+
+/*左侧导航栏里的版块在不同分辨率下显示不同的高度 小于1366 */
+@media screen and (max-width:1366px) {
+    .navCon {
+        width: 180px;
+        height: 40px;
+        position: relative;
+    }
+    .navigationList a {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+        line-height: 40px;
+        display: block;
+        overflow: hidden;
+        transition: 0.8s;
+        cursor: pointer;
+    }
+    .navigationList span {
+        width: auto;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        float: left;
+        margin-left: 12px;
+        overflow: hidden;
+    }
+}
+/*左侧导航栏里的版块在不同分辨率下显示不同的高度 大于1366小于1920 */
+@media screen and (min-width:1366px) and (max-width:1920px) {
+    .navCon {
+        width: 180px;
+        height: 46px;
+        position: relative;
+    }
+    .navigationList a {
+        width: 100%;
+        height: 46px;
+        font-size: 14px;
+        line-height: 46px;
+        display: block;
+        overflow: hidden;
+        transition: 0.8s;
+        cursor: pointer;
+    }
+    .navigationList span {
+        width: auto;
+        height: 46px;
+        padding: 0 0 0 8px;
+        line-height: 46px;
+        text-align: center;
+        vertical-align: top;
+        display: inline-block;
+        overflow: hidden;
+    }
+}
+/*左侧导航栏里的版块在不同分辨率下显示不同的高度 大于1920 */
+@media screen and (min-width:1920px){
+    .navCon {
+        width: 180px;
+        height: 46px;
+        position: relative;
+    }
+    .navigationList a {
+        width: 100%;
+        height: 46px;
+        font-size: 14px;
+        line-height: 46px;
+        display: block;
+        overflow: hidden;
+        transition: 0.8s;
+        cursor: pointer;
+    }
+    .navigationList span {
+        width: auto;
+        height: 46px;
+        padding: 0 0 0 8px;
+        line-height: 46px;
+        text-align: center;
+        vertical-align: top;
+        display: inline-block;
+        overflow: hidden;
+    }
+}
+
+
+.navigationList a:hover {
+    color: #ffffff;
+}
+
+.navigationList a i {
+    width: 3px;
+    height: 46px;
+    float: left;
+    overflow: hidden;
+}
+
+.navigationList a img {
+    width: 14px;
+    height: 14px;
+    float: left;
+    margin: 13px 0 0 12px;
+    overflow: hidden;
+}
+
+.navbottom{
+    width: 100px;
+    text-align: center;
+    color: #b3bbbb;
+    font-size: 14px;
+    height: 46px;
+    line-height: 46px;
+    /*background: #1f323c;*/
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    display: none;
+}
+.navbottom:hover{
+    background: #1f323c;
+}
+.navbottom .cityul{
+    display: none;
+    position: absolute;
+    left: 100px;
+    bottom: 0;
+}
+.navbottom .cityul li{
+    width: 105px;
+    height: 46px;
+    line-height: 46px;
+    color: #b3bbbb;
+    background: #1f323c;
+    cursor: pointer;
+}
+.navbottom .cityul li:hover{
+    color: #fff;
+}
+
+    /* 左下角帮助 2017.12.4 */
+
+    #help{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+
+/*左侧功能导航栏 end*/
+.layout-right {
+    width: calc(100% - 100px);
+    height: 100%;
+    margin: 0 0 0 180px;
+    position: absolute;
+    overflow: hidden;
+}
+
+/*二级菜单*/
+.layout-top {
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 1px 2px #ebeeef;
+    position: relative;
+    /*overflow: hidden;*/
+    position: relative;
+}
+
+.nav-children {
+    width: 100%;
+    height: 60px;
+    padding: 0 0 0 15px;
+    background: #ffffff;
+    /*overflow: hidden;*/
+}
+
+.nav-children li {
+    width: auto;
+    height: 58px;
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 58px;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/*二级菜单  end*/
+.layout-content {
+    width: 100%;
+    min-width: 1100px;
+    height: calc(100% - 60px);
+    background: #f2f6f7;
+    overflow: hidden;
+}
+
+/*个人中心*/
+.nav-personalCenter {
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 2px;
+    top: 0;
+}
+
+/*快速添加房源入口*/
+.nav-quickEntry {
+    width: 100px;
+    height: 60px;
+    border-left: 1px solid #f2f6f7;
+    float: left;
+    cursor: pointer;
+}
+
+.nav-quickEntry a {
+    width: 30px;
+    height: 30px;
+    margin: 13px auto 13px;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 100%;
+    display: block;
+    position: relative;
+}
+
+/*加号*/
+.nav-quickEntry a span{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: -2px;
+    left: 4px;
+
+}
+
+.nav-quickEntry:hover {
+    background: #f8f8f8;
+}
+
+.nav-quickEntry:hover a {
+    background: #50B220;
+}
+
+.convenient {
+    width: 110px;
+    height: 200px;
+    padding: 2px 5px 0 0;
+    margin: 0 0 0 30px;
+    display: none;
+}
+
+.convenient li {
+    width: 100%;
+    height: 36px;
+    margin: 9px 0 0 0;
+    font-size: 14px;
+    line-height: 36px;
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.convenient li:hover {
+    background: #fff;
+}
+
+.convenient li .crcel {
+    width: 40px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+/*--添加房源--*/
+.housing-type {
+    color: #24b0fc;
+    border: 1px solid #24b0fc;
+}
+
+.convenient .housing-type:hover {
+    color: #24b0fc;
+}
+
+.housing-type .crcel {
+    background: #24b0fc;
+}
+
+.housing-type .crcel img {
+    margin: -5px 0 0 0;
+    display: inline-block;
+}
+
+/*--添加房源 end--*/
+/*--添加合同--*/
+.contract-entry {
+    color: #01be6a;
+    border: 1px solid #01be6a;
+}
+
+.convenient .contract-entry:hover {
+    color: #01be6a;
+}
+
+.contract-entry .crcel {
+    background: #01be6a;
+}
+
+.contract-entry .crcel img {
+    margin: -5px 0 0 0;
+    display: inline-block;
+}
+
+/*--添加合同 end--*/
+/*--添加预订--*/
+.add-booking {
+    color: #f36222;
+    border: 1px solid #f36222;
+}
+
+.convenient .add-booking:hover {
+    color: #f36222;
+}
+
+.add-booking .crcel {
+    background: #f36222;
+}
+
+.add-booking .crcel img {
+    margin: -5px 0 0 0;
+    display: inline-block;
+}
+
+/*--添加预订 end--*/
+/*---添加记账--*/
+.add-account {
+    color: #f6b103;
+    border: 1px solid #f6b103;
+}
+
+.convenient .add-account:hover {
+    color: #f6b103;
+}
+
+.add-account .crcel {
+    background: #f6b103;
+}
+
+.add-account .crcel img {
+    margin: -5px 0 0 0;
+    display: inline-block;
+}
+
+/*--添加记账 end--*/
+/*---添加待办--*/
+.add-daiban {
+    color: #1569db;
+    border: 1px solid #1569db;
+}
+
+.convenient .add-daiban:hover {
+    color: #1569db;
+}
+
+.add-daiban .crcel {
+    background: #1569db;
+}
+
+.add-daiban .crcel img {
+    margin: -5px 0 0 0;
+    display: inline-block;
+}
+
+/*--添加记账 end--*/
+
+/*--- 房源推广 --*/
+.house_tuiguang {
+    color: #00bf00;
+    border: 1px solid #00bf00;
+}
+
+.convenient .house_tuiguang:hover {
+    color: #00bf00;
+}
+
+.house_tuiguang .crcel {
+    background: #00bf00;
+}
+
+.house_tuiguang .crcel img {
+    margin: -5px 0 0 0;
+    display: inline-block;
+}
+
+/*-- 房源推广 end --*/
+/*个人中心头像，退出*/
+.personalCenter {
+    width: auto;
+    height: auto;
+    border-left: 1px solid #f2f6f7;
+    float: left;
+    cursor: pointer;
+}
+
+.personalCenter:hover {
+    background: #f8f8f8;
+}
+
+.personalCenter-name {
+    width: auto;
+    height: 60px;
+    overflow: hidden;
+}
+
+.personalCenter-name img {
+    width: 30px;
+    height: 30px;
+    margin: 13px 0 13px 30px;
+    border-radius: 100%;
+    vertical-align: top;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.personalCenter-name span {
+    width: auto;
+    height: 60px;
+    padding: 0 20px 0 10px;
+    font-size: 14px;
+    line-height: 60px;
+    vertical-align: top;
+    display: inline-block;
+    overflow: hidden;
+}
+
+/*退出*/
+.personalCenter-exit {
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+    box-shadow: -4px 0 4px #f6f4ef, /*左边阴影*/ 4px 0 4px #f6f4ef, /*右边阴影*/ 0 4px 4px #f6f4ef; /*底边阴影*/
+    -moz-box-shadow: -4px 0 4px #f6f4ef, /*左边阴影*/ 4px 0 4px #f6f4ef, /*右边阴影*/ 0 4px 4px #f6f4ef; /*底边阴影*/
+    -webkit-box-shadow: -4px 0 4px #f6f4ef, /*左边阴影*/ 4px 0 4px #f6f4ef, /*右边阴影*/ 0 4px 4px #f6f4ef; /*底边阴影*/
+    overflow: hidden;
+    display: none;
+}
+
+.personalCenter-exit li {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.personalCenter-exit li:hover {
+    background: #f2f2f2;
+}
+
+.personalCenter:hover .personalCenter-exit {
+    background: #ffffff;
+    display: block;
+}
+
+/*子页面按钮样式*/
+.addButton {
+    width: auto;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    border-radius: 2px;
+    padding: 0 20px;
+    cursor: pointer;
+    position: fixed;
+    right: 270px;
+    top: 14px;
+    overflow: hidden;
+    display: none;
+}
+.addButton-left{
+    width: auto;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    border-radius: 2px;
+    padding: 0 20px;
+    cursor: pointer;
+    position: fixed;
+    right: 380px;
+    top: 14px;
+    overflow: hidden;
+    display: none;
+}
+.addButton-left-pro{
+    width: auto;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    border-radius: 2px;
+    padding: 0 20px;
+    cursor: pointer;
+    position: fixed;
+    right: 490px;
+    top: 14px;
+    overflow: hidden;
+    display: none;
+}
+
+/*---- 合同导入样式  2017-06-29 ----*/
+.hetongDaoru {
+    width: auto;
+    position: fixed;
+    right: 270px;
+    top: 14px;
+    overflow: hidden;
+}
+
+.hetongDaoru .daoruButton {
+    width: auto;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    border-radius: 2px;
+    padding: 0 20px;
+    cursor: pointer;
+    float: left;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+/*---- 合同导入样式  2017-06-29  end ----*/
+/*报表按钮*/
+.baobiaoButton {
+    position: absolute;
+    top: 0;
+    right: 250px;
+}
+
+.top-btn {
+    width: 80px;
+    height: 34px;
+    margin: 13px 10px 0 0;
+    font-size: 14px;
+    line-height: 34px;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 2px;
+    float: left;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+/*报表添加按钮样式 end*/
+
+/*----   2017-06-29 修改  ----*/
+
+.menuCon {
+    width: 200px;
+    height: auto;
+    background-color: #3E3A39;
+    position: absolute;
+    top: 0;
+    left: 180px;
+    z-index: 1;
+    display: none;
+
+}
+.navCon[roleaccess="fq_pz"] .menuCon {
+    /*top: -322px!important;*/
+}
+
+.menuCon li {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+    color: #b3bbbb;
+    text-align: center;
+    cursor: pointer;
+    /*overflow: hidden;*/
+}
+
+.menuCon li:hover {
+    color: #fff;
+}
+
+.navCon:hover {
+    background: #86b22f !important;
+    color: #ffffff;
+}
+
+.navCon:hover .menuCon {
+    display: block;
+}
+
+/*----   2017-06-29 修改  end  ----*/
+/*----   2017-07-04 添加日租  start  ----*/
+.xiangmu {
+    width: 180px;
+    height: 60px;
+    float: left;
+    margin: 0 20px 0 -20px;
+    background: #86b22f;
+}
+
+.xiangmu .layui-input {
+    margin: 10px 0 0 0;
+    padding: 0 25px 0 10px;
+    background: #86b22f;
+    border: none;
+    color: #fff;
+    text-align: center;
+}
+.layui-form-select dl dd {
+    cursor: pointer;
+    text-align: center;
+}
+.xiangmu .layui-form-select .layui-edge {
+    border-top-color: #fff !important;
+}
+
+/*----   2017-07-04 添加日租  end    ----*/
+
+/*更新说明*/
+#upDataRemark {
+    display: none;
+}
+
+.updata {
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    position: relative;
+}
+
+.fei {
+    width: 600px;
+    height: 500px;
+    background: url(../gongZuoTai/images/updatabg.png) no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 99999;
+}
+
+.title {
+    padding: 10px 0;
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+    margin-top: 196px;
+    float: left;
+    background: #fff;
+}
+
+.updata .layui-textarea {
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 0 15px;
+    border: none;
+    cursor: inherit;
+    position: relative;
+    top: -2px;
+    min-height: 150px;
+    overflow: scroll;
+    line-height: 25px;
+}
+
+.btn {
+    width: 100%;
+    background: #fff;
+    cursor: pointer;
+    color: #86b22f;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    top: -5px;
+}
+
+.updataclose {
+    position: absolute;
+    cursor: pointer;
+    right: -15px;
+    top: 34px;
+}
+
+/*更新说明  end*/
+/*  <!--  头 部 推 广 -->  */
+
+
+/*  logo  */
+.tuiGuanglogo {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 99;
+    width: 153px;
+    height: 44px;
+    cursor: pointer;
+    background: url("../images/logoTipTop.png") 0 0 no-repeat;
+    background-size: 153px 44px;
+}
+
+.logoBtn {
+    position: absolute;
+    right: -18px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background: url("../images/img_del.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+/* 内容  */
+.tuiGuang {
+    position: absolute;
+    left: 50%;
+    top: 27px;
+    transform: translate(-50%, 0);
+    width: 410px;
+    height: 241px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.tuiGuang .leftWing {
+    /*margin-right: 2px;*/
+    /*float: left;*/
+    /*border-left: 10px solid transparent;*/
+    /*border-right: 14px solid #1dbc6d;*/
+    /*border-top: 16px solid #1dbc6d;*/
+    /*border-bottom: 14px solid #1dbc6d;*/
+}
+
+.tuiGuang .rightWing {
+    /*float: left;*/
+    /*border-left: 14px solid #1dbc6d;*/
+    /*border-right: 10px solid transparent;*/
+    /*border-top: 16px solid #1dbc6d;*/
+    /*border-bottom: 14px solid #1dbc6d;*/
+}
+
+.tuiGuang .tuiGuangContent {
+    margin-right: 2px;
+    float: left;
+    width: 410px;
+    height: 100%;
+    background-color: #1dbc6d;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+    cursor: pointer;
+    background: url("../images/logoTip.png") 0 0 no-repeat;
+    background-size: 410px 241px;
+}
+
+.tuiGuangContent p {
+    color: #FFFFFF;
+}
+
+.sanJiao {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #1dbc6d;
+}
+/*三级下滑样式*/
+.layout-top-children{
+    position: absolute;
+    top:60px;
+    width: calc(100% - 80px);
+    padding: 20px 40px;
+    min-width: 1100px;
+    height: 240px;
+    background: #213742;
+    overflow: hidden;
+    display: none;
+    box-shadow: 0 2px 0 #e0d6d6;
+}
+.nav-children-nav{
+    display: none;
+}
+.content_part_title{
+    padding:15px 0;
+    font-size: 16px;
+    color: #b3bbbb;
+}
+.children_content_part{
+    float: left;
+}
+.body_tab_warp{
+    float: left;
+    padding-right: 80px;
+}
+.body_tab_warp .active{
+    color: #67d3fc;
+}
+.body_tab_warp li{
+    color: #808080;
+    padding:10px 0;
+    cursor: pointer;
+}
+.body_tab_warp li:hover{
+    color: #fff;
+}
+
+.layui-layer-shade{
+    /*width: calc(100% - 100px)!important;*/
+    /*right: 0!important;*/
+    /*left: inherit!important;*/
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{
+    width: 1px;
+    height: 1px;
+    background-color: rgba(255,255,255,0);
+    display: none;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+    border-radius: 2px;
+    background-color: rgba(255,255,255,0);
+    display: none;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,.3);
+    background-color: rgba(255,255,255,0);
+    display: none;
+}
+
+#webChildren+ul{
+    width:125px;
+}
+#webChildren+ul li{
+    text-align:left;
+}
+/*试用版样式*/
+#tryOutMaskLayer{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top:0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+}
+#tryOutMaskLayer .authentication{
+    width:100px;
+    height:40px;
+    line-height:40px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#tryOutMaskLayer .contentWarp{
+    width: 400px;
+    height:150px;
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin:auto;
+    text-align: center;
+}
+#tryOutMaskLayer .contentWarp p{
+    font-size: 18px;
+    color: #fff;
+}
+.fuzzy{
+    color: transparent;
+    text-shadow: 0 0 5px #123;
+}
+/*子页面按钮样式*/
+.piLiangBangBiao {
+    width: auto;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    border-radius: 2px;
+    padding: 0 20px;
+    cursor: pointer;
+    position: fixed;
+    right: 270px;
+    top: 14px;
+    overflow: hidden;
+    display: none;
+    border: none;
+}
+#change_city{
+	display: none;
+	width: 200px;
+    height: auto;
+    background-color: #1f323c;
+    color: #ccc;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    padding: 10px 0 10px 10px;
+}
+#change_city span{
+	display: inline-block;
+    margin: 10px 10px 0 0;
+    padding: 4px;
+    text-align: center;
+    font-size: 14px;
+    color: #b3bbbb;
+    cursor: pointer;
+}
+#change_city span:hover{
+	color: #fff;
+}
+#change_city .company_name span{
+	background-color: #86b22f;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 4px;
+    color: #fff;
+}
+.bg{
+    width: 100%;
+    height:100%;
+    background: #000;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}

@@ -1,0 +1,166 @@
+.shujuTongji{
+    /*width: calc(100% - 40px);*/
+    width: 1100px;
+    height: auto;
+    padding: 20px;
+    overflow: hidden;
+}
+.tongji-title{
+    width: calc(100% - 40px);
+    height: auto;
+    background: #FFFFFF;
+    padding: 20px;
+    overflow: hidden;
+}
+.tongji-title h2{
+    width: 100%;
+    height: auto;
+    color: #86b22f;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.tongji-title h2 strong{
+    width: auto;
+    height: 16px;
+    line-height: 16px;
+    font-size: 16px;
+    border-left: 2px solid #86b22f;
+    padding-left: 10px;
+    float: left;
+    overflow: hidden;
+}
+.tongji-title h2 a{
+    width: auto;
+    height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    color: #86b22f;
+    border-bottom: 1px solid #86b22f;
+    float: right;
+    overflow: hidden;
+}
+.tongji-shuju{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.tongji-shuju .shouru-left{
+    width: 40%;
+    height: auto;
+    float: left;
+    overflow: hidden;
+}
+.tongji-shuju .shouru-right{
+    width: 40%;
+    height: auto;
+    float: right;
+    overflow: hidden;
+}
+.tongji-shuju .shouru-left label,.tongji-shuju .shouru-left span,.tongji-shuju .shouru-right label,.tongji-shuju .shouru-right span{
+    width: auto;
+    height: 26px;
+    line-height: 26px;
+    color: #404040;
+    overflow: hidden;
+}
+.tongji-shuju .shouru-left label,.tongji-shuju .shouru-right label{
+    width: 49.9%;
+    float: left;
+}
+.tongji-shuju .shouru-left span,.tongji-shuju .shouru-right span{
+    width: 50.1%;
+    float: right;
+    text-align: right;
+}
+.zongji-shuju{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.zongji-shuju .shuju-zongji-left,.zongji-shuju .shuju-zongji-right{
+    width: 40%;
+    height: auto;
+    overflow: hidden;
+}
+.zongji-shuju .shuju-zongji-left{
+    float: left;
+}
+.zongji-shuju .shuju-zongji-right{
+    float: right;
+}
+.zongji-shuju .shuju-zongji-left label,.zongji-shuju .shuju-zongji-left span,.zongji-shuju .shuju-zongji-right label,.zongji-shuju .shuju-zongji-right span{
+    width: auto;
+    height: auto;
+    font-size:22px;
+    font-weight: bold;
+    color: #000000;
+    overflow: hidden;
+}
+.zongji-shuju .shuju-zongji-left label,.zongji-shuju .shuju-zongji-right label{
+    width: 49.9%;
+    float: left;
+}
+.zongji-shuju .shuju-zongji-left span,.zongji-shuju .shuju-zongji-right span{
+    width: 50.1%;
+    float: right;
+    text-align: right;
+}
+.shuju-content{
+    width: calc(100% - 40px);
+    height: auto;
+    background: #FFFFFF;
+    padding: 30px 20px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.shuju-content dl{
+    width: calc(25% - 80px);
+    height: auto;
+    border-radius: 10px;
+    float: left;
+    padding: 20px 30px;
+    margin: 0 10px;
+    overflow: hidden;
+}
+.shuju-content dl dt{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.shuju-content dl dd{
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+.shuju-content dl dd strong{
+    width: calc(100% - 80px);
+    font-size: 18px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+/*出房*/
+.shuju-content .shuju-chufang{
+    background: #60d294;
+}
+/*收房*/
+.shuju-content .shuju-shoufang{
+    background: #59ade9;
+}
+/*退租*/
+.shuju-content .shuju-tuizu{
+    background: #f89262;
+}
+/*续租*/
+.shuju-content .shuju-xuzu{
+    background: #f3787a;
+}

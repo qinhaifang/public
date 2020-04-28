@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../libs/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="sass/shop.css">
+</head>
+<body>
+    <div id="shopOrder">
+        <div class="layui-form">
+            <table class="layui-table" id="shop">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" class="allCheckbox" lay-filter="allChecked"></th>
+                        <th>商品信息</th>
+                        <th>商品参数</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>金额</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+
+                <tbody></tbody>
+
+            </table>
+            <div class="total">
+                <ul>
+                    <li class="orderBtn">结算</li>
+                    <li>共计 &nbsp;&nbsp;<span class="totalPrice">0.00</span>&nbsp;&nbsp;</li>
+                    <li>已选商品 &nbsp;&nbsp;<span class="totalNum">0</span>&nbsp;&nbsp;件</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <script src="../libs/jquery-1.8.0.min.js"></script>
+    <script src="../libs/layui/layui.all.js"></script>
+    <script src="js/shopOrder.js"></script>
+</body>
+</html>

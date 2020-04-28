@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul,
+ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0;font-family: "微软雅黑"; color: #404040; -webkit-font-smoothing: antialiased;}
+body, button, input, select, textarea { font-size: 14px; font-family: "微软雅黑"; color: #404040; -webkit-font-smoothing: antialiased;}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; }
+small { font-size: 14px; }
+ul, ol { list-style: none; }
+img { vertical-align: middle; border: 0; }
+a { text-decoration: none; font-family: "微软雅黑"; color: #404040; -webkit-font-smoothing: antialiased;}
+button, input, select, textarea { font-size: 100%; }
+table { border-collapse: collapse; border-spacing: 0; }
+textarea { resize: vertical; }
+.cf:before, .cf:after { content: ""; display: block; }
+.cf:after { clear:both; }
+.none { display: none; }
+
+.fl { float:left;}
+.fr { float:right;}
+.clearfix:after {
+    content:"";
+    display:block;
+    height:0;
+    clear:both;
+}
+.clearfix {
+    zoom:1;
+}
+
+/**flex布局相关样式**/
+html,body{height:100%;}
+.flex-cont{display:flex;flex-direction: column;height:100%;box-sizing: border-box;}
+.flex-wrapper{margin:0 20px;}
+.flex-item{flex: 1;overflow: hidden;}
+
+/**flex布局容器**/
+
+/**子菜单样式**/
+.flex-menu{padding:10px 0 10px 10px;color:#999999;font-size:14px;line-height:30px;}
+.flex-menu span{display:inline-block;}
+.flex-menu span +span{margin-left:10px;}
+.flex-menu span i{margin-left:5px;font-style: normal;}
+.flex-menu span,.flex-menu a{color:#999999;}
+.flex-menu span.active,.flex-menu span.active a{color:#86b22f;}
+.flex-menu span:hover,.flex-menu span:hover a{color:#86b22f;}
+
+.flex-form{padding:20px;background:#ffffff;}
+.flex-content{flex:1;overflow: hidden;padding:20px;box-sizing: border-box;background:#ffffff;margin-top:20px;}
+.flex-pages{background:#f9f9f9;border-top:1px solid #e5e5e5;margin-top:8px;}
+.flex-scroll{height:100%;overflow: auto;}

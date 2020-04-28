@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>空置统计</title>
+    <link rel="stylesheet" href="../libs/ext/layui/css/layui.css"/>
+    <link rel="stylesheet" href="../libs/public.css"/>
+    <link rel="stylesheet" href="../libs/common.css"/>
+    <link rel="stylesheet" href="css/kongZhiTongJi.css?v=2017101601"/>
+</head>
+<body>
+    <div id="kongZhiTongJi" class="kongZhiTongJi">
+        <div class="kongzhi-title">
+            <a href="quanjushuju.html" roleAccess="fq_sj_qjsj">全局数据</a>
+            <a href="yeWuTongJi.html" roleAccess="fq_sj_ywtj">业务统计</a>
+            <a href="kongZhiTongJi.html" roleAccess='fq_sj_kztj' class="titleActive">空置统计</a>
+            <!--<div name="houseStatus" class="house-status">
+                <span class="houseActive">合租</span>
+                <span>整租</span>
+                <span>集中</span>
+            </div>-->
+        </div>
+        <div class="kongzhi-con">
+            <div class="leftSide">
+                <div class="hezuBox">
+                    <div class="conDiv conDivFirst">
+                        <label>合租</label>
+                        <span>&nbsp;/&nbsp;间</span>
+                    </div>
+                    <div class="conDiv kezuConDiv">
+                        <h3 name="heKeZu">0</h3>
+                        <p>可租</p>
+                    </div>
+                    <div class="conDiv kongzhiConDiv">
+                        <h3 name="heKongZhi">0</h3>
+                        <p>空置</p>
+                    </div>
+                    <div class="conDiv yudingConDiv">
+                        <h3 name="heYuDing">0</h3>
+                        <p>预定</p>
+                    </div>
+                </div>
+                <div class="zhengzuBox">
+                    <div class="conDiv conDivFirst">
+                        <label>整租</label>
+                        <span>&nbsp;/&nbsp;套</span>
+                    </div>
+                    <div class="conDiv kezuConDiv">
+                        <h3 name="zhengKeZu">0</h3>
+                        <p>可租</p>
+                    </div>
+                    <div class="conDiv kongzhiConDiv">
+                        <h3 name="zhengKongZhi">0</h3>
+                        <p>空置</p>
+                    </div>
+                    <div class="conDiv yudingConDiv">
+                        <h3 name="zhengYuDing">0</h3>
+                        <p>预定</p>
+                    </div>
+                </div>
+                <div class="jizhongBox">
+                    <div class="conDiv conDivFirst">
+                        <label>集中</label>
+                        <span>&nbsp;/&nbsp;间</span>
+                    </div>
+                    <div class="conDiv kezuConDiv">
+                        <h3 name="jiKeZu">0</h3>
+                        <p>可租</p>
+                    </div>
+                    <div class="conDiv kongzhiConDiv">
+                        <h3 name="jiKongZhi">0</h3>
+                        <p>空置</p>
+                    </div>
+                    <div class="conDiv yudingConDiv">
+                        <h3 name="jiYuDing">0</h3>
+                        <p>预定</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rightSide">
+                <div class="kongzhifangShowBox">
+                    <p class="showBoxTitle">当前空置房屋分析</p>
+                    <div id="kongzhifangmain" class="kongzhiLv"></div>
+                    <div class="kongzhiDataList">
+                        <p name="sevenCount" class="seven"><span></span>0-7天<label>0间</label><strong>0.00%</strong></p>
+                        <p name="fifteenCount" class="fifteen"><span></span>8-15天<label>0间</label><strong>0.00%</strong></p>
+                        <p name="twentyCount" class="twenty"><span></span>16-20天<label>0间</label><strong>0.00%</strong></p>
+                        <p name="thirfyCount" class="thirfy"><span></span>21-30天<label>0间</label><strong>0.00%</strong></p>
+                        <p name="fiftyCount" class="fifty"><span></span>31-50天<label>0间</label><strong>0.00%</strong></p>
+                        <p name="othersCount" class="others"><span></span>51天以上<label>0间</label><strong>0.00%</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="../libs/ext/layui/layui.all.js"></script>
+<script src="../libs/jquery-1.8.0.min.js"></script>
+<script src="../libs/ext/echarts/echarts.js"></script>
+<script src="../libs/public.js"></script>
+<script src="js/kongZhiTongJi.js?v=20171109"></script>
+<script src="js/api/kongZhiTongJiApi.js?v=20171109"></script>
+</body>
+</html>

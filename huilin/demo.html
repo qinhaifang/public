@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../libs/ext/layui/css/layui.css" />
+    <link rel="stylesheet" href="../libs/ext/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../libs/layui/css/formSelects-v4.css">
+    <link rel="stylesheet" href="../common/weui.min.css">
+    <link rel="stylesheet" href="../libs/public.css" />
+    <link rel="stylesheet" href="../libs/common.css" />
+    <title>乱七八糟demo</title>
+    <style>
+        .block{
+            padding: 20px;;
+        }
+        .block li{
+            height: 50px;
+        }
+        .block li span{
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            display: inline-block;
+            float: left;
+        }
+        .block li input{
+            padding-left: 10px;
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+        }
+        input{
+            outline: none;
+            border: 0;
+        }
+        .border{
+            border:1px solid #efefef;
+        }
+        .h40{
+            height: 40px;
+        }
+        .pl10{
+            padding-left: 10px;
+        }
+        .layui-form-item{
+            margin-bottom: 0;
+        }
+        .layui-form-select .layui-input{
+            width: 210px;
+            height: 40px;
+            line-height: 40px;
+            border: 0;
+        }
+        div[xm-select-skin] .xm-select-title div.xm-select-label>span{
+            width: 35px;
+        }
+        .xm-select-parent .xm-select-title{
+            width: 500px;
+        }
+        .xm-select-parent .xm-select{
+            height: auto;
+            background: #fff;
+            height: 40px;
+        }
+        .btn{
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 4px;
+            background: #5DA8FC;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <ul class="block">
+        <li><span>网址：</span><input type="text" placeholder="请输入网址" name="url"></li>
+        <li><span>选分类：</span><form class="layui-form fl" action="" lay-filter="type">
+            <div class="layui-form-item">
+                <div class="layui-input-inline fl">
+                    <select name="type" id="getColumn" xm-select="selectId" width="200px"></select>
+                </div>
+            </div>
+        </form></li>
+        <li><span>输入用户账号：</span><input type="请输入用户账号"></li>
+        <li><span>选地址：</span><form class="layui-form fl" lay-filter="Address">
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <select id="province" name="province" class="border" lay-filter="province">
+                        <option value="">请选择省</option>
+                    </select>
+                </div>
+                <div class="layui-input-inline" style="display: none;">
+                    <select id="city" name="city" class="border" lay-filter="city">
+                        <option value="">请选择市</option>
+                    </select>
+                </div>
+                <div class="layui-input-inline" style="display: none;">
+                    <select id="area" name="area" class="border" lay-filter="area">
+                        <option value="">请选择县/区</option>
+                    </select>
+                </div>
+            </div>
+        </form></li>
+        <li class="tc"><div class="btn" onclick="btn()">提交</div></li>
+    </ul>
+    <!--loading-->
+    <div id="loadingToast" style="opacity: 0; display: none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <i class="weui-loading weui-icon_toast"></i>
+            <p class="weui-toast__content">加载中</p>
+        </div>
+    </div>
+
+</body>
+</html>
+<script src="../libs/jquery-1.8.0.min.js"></script>
+<script src="../libs/layui/layui.all.js"></script>
+<script src="../libs/layui/formSelects-v4.min.js"></script>
+<script src="../libs/area.js"></script>
+<script src="../libs/address.js"></script>
+<script src="../libs/public.js"></script>
+<script>
+    function type(){
+        $("#loadingToast").css({"display":"block","opacity":"1"});
+        var formSelects = layui.formSelects;
+        $.send({
+            url: '/v2/article/article_column/getCrawlColumn',
+            data: {},
+            success: function (data) {
+                if (data.status.code == 200) {
+                    $("#loadingToast").css({"display":"none","opacity":"0"});
+                    var list = data.result.columns;
+                    var content = '';
+                    for (var i = 0; i < list.length; i++) {
+                        content += '<option value="' + list[i].id + '">' + list[i].class_name + '</option>'
+                    }
+                    $('#getColumn').html(content);
+                    formSelects.render();
+                }
+            }
+        })
+    }
+    type();
+    function btn(){
+        $("#loadingToast").css({"display":"block","opacity":"1"});
+        var column = layui.formSelects.value('selectId', 'val'),columns = '';
+        for(var i = 0;i<column.length;i++){
+            if(i == (column.length -1)){
+                columns += parseInt(column[i]);
+            }else{
+                columns += parseInt(column[i]) + ',';
+            }
+        }
+
+        var sendData = {
+            netUrl:$('input[name=url]').val(),
+            articleAddressCode:'',
+            articleAddressName:'',
+            columns:columns
+        }
+        var province = document.getElementById("province").value
+            ,city = document.getElementById("city").value
+            ,area = document.getElementById("area").value;
+        if(area == ''){
+            if(city == ''){
+                sendData.articleAddressCode = city.substring(0,6);
+                sendData.articleAddressName = province.substr(province.lastIndexOf("_")).substr(1) + city.substr(city.lastIndexOf("_")).substr(1)
+            }else{
+                sendData.articleAddressCode = province.substring(0,6);
+                sendData.articleAddressName = province.substr(province.lastIndexOf("_")).substr(1);
+            }
+        }else{
+            sendData.articleAddressCode = area.substring(0,6);
+            sendData.articleAddressName = province.substr(province.lastIndexOf("_")).substr(1) + city.substr(city.lastIndexOf("_")).substr(1) + area.substr(area.lastIndexOf("_")).substr(1);
+        }
+        console.log(sendData)
+        $.send({
+            url: '/v2/crawl/crawl/insertByUrl',
+            data: sendData,
+            success: function (data) {
+                if (data.status.code == 200) {
+                    $("#loadingToast").css({"display":"none","opacity":"0"});
+
+                }
+            }
+        })
+    }
+</script>

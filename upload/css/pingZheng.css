@@ -1,0 +1,125 @@
+body{
+    background: #fff;
+}
+.proof{
+    width:520px;
+    height:216px;
+    font-size: 14px;
+    background: #fff;
+    padding: 30px;
+    margin: 0 auto;
+    /*display: none;*/
+}
+/*title*/
+.proof .proof-title{
+    width:100%;
+    height:50px;
+    line-height: 50px;
+    border-bottom:1px solid #e6e6e6;
+    color: #86b22f;
+    margin-bottom: 10px;
+}
+.proof .proof-title-proof{
+    display: inline-block;
+    width:70px;
+    text-align: center;
+    float: left;
+}
+.proof .proof-title-x{
+    display: inline-block;
+    width:50px;
+    text-align: center;
+    float: right;
+}
+/*main*/
+.proof .proof-main{
+    width:520px;
+}
+.proof .proof-btn{
+    width:510px;
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.proof .img-show{
+    display: -webkit-box;
+    float: left;
+    cursor: pointer;
+    background: #e1eaec;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    height:160px;
+    width:120px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    position: relative;
+}
+.proof .img-show .showimg{
+    display: inline-block;
+    max-width:100px;
+    max-height:100%;
+}
+.proof .img-show .del{
+    display: inline-block;
+    float: right;
+    position: absolute;
+    top:-11px;
+    right:-8px;
+    z-index: 999999;
+    display: none;
+}
+.proof .img-load{
+    display: inline-block;
+    float: left;
+    text-align: center;
+    position: relative;
+    background: #e1eaec;
+    width:120px;
+    height:160px;
+}
+.proof .img-load img{
+    display: inline-block;
+    float: left;
+    position: absolute;
+    top:34%;
+    left:38%;
+}
+.proof .img-load p{
+    color:#999;
+    position: absolute;
+    top:54%;
+    width:124px;
+    text-align: center;
+}
+.proof .img-load .fileimg{
+    display: inline-block;
+    float: left;
+    position: absolute;
+    top:0;
+    left:0;
+    width:120px;
+    height:160px;
+    opacity: 0;
+    cursor: pointer;
+}
+/*layui*/
+.proof .layui-btn-primary{
+    width:100px;
+    height:40px;
+    line-height:40px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.proof .layui-btn-normal{
+    width:100px;
+    height:40px;
+    line-height:40px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+
+
+

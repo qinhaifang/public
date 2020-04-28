@@ -1,0 +1,423 @@
+.quanjushuju{
+    width: calc(100% - 40px);
+    min-width: 1060px;
+    height: auto;
+    padding: 20px;
+    overflow-y: scroll;
+}
+.quanju-title{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.quanju-title a{
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #999999;
+    padding-right: 22px;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+}
+.quanju-title a:hover{
+    color: #404040;
+}
+.quanju-title .titleActive{
+    color: #86b22f;
+}
+.quanju-title .titleActive:hover{
+    color: #86b22f;
+}
+.quanju-title .shuju-time{
+    width: auto;
+    height: 30px;
+    float: left;
+    margin-left: 30px;
+    overflow: hidden;
+}
+.quanju-title .shuju-time input{
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 2em;
+    color: #86b22f;
+    border: 0;
+    background: url("../images/datas.png") no-repeat left center;
+    overflow: hidden;
+}
+
+/*----统计------*/
+.quanju-tongji{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.quanju-tongji .tongjiCon{
+	position: relative;
+    width: calc(50% - 52px);
+    height: 140px;
+    background: #ffffff;
+    border: 1px solid #edf1f2;
+    padding: 20px;
+    float: left;
+    overflow: hidden;
+}
+.quanjushuju .tongji-title{
+    width: calc(100% - 12px);
+    height: 18px;
+    line-height: 18px;
+    font-size: 16px;
+    color: #86b22f;
+    border-left: 2px solid #86b22f;
+    padding-left: 10px;
+    overflow: hidden;
+}
+.quanju-tongji .tongji-left{
+    margin-right: 10px;
+}
+.tongji-left .left-shiji{
+    width: calc(100% - 12px);
+    height: auto;
+    padding-left: 12px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.tongji-left .left-shiji li{
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    color: #404040;
+    overflow: hidden;
+}
+.tongji-left .left-shiji li label{
+    float: left;
+}
+.tongji-left .left-shiji li span{
+    float: right;
+    margin-right: 20px;
+}
+.tongji-left .left-yuE{
+    width: calc(100% - 12px);
+    height: 30px;
+    line-height: 30px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #000000;
+    padding-left: 12px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.tongji-left .left-yuE label{
+    float: left;
+}
+.tongji-left .left-yuE span{
+    float: right;
+    margin-right: 20px;
+}
+.quanju-tongji .tongji-right{
+    float: right;
+}
+.tongji-right .rightCon{
+    width: 100%;
+    height: auto;
+    margin-top: 45px;
+    overflow: hidden;
+}
+.tongji-right .rightCon dl{
+    width: calc(16.66% - 4px);
+    height: auto;
+    float: left;
+    margin: 0 2px;
+    overflow: hidden;
+}
+.tongji-right .rightCon dl dt{
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    color: #00bf67;
+    overflow: hidden;
+}
+.tongji-right .rightCon dl dd{
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 14px;
+    color: #999999;
+    overflow: hidden;
+}
+/*-----统计  end----*/
+/*-----昨日报表------*/
+.quanjuBaobiao{
+    width: calc(100% - 42px);
+    height: auto;
+    border: 1px solid #edf1f2;
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.quanjuBaobiao .baobiaoCon{
+    width: calc(33.33% - 1px);
+    height: auto;
+    float: left;
+    margin-top: 35px;
+    overflow: hidden;
+}
+.quanjuBaobiao .baobiaoCon dt{
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    font-size: 18px;
+    color: #404040;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.quanjuBaobiao .baobiaoCon dd{
+    width: 250px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 16px;
+    color: #666666;
+    text-align: left;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.quanjuBaobiao .baobiaoCon dd label{
+    width: auto;
+    height: 46px;
+    line-height: 46px;
+    float: left;
+    overflow: hidden;
+}
+.quanjuBaobiao .baobiaoCon dd span{
+    width: 60px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 18px;
+    color: #00bf67;
+    text-align: center;
+    font-weight: 400;
+    float: left;
+    overflow: hidden;
+}
+.quanjuBaobiao .baobiaoCon dd strong{
+    width: auto;
+    height: 46px;
+    line-height: 46px;
+    font-size: 18px;
+    font-weight: normal;
+    float: left;
+    overflow: hidden;
+}
+.quanjuBaobiao .baobiao-yuding dd{
+    width: 115px;
+}
+.quanjuBaobiao p{
+    width: 1px;
+    height: 90px;
+    background: #f5f5f5;
+    float: left;
+    margin-top: 75px;
+    overflow: hidden;
+}
+/*-----昨日报表 end------*/
+/*-----昨日租客-------*/
+.quanju-zuke{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.zuke-left{
+    width: calc(50% - 10px);
+    height: auto;
+    float: left;
+    overflow: hidden;
+}
+/*----昨日租客续约----*/
+.zuke-left-con{
+    width: calc(100% - 42px);
+    height: auto;
+    border: 1px solid #edf1f2;
+    background: #ffffff;
+    padding: 20px;
+    float: left;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.zuke-left-con dl{
+    width: calc(25% - 6px);
+    height: auto;
+    float: left;
+    margin: 40px 3px 20px 3px;
+    overflow: hidden;
+}
+.zuke-left-con dl dt{
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    overflow: hidden;
+}
+.zuke-left-con dl dd{
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 14px;
+    color: #999999;
+    overflow: hidden;
+}
+/*---绿色字体---*/
+.zuke-left-con .fontLv dt{
+    color: #00bf67;
+}
+/*---绿色字体 end---*/
+/*---蓝色字体---*/
+.zuke-left-con .fontLan dt{
+    color: #24b0fc;
+}
+/*---蓝色字体 end---*/
+/*---红色字体---*/
+.zuke-left-con .fontHong dt{
+    color: #f61c3a;
+}
+/*---红色字体 end---*/
+.zuke-tuiFang{
+    margin-bottom: 0;
+}
+/*----昨日租客续约  end----*/
+/*-----房间总数-----*/
+.houseZongShu{
+    width: calc(50% - 52px);
+    height: auto;
+    border: 1px solid #edf1f2;
+    background: #ffffff;
+    padding: 20px;
+    float: right;
+    overflow: hidden;
+}
+.houseInfo{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.houseInfo-title{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.houseInfo-title h3{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: #404040;
+    font-weight: 400;
+    overflow: hidden;
+}
+.houseInfo-title p{
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 14px;
+    color: #999999;
+    overflow: hidden;
+}
+.houseInfo-con{
+    width: 100%;
+    height: auto;
+    margin-bottom: 13px;
+    overflow: hidden;
+}
+.houseInfo-con dl{
+    width: calc(20% - 6px);
+    height: auto;
+    float: left;
+    margin: 0 3px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.houseInfo-con dl dt{
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    overflow: hidden;
+}
+.houseInfo-con dl dd{
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    text-align: center;
+    color: #999999;
+    overflow: hidden;
+}
+/*---可租字体---*/
+.houseInfo-con .kezuFont dt{
+    color: #00bf67;
+}
+/*---可租字体 end---*/
+/*---配置字体---*/
+.houseInfo-con .peizhiFont dt{
+    color: #ffa300;
+}
+/*---配置字体 end---*/
+/*---预定字体---*/
+.houseInfo-con .yudingFont dt{
+    color: #f56208;
+}
+/*---预定字体 end---*/
+/*---成租字体---*/
+.houseInfo-con .chengzuFont dt{
+    color: #f61c3a;
+}
+/*---成租字体 end---*/
+/*---不可租字体---*/
+.houseInfo-con .bukezuFont dt{
+    color: #8a8a8a;
+}
+/*---不可租字体 end---*//*-----房间总数   end----*/
+/*-----昨日租客 end-----*/
+.account{
+	position: absolute;
+    right: 38px;
+}
+.account .layui-form-selected dl{
+	max-height: 120px;
+    top: 24px;
+}
+.account input{
+	text-align: right;
+    color: #86b22f;
+    border: none;
+    height: auto;
+    line-height: initial;
+}
+.account .layui-form-select .layui-edge{
+	border-top-color: #86b22f;
+	right: 0;
+}
+.account .layui-form-select .layui-input{
+	padding-right: 20px;
+}

@@ -1,0 +1,449 @@
+body{
+    background: #fff;
+}
+.tiXing{
+    min-width: 1110px;
+    min-height: 300px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.left{
+    min-height: 300px;
+    width: 800px;
+    height: 100%;
+    float: left;
+}
+.right{
+    width: calc(100% - 801px);
+    min-height: 300px;
+    float: left;
+    background: #fff;
+    border-left: 1px solid #e6e6e6;
+}
+/*搜索*/
+.sousuo{
+    width: 760px;
+    float: left;
+    padding: 20px;
+}
+.selectDivs{
+    width: 90px;
+    float: left;
+    /*border-bottom: 1px solid #e6e6e6;*/
+}
+.selectDiv{
+    /*margin-left: 10px;*/
+    width: 170px;
+    float: left;
+    /*border-bottom: 1px solid #e6e6e6;*/
+}
+.selectDiv span{
+    display: inline-block;
+    float: left;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background: #e2e2e2;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.guanjianzi{
+    width: 480px;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+}
+.sousuoKuangs {
+    padding-right: 80px;
+    position: absolute;
+    border-right: 0;
+}
+.zuke_souSuoButton {
+    width: 70px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 0 2px 2px 0;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+}
+.addRi{
+    float: right;
+    margin-left: 10px;
+}
+.addRi .layui-btn{
+    height: 36px;
+    line-height: 36px;
+}
+/*未保存的列表*/
+#newListAll{
+    width:100%;
+    float: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-bottom: 1px solid #e6e6e6;
+}
+.look{
+    float: left;
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    height: 70px;
+    line-height: 70px;
+}
+.look-suc{
+    color: #86b22f;
+    cursor: pointer;
+}
+.newList{
+    display: inline-block;
+    width: 800px;
+    float: left;
+    margin-bottom: 20px;
+}
+.overDiv .newList{
+    height: 207px;
+}
+.line{
+    width: 762px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 18px;
+    float: left;
+    border-bottom: 1px solid #e6e6e6;
+    position: relative;
+}
+.line:hover{
+    background: #f7f7f7;
+}
+.activeList{
+    background: #f7f7f7;
+}
+.line .lay-input,
+.line p
+{
+    float: left;
+}
+.line input{
+    float: right;
+    position: absolute;
+    right: -10px;
+}
+.tiXing .layui-form-checkbox{
+    margin-right: -10px!important;
+}
+.line p{
+    width: 658px;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.line p .tixingCon {
+    width: calc(100% - 275px);
+    height: auto;
+    display: block;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.naoling{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px 20px 0 5px;
+    color: #afafaf;
+}
+.naoling img{
+    float: left;
+    margin: 11px 5px 0 0;
+}
+.naoling span{
+    float: left;
+    display: inline-block;
+    margin-bottom: -3px;
+}
+/*已完成*/
+.overDiv p,
+.overDiv span
+{
+    color: #b6b6b6;
+}
+.overPage{
+    width: 760px;
+    display: inline-block;
+    padding: 25px 20px 15px 20px;
+    color: #b6b6b6;
+}
+/*编辑*/
+.riqi{
+    width: calc(100% - 30px);
+    height: 60px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 15px;
+    overflow: hidden;
+}
+.linger{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden;
+}
+.linger img{
+    margin: 21px 5px 0 0;
+    float: left;
+}
+.linger span{
+    float: left;
+}
+.linger .layui-input{
+    width: calc(100% - 30px);
+    height: 60px!important;
+    line-height: 60px!important;
+    padding-left: 25px;
+    color: #86b22f;
+    background: url("../images/datas.png") no-repeat left center #FFFFFF;
+    border: 0;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+}
+.con{
+    width: 100%;
+    float: left;
+    position: relative;
+    background: #f7f7f7;
+}
+.con .bot{
+    float: left;
+    width: calc(100% - 40px);
+    margin: 0 20px 10px;
+    color: #999;
+}
+#botheight{
+    display: none;
+}
+.bots{
+    float: left;
+    width: calc(100% - 40px);
+    padding: 20px;
+    background: #fff;
+}
+.tishis{
+    float: left;
+}
+.tishi{
+    margin: 5px 0 0 15px;
+    float: left;
+}
+.shuzi{
+    float: right;
+}
+.mright{
+    margin-right: 15px;
+    float: left;
+}
+.laji{
+    float: left;
+    width:360px;
+    background: #fff;
+    padding: 20px;
+    text-align: right;
+    border-top: 1px solid #e6e6e6;
+}
+.laji img{
+    cursor: pointer;
+    float: right;
+}
+.allnames{
+    float: left;
+    width: 100%;
+    margin: 10px 0;
+}
+.allname{
+    float: left;
+    width: 100%;
+    line-height: 25px;
+    color: #404040;
+}
+.allname span{
+    color: #86b22f;
+}
+/*layui*/
+.tiXing .layui-input{
+    height: 36px!important;
+    line-height: 36px!important;
+}
+.left .layui-form-checkbox[lay-skin=primary]{
+    float: left;
+    margin: 15px 15px 0 0;
+}
+.right .layui-form-checkbox[lay-skin=primary]{
+    float: left;
+    margin: 0 15px 0 15px;
+}
+.con .layui-textarea{
+    width: calc(100% - 40px);
+    margin: 20px 20px 10px;
+    border: 0;
+    background: #f7f7f7;
+    font-size: 16px;
+}
+.tiXing .layui-form-checked[lay-skin=primary] i {
+    border-color: #86b22f;
+    background-color: #86b22f;
+    color: #fff;
+}
+.tiXing .layui-form-checkbox[lay-skin=primary]:hover i {
+    border-color: #86b22f;
+    color: #fff;
+}
+.tiXing .layui-form-checked i, .layui-form-checked:hover i {
+    color: #86b22f!important;
+}
+.tiXing .fa {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+    float: right;
+    color: #86b22f;
+    margin: 14px 36px 0 0;
+    position: absolute;
+    right: 80px;
+}
+.tiXing .line .tipsImgs{
+    position: absolute;
+    float: right;
+    margin: 17px 0 0 0;
+    right: 185px;
+}
+.tiXing .line .tipsImgss{
+    position: absolute;
+    float: right;
+    margin: 17px 0 0 0;
+    right: 152px;
+}
+.save{
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0;
+    background: #86b22f;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+}
+.tiXing .layui-laypage {
+    margin: 10px 0 0!important;
+}
+/*提示框*/
+.tips{
+    display: none;
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 3px #e2e2e2;
+    position: absolute;
+    top: 50px;
+    left: 65px;
+    background: #fff;
+    z-index: 999;
+}
+.tips:before{
+    content: "";
+    display: block;
+    border-width: 15px;
+    position: absolute;
+    top: -29px;
+    left: 27px;
+    border-style: solid dashed dashed solid;
+    border-color: transparent transparent #fff transparent;
+    font-size: 0;
+    line-height: 0;
+}
+.tips .tips-line{
+    width:100%;
+    margin: 16px 0 0;
+    text-align: center;
+    float: left;
+}
+.tips .tips-line>span{
+    color: #999;
+}
+.tips .layui-form-checkbox{
+    margin-left: -55px;
+}
+.tips .layui-form-checkbox span{
+    width: 50px!important;
+    text-align: center;
+}
+.line-span{
+    display: inline-block;
+    width: 50%;
+    float: left;
+}
+.line-span span{
+    display: inline-block;
+    width: 65px;
+    padding-left: 5px;
+    height: 22px;
+    line-height: 22px;
+    text-align: left;
+    color: #999;
+}
+.tips .layui-checkbox-disbaled{
+    cursor: inherit!important;
+}
+.tips .layui-form-checked.layui-checkbox-disbaled span{
+    background: #86b22f!important;
+}
+
+
+/*标题*/
+.tips-title{
+    width: 100%;
+    min-width: 1110px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    padding: 8px 0;
+    background: #F8F8F8;
+    border-bottom: 1px solid #eee;
+}
+.tips-title>span{
+    color: #86b22f;
+    font-size: 16px;
+    margin: 0 15px 0 20px;
+    display: inline-block;
+    float: left;
+}
+.tips-title>div>img{
+    float: left;
+    margin-top: 8px;
+    cursor: pointer;
+}
+/**/
+.totop{
+    float: left;
+    width: calc(100% - 40px);
+    height: 30px;
+    padding: 0 20px;
+    color: #999;
+}
+.layui-form-checkbox span{
+    width: 42px;
+    text-align: center;
+}

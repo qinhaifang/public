@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插件收集</title>
+    <link rel="stylesheet" href="libs/ext/layui/css/layui.css" />
+    <link rel="stylesheet" href="libs/ext/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="libs/public.css" />
+    <link rel="stylesheet" href="libs/common.css" />
+    <link rel="stylesheet" href="css/index.css?v=20180417" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body id="index">
+<!-- SOKAYO 180822 添加权限变更提示退出框样式 B  -->
+    <!--<div id="changePermissions">-->
+        <!--<div class="changePermissionsMark"></div>-->
+        <!--<div class="changePermissionsTips">-->
+            <!--<div class="changePermissionsIcon">!</div>-->
+            <!--<p>您当前系统权限已发生变化</p>-->
+            <!--<p>必须强制退出系统重新登陆获取</p>-->
+            <!--<a href="./login.html">退出</a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!-- SOKAYO 180822 添加权限变更提示退出框样式 B  -->
+<!-- 左侧功能导航栏 -->
+    <div class="layout-left">
+    <!-- logo -->
+    <a href="index.html" class="logo"></a>
+    <div class="navigationList">
+        <div class="navCon" roleAccess="fq_pz">
+            <a href="#select_children" class="nav-left nav-act" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_bmen.png" alt="bmen" />
+                <span>选择框</span>
+            </a>
+            <ul class="menuCon"></ul>
+        </div>
+        <div class="navCon nav-active">
+            <a href="#lunbo_children" class="nav-left nav-act" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_lunbos.png" alt="lunbo" />
+                <span>轮播</span>
+            </a>
+            <ul class="menuCon"></ul>
+        </div>
+        <div class="navCon" roleAccess="fq_bb">
+            <a href="#table_children" class="nav-left frameBlock" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_bbiao.png" alt="bbiao" />
+                <span>表格</span>
+            </a>
+            <ul class="menuCon"></ul>
+        </div>
+        <div class="navCon" roleAccess="fq_ft">
+            <a href="#chajian_children" class="nav-left nav-act" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_ftai.png" alt="ftai" />
+                <span>常用插件</span>
+            </a>
+            <ul class="menuCon"></ul>
+        </div>
+        <div class="navCon" roleAccess="fq_yj">
+            <a href="#upload_children" class="nav-left nav-act" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_yji.png" alt="yji" />
+                <span>上传/下载文件</span>
+            </a>
+            <ul class="menuCon"></ul>
+        </div>
+        <div class="navCon qiye" roleAccess="fq_qy">
+            <a href="#login_children" id="qiYeChildren" class="nav-left nav-act" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_qye.png" alt="qye" />
+                <span>login</span>
+            </a>
+            <ul class="menuCon"></ul>
+        </div>
+        <div class="navCon" roleAccess="fq_yx">
+            <a href="#date_children" id="yingXiaoChildren" class="nav-left nav-act" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_yxiao.png" alt="yxiao" />
+                <span>时间(日,周,月)</span>
+            </a>
+            <ul class="menuCon"></ul>
+        </div>
+        <div class="navCon jinrong" roleAccess="fq_jr">
+            <a href="#pdf_children" id="JinRongChildren" class="nav-left nav-act" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_yxiao.png" alt="yxiao" />
+                <span>HTML转PDF</span>
+            </a>
+            <ul class="menuCon">
+            </ul>
+        </div>
+        <div class="navCon" id="shareTitle">
+            <a href="#echarts_children" class="nav-left nav-act" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_bmen.png" alt="bmen" />
+                <span>常用的echarts</span>
+            </a>
+            <ul class="menuCon"></ul>
+        </div>
+
+        <div class="navCon" roleAccess="fq_zyc">
+            <a href="#ziyuanchi_children" class="nav-left" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_zyuan.png" alt="zyuan" />
+                <span>编辑器</span>
+            </a>
+            <ul class="menuCon"></ul>
+        </div>
+        <div class="navCon" id="animation">
+            <a href="#animation_children" class="nav-left nav-act" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_help.png" alt="help" />
+                <span>交互特效</span>
+            </a>
+            <ul class="menuCon"></ul>
+        </div>
+        <div class="navCon" roleAccess="fq_ht">
+            <a href="#huilin_children" class="nav-left nav-act" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_htong.png" alt="htong" />
+                <span>临时demo</span>
+            </a>
+            <ul class="menuCon"></ul>
+        </div>
+        <div class="navCon">
+            <a href="#help_children" class="nav-left nav-act" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_help.png" alt="help" />
+                <span>问题汇总</span>
+            </a>
+            <ul class="menuCon"></ul>
+        </div>
+        <div class="navCon">
+            <a href="#public_children" class="nav-left nav-act" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_help.png" alt="help" />
+                <span>公用方法</span>
+            </a>
+            <ul class="menuCon"></ul>
+        </div>
+
+        <div class="navCon" roleAccess="fq_zh">
+            <a href="#html_children" class="nav-left nav-act" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_zhou.png" alt="zhou" />
+                <span>HTML标准模板</span>
+            </a>
+            <ul class="menuCon"></ul>
+        </div>
+        <div class="navCon" roleAccess="fq_cw">
+            <a href="#phone_children" class="nav-left nav-act" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_cwu.png" alt="cwu" />
+                <span>手机适配模板</span>
+            </a>
+            <ul class="menuCon"></ul>
+        </div>
+        <div class="navCon" roleAccess="fq_ft">
+            <a href="#img_children" class="nav-left nav-act" onmouseover="showMenu(this)">
+                <i></i>
+                <img src="images/index_ftai.png" alt="ftai" />
+                <span>图片放大</span>
+            </a>
+            <ul class="menuCon"></ul>
+        </div>
+    </div>
+</div>
+<!-- 左侧功能导航栏 -->
+
+<!-- 右侧 -->
+    <div class="layout-right">
+    <!-- 头部 -->
+    <div class="layout-top">
+        <!-------- 轮播 ---------->
+        <ul id="lunbo_children" class="nav-children">
+            <li navUrl="lunbo/lunbo.html" class="active">定时轮播图</li>
+            <li navUrl="lunbo/ppt.html">PPT轮播图</li>
+        </ul>
+        <!-------- 轮播 end ---------->
+
+        <!-------- 选择框开始 ---------->
+        <ul id="select_children" class="nav-children" style="display: none;">
+            <li class="active" navUrl="select/select.html" name="zuke" roleAccess="fq_zyc">常见选择框</li>
+            <li navUrl="select/select1.html" name="zuke" roleAccess="fq_zyc">级联选择框</li>
+        </ul>
+        <!-------- 选择框结束 ---------->
+
+        <!-------- 表格开始 ---------->
+        <ul id="table_children" class="nav-children" style="display: none;">
+            <li class="active" navUrl="table/table.html" name="zuke" roleAccess="fq_zyc">静态表格</li>
+            <li class="active" navUrl="table/table2.html" name="zuke" roleAccess="fq_zyc">动态表格</li>
+            <li class="active" navUrl="table/ajaxTable.html" name="zuke" roleAccess="fq_zyc">ajax表格</li>
+            <li class="active" navUrl="table/tables.html" name="zuke" roleAccess="fq_zyc">复杂表格</li>
+        </ul>
+        <!-------- 表格结束 ---------->
+
+        <!-------- 上传文件开始 ---------->
+        <ul id="upload_children" class="nav-children" style="display: none;">
+            <li class="active" navUrl="upload/upload.html" name="zuke" roleAccess="fq_zyc">上传</li>
+            <li class="active" navUrl="upload/import.html" name="zuke" roleAccess="fq_zyc">导入/导出</li>
+        </ul>
+        <!-------- 上传文件end ---------->
+
+        <!-------- login 开始 ---------->
+        <ul id="login_children" class="nav-children" style="display: none;">
+            <li class="active" navUrl="login/login.html" name="zuke" roleAccess="fq_zyc">login</li>
+            <li class="active" navUrl="login/loginUser.html" name="zuke" roleAccess="fq_zyc">用户登录</li>
+        </ul>
+        <!-------- login end ---------->
+
+        <!-------- 时间 开始 ---------->
+        <ul id="date_children" class="nav-children" style="display: none;">
+            <li class="active" navUrl="date/date.html" name="zuke" roleAccess="fq_zyc">时间选择</li>
+        </ul>
+        <!-------- 时间 end ---------->
+
+        <!-------- pdf 开始 ---------->
+        <ul id="pdf_children" class="nav-children" style="display: none;">
+            <li class="active" navUrl="pdf/pdf.html" name="zuke" roleAccess="fq_zyc">html转pdf</li>
+        </ul>
+        <!-------- pdf end ---------->
+
+        <!-------- echarts 开始 ---------->
+        <ul id="echarts_children" class="nav-children" style="display: none;">
+            <li class="active" navUrl="echarts/echarts.html" name="zuke" roleAccess="fq_zyc">常用的echarts</li>
+        </ul>
+        <!-------- echarts end ---------->
+
+        <!-------- html 开始 ---------->
+        <ul id="html_children" class="nav-children" style="display: none;">
+            <li class="active" navUrl="htmlDemo/html.html" name="zuke" roleAccess="fq_zyc">html初始化</li>
+            <li class="active" navUrl="htmlDemo/html.html" name="zuke" roleAccess="fq_zyc">流式布局</li>
+            <li class="active" navUrl="htmlDemo/html.html" name="zuke" roleAccess="fq_zyc">滚动加载</li>
+        </ul>
+        <!-------- html end ---------->
+
+        <!-------- phone 开始 ---------->
+        <ul id="phone_children" class="nav-children" style="display: none;">
+            <li class="active" navUrl="phone/phone.html" name="zuke" roleAccess="fq_zyc">刷新功能</li>
+        </ul>
+        <!-------- phone end ---------->
+
+        <!-------- 富文本编辑器 ---------->
+        <ul id="ziyuanchi_children" class="nav-children" style="display: none;">
+            <li class="active" navUrl="ueditor/ueditor.html" name="zuke" roleAccess="fq_zyc">富文本编辑器</li>
+        </ul>
+        <!-------- 富文本编辑器 end ---------->
+
+        <!-------- 交互 开始 ---------->
+        <ul id="animation_children" class="nav-children" style="display: none;">
+            <li class="active" navUrl="animation/animation.html" name="zuke" roleAccess="fq_zyc">交互特效</li>
+        </ul>
+        <!-------- 交互 结束 ---------->
+
+        <!-------- 图片放大 开始 ---------->
+        <ul id="chajian_children" class="nav-children" style="display: none;">
+            <li class="active" navUrl="chajian/three.html" name="zuke" roleAccess="fq_zyc">three.js</li>
+            <li class="active" navUrl="chajian/font.html" name="zuke" roleAccess="fq_zyc">字体引用</li>
+            <li class="active" navUrl="chajian/shopOrder.html" name="zuke" roleAccess="fq_zyc">layui购物车</li>
+            <li class="active" navUrl="chajian/shopCar.html" name="zuke" roleAccess="fq_zyc">js购物车</li>
+            <li class="active" navUrl="chajian/timeLine.html" name="zuke" roleAccess="fq_zyc">时间轴</li>
+            <li class="active" navUrl="chajian/picText.html" name="zuke" roleAccess="fq_zyc">图文结合</li>
+        </ul>
+        <!-------- 图片放大 结束 ---------->
+
+        <!-------- 图片放大 开始 ---------->
+        <ul id="img_children" class="nav-children" style="display: none;">
+            <li class="active" navUrl="scalimg/img.html" name="zuke" roleAccess="fq_zyc">图片放大</li>
+        </ul>
+        <!-------- 图片放大 结束 ---------->
+
+        <!-------- 问题汇总 开始 ---------->
+        <ul id="help_children" class="nav-children" style="display: none;">
+            <li class="active" navUrl="problem/problem.html" name="zuke" roleAccess="fq_zyc">问题汇总</li>
+            <li class="active" navUrl="problem/install.html" name="zuke" roleAccess="fq_zyc">软件安装</li>
+        </ul>
+        <!-------- 问题汇总 开始 ---------->
+
+        <!-------- 公用方法 开始 ---------->
+        <ul id="public_children" class="nav-children" style="display: none;">
+            <li class="active" navUrl="public/public.html" name="zuke" roleAccess="fq_zyc">公用方法</li>
+        </ul>
+        <!-------- 公用方法 结束 ---------->
+
+        <!-------- demo 开始 ---------->
+        <ul id="huilin_children" class="nav-children" style="display: none;">
+            <li class="active" navUrl="huilin/demo.html" name="zuke" roleAccess="fq_zyc">demo</li>
+        </ul>
+        <!-------- demo 结束 ---------->
+
+    </div>
+
+    <!-- 内容 -->
+    <div id="layout-content" class="layout-content">
+        <iframe id="main-content" frameBorder=0 scrolling=no src="gongZuoTai/daiBan.html" width="100%" height="100%"></iframe>
+        <div id="tryOutMaskLayer">
+            <div class="contentWarp">
+                <p>此功能需要进行企业认证后才可使用</p>
+                <button class="authentication determine">免费认证</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 个人中心 -->
+<div class="nav-personalCenter">
+    <!--<div class="nav-quickEntry">-->
+        <!--<a id="nav-Convenient" href="javaScript:;" roleAccess="index_tj_all_tjrk">-->
+            <!--<span class="icon-jiahao">+</span>-->
+        <!--</a>-->
+        <!--<ul id="convenientCon" class="convenient">-->
+            <!--<li onclick="addDaiBan()" class="add-daiban" roleAccess="index_tj_db_tjdb">-->
+                    <!--<span class="crcel">-->
+                        <!--<img src="images/index_daiban.png" alt="">-->
+                    <!--</span>-->
+                <!--<span>添加待办</span>-->
+            <!--</li>-->
+            <!--<li onclick="addHouse()" class="housing-type" roleAccess="index_tj_fy_fylu">-->
+                    <!--<span class="crcel">-->
+                        <!--<img src="images/index_fangyuan_.png" alt="">-->
+                    <!--</span>-->
+                <!--<span>房源录入</span>-->
+            <!--</li>-->
+            <!--<li onclick="luRuHeTong()" class="contract-entry" roleAccess="index_tj_ht_htlu">-->
+                    <!--<span class="crcel">-->
+                        <!--<img src="images/index_hetong_.png" alt="">-->
+                    <!--</span>-->
+                <!--<span>合同录入</span>-->
+            <!--</li>-->
+            <!--<li onclick="yuDingHouse()" class="add-booking" roleAccess="index_tj_yd_tjyd">-->
+                    <!--<span class="crcel">-->
+                        <!--<img src="images/index_yuding_.png" alt="">-->
+                    <!--</span>-->
+                <!--<span>添加预定</span>-->
+            <!--</li>-->
+            <!--<li onclick="addJiZhang()" class="add-account" roleAccess="index_tj_jz_tjjz">-->
+                    <!--<span class="crcel">-->
+                        <!--<img src="images/index_jizhang_.png" alt="">-->
+                    <!--</span>-->
+                <!--<span>添加记账</span>-->
+            <!--</li>-->
+            <!--&lt;!&ndash;<li onclick="houseTuiguang()" class="house_tuiguang" roleAccess="index_tj_tg_fytg">-->
+            <!--<span class="crcel"><img src="images/index_house_tuiguang.png" alt=""></span>-->
+            <!--<span>房源推广</span>-->
+        <!--</li>&ndash;&gt;-->
+        <!--</ul>-->
+    <!--</div>-->
+    <div class="personalCenter">
+        <div id="broker" class="personalCenter-name">
+            <img src="images/index_touxiang.png" />
+            <span></span>
+        </div>
+        <ul class="personalCenter-exit">
+            <li id="updateMiMa">修改密码</li>
+            <li id="pms_system_message">系统消息</li>
+            <li id="index-exit">退出</li>
+        </ul>
+    </div>
+</div>
+
+<script src="libs/jquery-1.8.0.min.js"></script>
+<script src="libs/ext/layui/layui.all.js"></script>
+<script src="libs/public.js?v=20171109"></script>
+<script src="bootPage/js/api/getUserStateApi.js"></script>
+<script src="libs/tips.js"></script>
+<!-- 引导页 结构图 -->
+<script id="bootPages"></script>
+<!-- 引导页 脚本-->
+<script src="bootPage/js/index.js"></script>
+<script src="js/index.js?v=20180325"></script>
+<script src="js/api/indexApi.js?v=20171211"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+body{
+    background: #fff;
+    height: 100%;
+    position: relative;
+}
+body .lookGongGao{
+    width: 100%;
+    height: 420px;
+    position: relative;
+    /*overflow: hidden;*/
+}
+html,body,div{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.lookGongGao .gongGaoBox{
+    position: relative;
+    width: 100%;
+    height: 360px;
+    overflow-y: scroll;
+    padding: 20px;
+}
+#showTitle{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+.titleText{
+    height: auto;
+    line-height: 40px;
+    font-size: 26px;
+    font-family: "微软雅黑", sans-serif;
+    text-align: center;
+}
+.showTime{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-family: "微软雅黑", sans-serif;
+    text-align: center;
+    color: #aaa;
+}
+.lineDiv{
+    width: 50px;
+    height: 3px;
+    background-color: #86b22f;
+    position: absolute;
+    left: 50%;
+    bottom:-3px;
+    transform: translate(-50%,0) ;
+}
+#gongGaoCon{
+    width: 884px;
+    padding-bottom: 10px;
+}
+.paging{
+    float: right;
+    width: 160px;
+    height: 30px;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.paging div{
+    width:80px;
+    height: 30px;
+    line-height: 30px;
+    color: #86b22f;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    text-indent: 0;
+    cursor: pointer;
+}
+.paging div:hover{
+    background-color: rgba(2, 179, 154, 0.2);
+}
+/*
+修复ueditor 的功能
+*/
+table {
+    margin-bottom: 10px;
+    border-collapse: collapse;
+    display: table;
+    border-spacing: 2px;
+    border-color: grey;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+td, th {
+    padding: 5px 10px;
+    border: 1px solid #DDD;
+}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-button:vertical{display:none}
+::-webkit-scrollbar-corner,::-webkit-scrollbar-track{background-color:#e2e2e2}
+::-webkit-scrollbar-thumb{border-radius:0;background-color:rgba(0,0,0,.3)}
+::-webkit-scrollbar-thumb:vertical:hover{background-color:rgba(0,0,0,.35)}
+::-webkit-scrollbar-thumb:vertical:active{background-color:rgba(0,0,0,.38)}
+p,span{
+    word-break: break-all;
+}
+.targetList {
+    width: 90%;
+    margin:  0 auto;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.fl{
+    float: left;
+}
+.targetList .content{
+    padding: 0;
+    width:90%;
+    margin-left: 20px;
+}
+.content span{
+    background: #e6ebee;
+    margin-right: 10px;
+    border-radius: 4px;
+    padding: 4px;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+
+
+
+

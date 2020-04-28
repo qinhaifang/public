@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问题汇总</title>
+    <link rel="stylesheet" href="../libs/ext/layui/css/layui.css" />
+    <link rel="stylesheet" href="sass/problem.css">
+</head>
+<body>
+<div id="problem">
+    <div class="layui-form">
+        <table class="layui-table">
+            <colgroup>
+                <col width="150">
+                <col width="150">
+                <col width="200">
+                <col>
+            </colgroup>
+            <thead>
+            <tr>
+                <th>问题</th>
+                <th>描述</th>
+                <th>原因</th>
+                <th>解决办法</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>layui校验的属性</td>
+                    <td> lay-verify：是表单验证的关键字()</td>
+                    <td></td>
+                    <td>required (必填项)
+                        phone（手机号）
+                        email（邮箱）
+                        url（网址）
+                        number（数字）
+                        date（日期）
+                        identity(身份证)
+                        自定义值
+                        同时支持多条规则的验证：
+                        格式：lay-verify=”验证A|验证B”
+                        如：lay-verify=”required|phone|number”</td>
+                </tr>
+                <tr>
+                    <td>checked属性</td>
+                    <td> checked属性设置不上去</td>
+                    <td>我们通过jquery设置选中的时候，发现checked属性已经设置上去了
+                        但是选中的样式却没有，选中的状态已经变了，但是样式却没有变过来。</td>
+                    <td>
+                        当你的jquery版本大于1.6的时候，这种只能生效一次，后面你只会看到checkbox的checked属性会增加checked但是现实的状态是没有打钩的。这种情况下你就不能使用$(this).attr(“checked”, checked)这种方法了，需要使用下面的代码：$(this).prop("checked", true);
+                    </td>
+                </tr>
+                <tr>
+                    <td>点击出现蓝色背景块</td>
+                    <td>点击出现蓝色背景块</td>
+                    <td>连续连击，背景出现一片蓝色</td>
+                    <td>
+                        $("元素").bind("selectstart", function () { return false; });
+                    </td>
+                </tr>
+                <tr>
+                    <td>文字超出指定长度，省略</td>
+                    <td>xxx</td>
+                    <td>xxx</td>
+                    <td>
+                        overflow: hidden
+                        text-overflow: ellipsis
+                        white-space: nowrap
+                    </td>
+                </tr>
+                <tr>
+                    <td>input  type='number' </td>
+                    <td>还可以输入e</td>
+                    <td>e在数学上代表无理数，e是自然对数的底数，是一个无限不循环小数，其值是2.71828…，所以在输入e时，输入框认为是数字</td>
+                    <td>
+                        (1)oninput="value=value.replace(/[^\d.]/g,'')" [会清空整个输入框]
+                        <br>(2)onKeypress="return (/[\d\.]/.test(String.fromCharCode(event.keyCode)))"[不会清空前边输入的]
+                    </td>
+                </tr>
+                <tr>
+                    <td>input  type='number' 隐藏后边箭头 </td>
+                    <td>xxx</td>
+                    <td>xxx</td>
+                    <td>
+                        input::-webkit-outer-spin-button,
+                        input::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        }
+                        input[type="number"]{
+                        -moz-appearance: textfield;
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <td>input  修改placehold的默认属性 </td>
+                    <td>xxx</td>
+                    <td>xxx</td>
+                    <td>
+                        input::-webkit-input-placeholder{ /*WebKit browsers*/
+                            color: red;
+                        }
+                        input::-moz-input-placeholder{ /*Mozilla Firefox*/
+                            color: red;
+                        }
+                        input::-ms-input-placeholder{ /*Internet Explorer*/
+                            color: red;
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <td>layui上传图片插件 默认只能上传资源管理器的图片，不会启动相机</td>
+                    <td>layui上传 区分pc和移动端</td>
+                    <td>xxx</td>
+                    <td>
+                        var u = navigator.userAgent, app = navigator.appVersion;
+                        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+                        if(isAndroid){
+                        $(":file").attr('capture','camera');
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <td>input type=""  有accept的属性</td>
+                    <td>可以限制接收格式</td>
+                    <td>xxx</td>
+                    <td>
+                        上传.csv格式的
+                        <input type="file" accept=".csv">
+                        上传.xls格式
+                        <input type="file" accept="application/vnd.ms-excel">
+                        上传.xslx格式
+                        <input type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+                    </td>
+                </tr>
+                <tr>
+                    <td>ajax 请求头</td>
+                    <td>xxx</td>
+                    <td>xxx</td>
+                    <td>
+                        formData  contentType:'application/x-www-form-urlencoded;charset=utf-8'
+                        <br>json  contentType:'application/x-www-form-urlencoded;charset=utf-8'[JSON.stringify(sendData)]
+                    </td>
+                </tr>
+            <tr>
+                <td>ifarm 跳转</td>
+                <td></td>
+                <td></td>
+                <td>"window.location.href"、"location.href"是本页面跳转
+                    "parent.location.href"是上一层页面跳转
+                    "top.location.href"是最外层的页面跳转
+                    举例说明：
+                    如果A,B,C,D都是jsp，D是C的iframe，C是B的iframe，B是A的iframe，如果D中js这样写
+                    "window.location.href"、"location.href"：D页面跳转
+                    "parent.location.href"：C页面跳转
+                    "top.location.href"：A页面跳转
+                    如果D页面中有form的话,
+                    <form>: form提交后D页面跳转
+                        <form target="_blank">: form提交后弹出新页面
+                            <form target="_parent">: form提交后C页面跳转
+                                <form target="_top"> : form提交后A页面跳转
+                                    关于页面刷新，D 页面中这样写：
+                                    "parent.location.reload();": C页面刷新 （当然，也可以使用子窗口的 opener 对象来获得父窗口的对象：window.opener.document.location.reload(); ）
+                                    "top.location.reload();": A页面刷新
+                                    </form>
+                                </form>
+                            </form>
+                        </form>
+                </td>
+            </tr>
+            <tr>
+                <td>$.each($("#viewer").find("img[isdata-original=1]"),function (n,$value) {
+                    picIndex ++;
+                    });</td>
+                <td> $.each(res.result.list, function (n, value){})</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>var index = parent.layer.getFrameIndex(window.name);
+                    parent.layer.close(index);
+                    window.parent.location.reload();</td>
+                <td>var index = parent.layer.getFrameIndex(window.name);
+                    parent.layer.close(index);
+                </td>
+                <td>
+                    window.parent.location.reload();
+                    parent.layer.close(index)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a onclick='selecthoods(\" "+a + "\");' >AAA</a>
+                    </td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="../libs/jquery-1.8.0.min.js"></script>
+<script src="../libs/ext/layui/layui.all.js"></script>
+</body>
+</html>

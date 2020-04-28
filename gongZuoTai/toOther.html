@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../libs/ext/layui/css/layui.css?v=20170827">
+    <link rel="stylesheet" href="../libs/ext/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../libs/common.css">
+    <link rel="stylesheet" href="../libs/public.css">
+    <link rel="stylesheet" href="css/toOther.css?v=2017092601">
+</head>
+<body>
+<div class="layui-form toOther">
+    <div id="names" class="names">
+        请选择人员！
+    </div>
+    <div class="select">
+        <div class="report-part">
+            <select name="bumen" lay-search placeholder="部门" lay-filter="buMen">
+                <option value="">部门</option>
+            </select>
+        </div>
+        <div class="search-box">
+            <input id="likeName" type="text" class="layui-input" placeholder="员工姓名">
+            <button class="layui-btn search" onclick="getJjrList()">搜索</button>
+            <img src="images/nothing.png" alt="" class="nothing" onclick="noThing()">
+        </div>
+    </div>
+    <div id="list" class="list">
+        <!--<p class="list-p">
+            <img class="p-img" src="images/nan.png" alt="">
+            <span class="p-name">1</span>
+            <input type="checkbox" lay-skin="primary" lay-filter="gouXuan">
+            <span class="p-det">产品部</span>
+        </p>-->
+    </div>
+    <div class="btn">
+        <button class="layui-btn determine" onclick="queDingSelect()">确定</button>
+    </div>
+</div>
+
+<script src="../libs/jquery-1.8.0.min.js"></script>
+<script src="../libs/ext/layui/layui.all.js"></script>
+<script src="../libs/public.js?v=2017092601"></script>
+<script src="js/toOther.js?v=2017092601"></script>
+<script src="js/api/toOtherApi.js?v=2017092601"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>待办提醒</title>
+    <link rel="stylesheet" href="../libs/ext/layui/css/layui.css"/>
+    <link rel="stylesheet" href="../libs/ext/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../libs/ext/jQueryDate/calendar.css"/>
+    <link rel="stylesheet" href="../libs/public.css?v=2017092601"/>
+    <link rel="stylesheet" href="../libs/common.css?v=2017092601"/>
+    <link rel="stylesheet" href="css/daiBan.css?v=20170929"/>
+</head>
+<body id="daiBanCon">
+<div id="daiBan" class="daiBan">
+    <div class="top">
+        <!--今日提醒-->
+        <div class="tiXingList">
+            <div class="tixingTitle">
+                <span class="jinri" onclick="lookTiXingList('0','','')">今日待办</span>
+            </div>
+            <ul id="xitingList" class="xitingList">
+                <!--<li onclick="lookTiXingList()"><span class="date">12:00</span>去安宁庄前街清上园9号楼3单元202房间查看热水器问题</li>
+                <li onclick="lookTiXingList()"><span class="date">12:00</span>去安宁庄前街清上园9号楼3单元202房间查看热水器问题</li>
+                <li onclick="lookTiXingList()"><span class="date">12:00</span>去安宁庄前街清上园9号楼3单元202房间查看热水器问题</li>
+                <li onclick="lookTiXingList()"><span class="date">12:00</span>去安宁庄前街清上园9号楼3单元202房间查看热水器问题</li>
+                <li onclick="lookTiXingList()"><span class="date">12:00</span>去安宁庄前街清上园9号楼3单元202房间查看热水器问题</li>
+                <li onclick="lookTiXingList()"><span class="date">12:00</span>去安宁庄前街清上园9号楼3单元202房间查看热水器问题</li>-->
+            </ul>
+            <div class="botAnniu">
+                <div class="addricheng" onclick="lookTiXingList('0','1','')">添加</div>
+                <div class="lookDaiBanList"><a onclick="lookTiXingList('0','1','')" href="javaScript:;">更多</a></div>
+            </div>
+        </div>
+        <!--公司公告-->
+        <div class="gonggao">
+            <div class="tixingTitle">
+                <span class="jinri" onclick="toQiYe()">公司公告</span>
+            </div>
+            <div class="gongCon">
+                <!--字数  一行23个左右，一共4行，大约超出90个字，拼接... -->
+                <p id="newCon">
+                    <!--和哈哈哈哈哈哈哈哈哈哈哈哈和哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈-->
+                    <!--<span onclick="lookGongGaoDetail(this,'哈哈哈')">......</span>-->
+                </p>
+            </div>
+            <div class="botAnniu">
+                <div class="addricheng" onclick="toQiYe()">更多</div>
+            </div>
+        </div>
+        <!--日历时间-->
+        <div class="rilitime">
+            <div class="tixingTitle">
+                <span class="jinri" id="jr">今日经营</span>
+            </div>
+            <div class="shijianShow">
+                <ul class="showLeft" id="showleft">
+                    <li>今日出房<span id="left1">0</span></li>
+                    <li>今日收房<span id="left2">0</span></li>
+                    <li>今日预定<span id="left3">0</span></li>
+                    <li>今日续约<span id="left4">0</span></li>
+                </ul>
+                <ul class="showRight" id="showright">
+                    <li>本月出房<span id="right1">0</span></li>
+                    <li>本月收房<span id="right2">0</span></li>
+                    <li>本月预定<span id="right3">0</span></li>
+                    <li>本月续约<span id="right4">0</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="top" id="topB" style="margin-top: 20px;">
+        <!--更多操作-->
+
+        <div class="moreOne">
+            <div class="moreDiv moreDivC1" onclick="daiban(this)" attrName="caiWu">
+                <div class="autoBox">
+                    <span class="more-con">待收账单</span>
+                        <span class="triangle-topright"><span class="triangle-topright-content">(7天)</span></span>
+                        <span class="more-main">
+                        <span id="daishou" class="more-shuZi">0</span>
+                    </span>
+                </div>
+                <img class="moreimg" src="./images/daishou1.png" alt="">
+            </div>
+            <div class="moreDiv moreDivB moreDivC2" onclick="daiban(this)" attrNum="2" attrName="heTong">
+                <div class="autoBox">
+                    <span class="more-con">即将搬入</span>
+                        <span class="triangle-topright"><span class="triangle-topright-content">(30天)</span></span>
+                        <span class="more-main">
+                        <span id="banru" class="more-shuZi">0</span>
+                    </span>
+                </div>
+                <img class="moreimg" src="./images/banru1.png" alt="">
+            </div>
+            <div class="moreDiv moreDivB moreDivC3" onclick="daiban(this)" attrNum="5" attrName="heTong" >
+                <div class="autoBox">
+                    <span class="more-con">即将搬出</span>
+                    <span class="triangle-topright"><span class="triangle-topright-content">(30天)</span></span>
+                    <span class="more-main">
+                        <span id="tuifang" class="more-shuZi">0</span>
+                    </span>
+                </div>
+                <img class="moreimg" src="./images/banchu1.png" alt="">
+            </div>
+            <div class="moreDiv moreDivB moreDivC4" onclick="daiban(this)" attrName="baoJie">
+                <div class="autoBox">
+                    <span class="more-con">保洁服务</span>
+                    <span class="more-main">
+                        <span id="baojie" class="more-shuZi">0</span>
+                    </span>
+                </div>
+                <img class="moreimg" src="./images/baojie1.png" alt="">
+            </div>
+            <div class="moreDiv moreDivC5" onclick="daiban(this)" attrName="weiXiu">
+                <div class="autoBox">
+                    <span class="more-con">维修服务</span>
+                    <span class="more-main">
+                        <span id="weixiu" class="more-shuZi">0</span>
+                    </span>
+                </div>
+                <img class="moreimg" src="./images/weixiu1.png" alt="">
+            </div>
+            <div class="moreDiv moreDivC6" onclick="daiban(this)" attrName="tousu">
+                <div class="autoBox">
+                    <span class="more-con">投诉服务</span>
+                    <span class="more-main">
+                        <span id="tousu" class="more-shuZi">0</span>
+                    </span>
+                </div>
+                <img class="moreimg" src="./images/tousu1.png" alt="">
+            </div>
+        </div>
+        <div class="more">
+            <div name="heZuHouse" class="zheng-hang">
+                <div class="zheng-title">合租</div>
+                <div class="zheng-main">
+                    <div class="zheng-mainCon" onclick="heDai('1')">
+                        <span class="shuziCon dai" id="hedai">0</span>
+                        <span class="shuziTitle">可租</span>
+                    </div>
+                    <div class="zheng-mainCon" onclick="heDai('2')">
+                        <span class="shuziCon pei" id="hekong">0</span>
+                        <span class="shuziTitle">空置</span>
+                    </div>
+                    <div class="zheng-mainCon" onclick="heDai('3')">
+                        <span class="shuziCon yu" id="hezhuan">0</span>
+                        <span class="shuziTitle">转租</span>
+                    </div>
+                    <div class="zheng-mainCon" onclick="heDai('4')">
+                        <span class="shuziCon cheng" id="heshen">0</span>
+                        <span class="shuziTitle">申退</span>
+                    </div>
+                    <div class="zheng-mainCon" onclick="heDai('5')">
+                        <span class="shuziCon yudao" id="hedao">0</span>
+                        <span class="shuziTitle">预到期</span>
+                    </div>
+                    <div class="zheng-mainCon" onclick="heDai('6')">
+                        <span class="shuziCon konglv" id="hekonglv">0</span>
+                        <span class="shuziTitle">空置率</span>
+                    </div>
+                </div>
+            </div>
+            <div name="zhengZuHouse" class="zheng-hang">
+                <div class="zheng-title">整租</div>
+                <div class="zheng-main">
+                    <div class="zheng-mainCon" onclick="zhengDai('1')">
+                        <span class="shuziCon dai" id="zhengdai">0</span>
+                        <span class="shuziTitle">可租</span>
+                    </div>
+                    <div class="zheng-mainCon" onclick="zhengDai('2')">
+                        <span class="shuziCon pei" id="zhengkong">0</span>
+                        <span class="shuziTitle">空置</span>
+                    </div>
+                    <div class="zheng-mainCon" onclick="zhengDai('3')">
+                        <span class="shuziCon yu" id="zhengzhuan">0</span>
+                        <span class="shuziTitle">转租</span>
+                    </div>
+                    <div class="zheng-mainCon" onclick="zhengDai('4')">
+                        <span class="shuziCon cheng" id="zhengshen">0</span>
+                        <span class="shuziTitle">申退</span>
+                    </div>
+                    <div class="zheng-mainCon" onclick="zhengDai('5')">
+                        <span class="shuziCon yudao" id="zhengdao">0</span>
+                        <span class="shuziTitle">预到期</span>
+                    </div>
+                    <div class="zheng-mainCon" onclick="zhengDai('6')">
+                        <span class="shuziCon konglv" id="zhengkonglv">0</span>
+                        <span class="shuziTitle">空置率</span>
+                    </div>
+                </div>
+            </div>
+            <div name="jiZhongHouse" class="zheng-hang zheng-hang1">
+                <div class="zheng-title">集中</div>
+                <div class="zheng-main">
+                    <div class="zheng-mainCon" onclick="jiDai('1')">
+                        <span class="shuziCon dai" id="jidai">0</span>
+                        <span class="shuziTitle">可租</span>
+                    </div>
+                    <div class="zheng-mainCon" onclick="jiDai('2')">
+                        <span class="shuziCon pei" id="jikong">0</span>
+                        <span class="shuziTitle">空置</span>
+                    </div>
+                    <div class="zheng-mainCon" onclick="jiDai('3')">
+                        <span class="shuziCon yu" id="jizhuan">0</span>
+                        <span class="shuziTitle">转租</span>
+                    </div>
+                    <div class="zheng-mainCon" onclick="jiDai('4')">
+                        <span class="shuziCon cheng" id="jishen">0</span>
+                        <span class="shuziTitle">申退</span>
+                    </div>
+                    <div class="zheng-mainCon" onclick="jiDai('5')">
+                        <span class="shuziCon yudao" id="jidao">0</span>
+                        <span class="shuziTitle">预到期</span>
+                    </div>
+                    <div class="zheng-mainCon" onclick="jiDai('6')">
+                        <span class="shuziCon konglv" id="jikonglv">0</span>
+                        <span class="shuziTitle">空置率</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--日历插件-->
+        <div class="dateDemo">
+            <div id="demo">
+                <div id="ca"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../libs/jquery-1.8.0.min.js"></script>
+<script src="../libs/ext/layui/layui.all.js"></script>
+<script src="../libs/ext/laydate/laydate.js"></script>
+<script src="../libs/public.js"></script>
+<script src="../libs/ext/jQueryDate/calendar.js"></script>
+<script src="js/daiBan.js?v=20180401"></script>
+<script src="js/api/daiBanApi.js?v=20171010"></script>
+</body>
+</html>

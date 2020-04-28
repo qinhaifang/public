@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复杂表格</title>
+    <link rel="stylesheet" href="../libs/ext/layui/css/layui.css" />
+    <style>
+        #selectList{
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+<div id="selectList">
+
+
+    <!--<table class="layui-table" lay-data="{width:800, url:'/test/table/demo2.json?v=2', page: true, limit: 6, limits:[6]}">-->
+        <!--<thead>-->
+            <!--<tr>-->
+                <!--<th lay-data="{checkbox:true, fixed:'left'}" rowspan="2"></th>-->
+                <!--<th lay-data="{field:'username', width:150}" rowspan="2">联系人</th>-->
+                <!--<th lay-data="{align:'center'}" colspan="3">地址</th>-->
+                <!--<th lay-data="{field:'amount', width:120}" rowspan="2">金额</th>-->
+                <!--<th lay-data="{fixed: 'right', width: 160, align: 'center', toolbar: '#barDemo'}" rowspan="2">操作</th>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th lay-data="{field:'province', width:120}">省</th>-->
+                <!--<th lay-data="{field:'city', width:120}">市</th>-->
+                <!--<th lay-data="{field:'zone', width:200}">区</th>-->
+            <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+            <!--<tr>-->
+                <!--<td>12</td>-->
+                <!--<td>12</td>-->
+                <!--<td>12</td>-->
+                <!--<td>12</td>-->
+            <!--</tr>-->
+        <!--</tbody>-->
+    <!--</table>-->
+    <table class="layui-table" style="width: 80%;margin: 20px">
+        <thead>
+            <tr>
+                <th rowspan="2">考评项目</th>
+                <th rowspan="2">签约项目（15分）</th>
+                <th colspan="4">在建项目（25分）</th>
+                <th colspan="2">竣工投产项目（20分）</th>
+                <th colspan="4">入规项目（30分）</th>
+                <th colspan="4">优化营商环境（10分）</th>
+                <th rowspan="2">总的风</th>
+            </tr>
+            <tr>
+                <th lay-data="{field:'province', width:200}">省级重点项目（7分）</th>
+                <th lay-data="{field:'city', width:200}">"1311"重大工程项目（6分）</th>
+                <th lay-data="{field:'zone', width:200}">集中开工项目（6分）</th>
+                <th lay-data="{field:'zone', width:200}">项目库建设（6分）</th>
+                <th lay-data="{field:'zone', width:200}">工业投资增幅（8分）</th>
+                <th lay-data="{field:'zone', width:200}">竣工投产工业项目（12分）</th>
+                <th lay-data="{field:'zone', width:200}">固定资产投资（15分）</th>
+                <th lay-data="{field:'zone', width:200}">入规工业企业（5分）</th>
+                <th lay-data="{field:'zone', width:200}">入规服务企业（5分）</th>
+                <th lay-data="{field:'zone', width:200}">入限贸易企业（5分）</th>
+                <th lay-data="{field:'zone', width:200}">主要工作任务（7分）</th>
+                <th lay-data="{field:'zone', width:200}">纪委监委监督检查（2分）</th>
+                <th lay-data="{field:'zone', width:200}">"零投诉"营商环境创建工作（1分）</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td lay-data="{fixed:'left'}">分数</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+            </tr>
+            <!--<tr>-->
+                <!--<td lay-data="{fixed:'left'}">111</td>-->
+                <!--<td>111</td>-->
+                <!--<td>111</td>-->
+                <!--<td>111</td>-->
+                <!--<td>111</td>-->
+                <!--<td>111</td>-->
+                <!--<td>111</td>-->
+            <!--</tr>-->
+        </tbody>
+    </table>
+    <table class="layui-table" style="width: 80%;margin: 20px">
+        <thead>
+            <tr>
+                <th>考核内容</th>
+                <th>评分办法</th>
+                <th>满分</th>
+                <th>自评分</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="6">这里是主要工作任务完成情况</td>
+                <td rowspan="">这里是主要工作任务完成情况</td>
+                <td rowspan="">这里是主要工作任务完成情况</td>
+                <td rowspan="">这里是主要工作任务完成情况</td>
+            </tr>
+            <tr>
+                <td rowspan="">22</td>
+                <td rowspan="">33</td>
+                <td rowspan="">44</td>
+            </tr>
+            <tr>
+                <td rowspan="">22</td>
+                <td rowspan="">33</td>
+                <td rowspan="">44</td>
+            </tr>
+            <tr>
+                <td rowspan="">22</td>
+                <td rowspan="">33</td>
+                <td rowspan="">443</td>
+            </tr>
+            <tr>
+                <td rowspan="">这里是主要工作任务完成情况</td>
+                <td rowspan="">这里是主要工作任务完成情况</td>
+                <td rowspan="">这里是主要工作任务完成情况</td>
+            </tr>
+            <tr>
+                <td rowspan="">这里是主要工作任务完成情况</td>
+                <td rowspan="">这里是主要工作任务完成情况</td>
+                <td rowspan="">这里是主要工作任务完成情况</td>
+            </tr>
+            <tr>
+                <td colspan="2">总计</td>
+                <td>44</td>
+                <td>66</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>123</td>
+                <td>44</td>
+                <td>66</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>123</td>
+                <td>44</td>
+                <td>66</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="layui-table" style="width: 80%;margin: 20px">
+        <thead>
+        <tr>
+            <th colspan="2">考核内容</th>
+            <th>评分办法</th>
+            <th>满分</th>
+            <th>自评分</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">省级重点项目</td>
+                <td rowspan="">年度项目数量：    个在建：     个新开工:     个总投资规模:      亿元</td>
+                <td>评分方法</td>
+                <td rowspan="">满分</td>
+                <td rowspan="">自评</td>
+            </tr>
+            <tr>
+                <td rowspan="">年度计划投资完成率</td>
+                <td rowspan="">评分方法</td>
+                <td rowspan="">满分</td>
+                <td rowspan="">自评</td>
+            </tr>
+            <tr>
+                <td rowspan="2">"1311"重大工程项目</td>
+                <td rowspan="">年度项目数量：    个在建：     个新开工:     个总投资规模:      亿元</td>
+                <td>评分方法</td>
+                <td rowspan="">满分</td>
+                <td rowspan="">自评</td>
+            </tr>
+            <tr>
+                <td rowspan="">年度计划投资完成率</td>
+                <td>评分方法</td>
+                <td rowspan="">满分</td>
+                <td rowspan="">自评</td>
+            </tr>
+            <tr>
+                <td rowspan="3">季度集中开工项目</td>
+                <td rowspan="">年度项目数量：    个在建：     个新开工:     个总投资规模:      亿元</td>
+                <td rowspan="">评分方法</td>
+                <td rowspan="">满分</td>
+                <td rowspan="">自评</td>
+            </tr>
+            <tr>
+                <td rowspan="">年度计划投资完成率</td>
+                <td rowspan="">评分方法</td>
+                <td rowspan="">满分</td>
+                <td rowspan="">自评</td>
+            </tr>
+            <tr>
+                <td rowspan="">年度计划投资完成率</td>
+                <td rowspan="">评分方法</td>
+                <td rowspan="">满分</td>
+                <td rowspan="">自评</td>
+            </tr>
+            <tr>
+                <td rowspan="3">项目建设库</td>
+                <td rowspan="">年度项目数量：    个在建：     个新开工:     个总投资规模:      亿元</td>
+                <td rowspan="">评分方法</td>
+                <td rowspan="">满分</td>
+                <td rowspan="">自评</td>
+            </tr>
+            <tr>
+                <td rowspan="">年度计划投资完成率</td>
+                <td rowspan="">评分方法</td>
+                <td rowspan="">满分</td>
+                <td rowspan="">自评</td>
+            </tr>
+            <tr>
+                <td rowspan="">年度计划投资完成率</td>
+                <td rowspan="">评分方法</td>
+                <td rowspan="">满分</td>
+                <td rowspan="">自评</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+    <script src="../libs/jquery-1.8.0.min.js"></script>
+    <script src="../libs/ext/layui/layui.all.js"></script>
+    <script>
+        layui.use('table', function(){
+            var table = layui.table;
+
+        });
+        initMapWindows();
+        //初始化内容区域高度
+        function initMapWindows() {
+            $("#selectList").css({"height":($(window).height()-50) + "px"},{"width":($(window).width()-180) + "px"});
+        }
+        //监听浏览器可视区域触发事件
+        $(window).resize(function () {
+            $("#selectList").css({"height":($(window).height()-50) + "px"},{"width":($(window).width()-180) + "px"});
+        });
+    </script>
+</body>
+</html>

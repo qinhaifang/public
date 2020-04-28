@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>凭证-上传图片</title>
+    <link rel="stylesheet" href="../libs/ext/layui/css/layui.css">
+    <link rel="stylesheet" href="../libs/ext/jQueryViewer/css/viewer.min.css">
+    <link rel="stylesheet" href="../libs/common.css">
+    <link rel="stylesheet" href="../libs/public.css">
+    <link rel="stylesheet" href="css/pingZheng.css">
+</head>
+<body>
+
+<div class="layui-form proof">
+    <!--main-->
+    <div id="imagesPic" class="proof-main layui-form-item">
+        <!--
+        <div class="img-show">
+            <img src="images/house_moRenPic01.jpg" class="showimg">
+            <i class="del"><img src="images/img_del.png" alt=""></i>
+        </div>
+        -->
+        <div id="img-load" class="img-load">
+            <img src="images/fileimg.png" alt="">
+            <p>点击添加图片</p>
+            <input id="iptfileUpload" class="fileimg" type="file" onchange="show(this)" value=""  multiple="multiple">
+        </div>
+    </div>
+    <!--按钮-->
+    <div class="proof-btn">
+        <div class="layui-input-inline">
+            <!--<button id="proof-cancel" class="layui-btn-primary layui-btn cancel">取消</button>-->
+            <button id="proof-save" class="layui-btn-normal layui-btn determine">保存</button>
+        </div>
+    </div>
+</div>
+
+<script src="../libs/jquery-1.8.0.min.js?v=20170827"></script>
+<script type="text/javascript" src="../libs/ext/jQueryViewer/js/viewer-jquery.min.js?v=20170827"></script>
+<script src="../libs/ext/layui/layui.all.js?v=20170827"></script>
+<script src="js/pingZheng.js?v=20170827"></script>
+</body>
+</html>

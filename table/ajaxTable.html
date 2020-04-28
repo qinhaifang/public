@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajaxTable</title>
+    <link rel="stylesheet" href="../libs/ext/layui/css/layui.css" />
+    <link rel="stylesheet" href="../common/weui.min.css">
+    <link rel="stylesheet" href="css/table.css">
+</head>
+<body>
+<div id="tables">
+    <table class="layui-table" id="table">
+        <colgroup>
+            <col width="150">
+            <col width="200">
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>用户名</th>
+                <th>性别</th>
+                <th>城市</th>
+                <th>签名</th>
+                <th>职业</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="page"></div>
+    <div class="pageOption">
+        <select>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="40">40</option>
+            <option value="60">60</option>
+            <option value="80">80</option>
+            <option value="100">100</option>
+        </select>
+    </div>
+
+    <!--<div id="demo8" style="text-align: right"></div>-->
+    <!--loading-->
+    <div id="loadingToast" style="opacity: 0; display: none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <i class="weui-loading weui-icon_toast"></i>
+            <p class="weui-toast__content">加载中</p>
+        </div>
+    </div>
+</div>
+
+    <script src="../libs/jquery-1.8.0.min.js"></script>
+    <script src="../libs/ext/layui/layui.all.js"></script>
+    <script src="../libs/public.js"></script>
+    <script src="js/xlPaging.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/ajaxTable.js"></script>
+</body>
+</html>

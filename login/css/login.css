@@ -1,0 +1,23 @@
+#login{
+    padding: 20px;
+    overflow: scroll;
+    background: #fff;
+}
+.clear{
+    clear: both;
+}
+#login form{
+    margin: 10px;
+}
+#login ul li{
+    width: 350px;
+    border: 1px solid #dadada;
+    float: left;
+    margin-right: 10px;
+}
+#login ul li .box{
+    padding: 10px 0;
+}
+button{
+    margin-top: 10px;
+}

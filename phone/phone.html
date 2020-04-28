@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--更改默认视口宽度,缺点: 需要浏览器的支持-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>手机模板</title>
+    <link rel="stylesheet" href="mescroll-master/mescroll.js/dist/mescroll.min.css">
+    <link rel="stylesheet" href="../libs/layer_mobile/need/layer.css">
+    <link rel="stylesheet" href="css/phone.css">
+</head>
+<body>
+<div id="mescroll" class="mescroll">
+    <!--标题-->
+    <section class="mainnav">
+        <div style="height: 50px;background-color: white;text-align:center;border-bottom: 4px solid #f5f5f5;">
+            <img style="height:32px;margin-left:16px;margin-top: 18px;float:left;visibility: hidden;" src="../images/index_jianguan.png" id="backImg" />
+            <img src="../images/login_slider4.jpg"  style="height:200px;width:50%;margin-top:8px;" />
+            <img src="../images/login_phoneb.png"  style="height: auto;float:right;margin-top:14px;margin-right:16px;" onclick="search2()">
+        </div>
+        <div style="clear: both;"></div>
+
+    </section>
+    <div class="proListmodule_1">
+        <ul id="newsList" class="news-list">
+            <!--<li>
+                <p>【新闻1】标题标题标题标题</p>
+                <p class="new-content">内容内容内容内容内容内容内容内容内容</p>
+            </li>-->
+        </ul>
+    </div>
+</div>
+
+
+<!--fastclick原理: 在检测到touchend事件的时候，会通过DOM自定义事件立即出发模拟一个click事件，并把浏览器在300ms之后真正的click事件阻止掉-->
+<script src="../libs/jquery-1.8.0.min.js"></script>
+<script src="mescroll-master/mescroll.js/dist/mescroll.min.js"></script>
+<script src="../libs/layer_mobile/layer.js"></script>
+<script src="js/jweixin-1.0.0.js"> </script>
+<script src="js/fastclick.js"></script>
+<script src="js/phone.js"></script>
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+</body>
+</html>
+<!--在vue中使用-->
+<!-- 安装    npm install fastclick -S   -->
+<!-- 引入    import FastClick from 'fastclick'    -->
+<!-- 使用    FastClick.attach(document.body);-->

@@ -1,0 +1,510 @@
+.loginbg{
+    width: 100%;
+    height:100%;
+    position: fixed;
+    background: url("../images/login_bg.png")no-repeat bottom;
+    background-size: cover;
+}
+.login-user {
+    width:100%;
+    height:100%;
+    font-size: 16px;
+    float: left;
+}
+.login-user .user-nav {
+    width:100%;
+    height:80px;
+    line-height: 80px;
+    box-shadow: 0 1px 2px #ebeeef;
+    float: left;
+    position: absolute;
+    top:0;
+    z-index: 99999;
+}
+.login-user .user-nav img {
+    width: auto;
+    height: 38px;
+    margin: 0 0 0 40px;
+    vertical-align: middle;
+}
+.login-user .user-bg {
+    position: absolute;
+    right: 50px;
+    z-index:999;
+    padding: 50px 0;
+    height: 100%;
+    width: 29%;
+    min-width: 400px;
+    box-sizing: border-box;
+}
+.user-wraper{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.logo{
+    position: absolute;
+    z-index: 99999;
+    top: 100px;
+    left: 100px;
+}
+/*用户名登录*/
+.login-user .user-main {
+    /*width:400px;*/
+    width: 100%;
+    border-radius: 10px;
+}
+.login-user .titleBox {
+    /*width:400px;*/
+    height:70px;
+    width: 80%;
+    line-height: 65px;
+    text-align: center;
+    /*margin-bottom: 20px;*/
+    background-image: url("../images/title-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: -36px;
+    left: 10%;
+}
+.login-user .titleLogo {
+    height: 64px;
+    background-image: url("../images/title-logo.png");
+    background-repeat: no-repeat;
+    background-size: 128px 52px;
+    background-position: center;
+}
+.login-user .mainLogo {
+    width: 100%;
+    height: 28px;
+    background-image: url("../images/main-logo.png");
+    background-repeat: no-repeat;
+    background-size: 250px 27px;
+    background-position: center;
+    margin-top: 22%;
+    margin-bottom: 10%;
+}
+.login-user .user-mt-title {
+    height:63px;
+    font-size: 24px;
+    line-height: 68px;
+    border-bottom: 4px solid #000;
+    display: inline-block;
+}
+.login-user .user-mt-img {
+    color: #86B22F;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 50px;
+}
+.login-user .user-mmain {
+    /*width:400px;*/
+    width: 100%;
+    height:auto;
+    padding: 20px 0 0 0;
+}
+.user-mmain input {
+    /*width: 338px;*/
+    width: 75%;
+    height: 48px;
+    margin: 3vh auto;
+    line-height: 48px;
+    text-indent: 5em;
+    /*border: none;*/
+    /*border-bottom: solid 1px #e0e0e0;*/
+    border: 1px solid #959595;
+    border-radius: 24px;
+    display: block;
+    overflow: hidden;
+}
+.inputBox {
+    position: relative;
+}
+.anQuanMa,.userName,.passWord {
+    width: 80px;
+    text-indent: 20px;
+    position: absolute;
+    line-height: 50px;
+    top: 0;
+    left: 12.5%;
+    z-index: 10;
+}
+
+/*.user-mmain .user-aqm-input { background: url("../images/login_aqmd.png") no-repeat 15px center; }*/
+/*.user-mmain .user-user-input { background: url("../images/login_userd.png") no-repeat 15px center; }*/
+/*.user-mmain .user-pwd-input { background: url("../images/login_pwdd.png") no-repeat 15px center; margin-top: 0; }*/
+.user-mmain .user-pwd-input,.user-mmain .user-aqm-input { margin-top: 0; }
+/*.user-mmain input:focus { border-color:#464646 !important;}*/
+/*.user-mmain .user-aqm-input:focus { background-image: url("../images/login_aqmb.png"); }*/
+/*.user-mmain .user-user-input:focus { background-image: url("../images/login_userb.png"); }*/
+/*.user-mmain .user-pwd-input:focus { background-image: url("../images/login_pwdb.png"); }*/
+.user-main .user-mmain input{
+    background-size: 16px 18px;
+}
+.login-user .user-submit {
+    /*width:340px;*/
+    width: 75%;
+    height:50px;
+    margin: 50px auto 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 50px;
+    border:none;
+    border-radius: 25px;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #86B22F;
+    box-shadow: 0px 8px 12px rgba(83, 83, 83, 0.3);
+}
+.login-user .user-submit:hover{
+    background-color: #86B22F;
+}
+/*二维码登录*/
+.login-user .qrCode-main {
+    /*width:400px;*/
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+}
+.login-user .qrCode-mtitle {
+    /*width:400px;*/
+    height:65px;
+    line-height: 65px;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+.login-user .qrCode-mt-title {
+    height:63px;
+    font-size: 24px;
+    line-height: 68px;
+    border-bottom: 4px solid #000;
+    display: inline-block;
+}
+.login-user .qrCode-mt-img {
+    color: #86B22F;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 2vh;
+}
+.login-user .qrCode-mmain {
+    /*width:400px;*/
+    height:374px;
+}
+.login-user .qrCode-ewm {
+    margin: 55px 115px 35px;
+    float: left;
+    display: inline-block;
+}
+.login-user .qrCode-place {
+    /*width:400px;*/
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #404040;
+    text-align: center;
+    display: inline-block;
+}
+/*-----扫码成功------*/
+.shaoma{
+    width: 100%;
+    height: auto;
+    max-height: 370px;
+    text-align: center;
+    overflow: hidden;
+    display: none;
+}
+.shaoma img{
+    margin-top: 50px;
+}
+.shaoma h3{
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    color: #404040;
+    margin-top: 40px;
+    overflow: hidden;
+}
+.shaoma p{
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #999999;
+    overflow: hidden;
+}
+.shaoma a{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #404040;
+    display: block;
+    margin-top: 30px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.shaoma a:hover{
+    color: #333;
+}
+/*-----扫码成功  end------*/
+/*-----生成二维码------*/
+.erweimashengcheng{
+    width: 100%;
+    height: 240px;
+    text-align: center;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.erweimashengcheng img{
+    width: 200px;
+    height: 200px;
+    margin: 40px auto 0;
+    overflow: hidden;
+}
+/*-----生成二维码 end------*/
+/*-----二维码已过期-------*/
+.qrCode-main .qrCode-mmain{
+    position: relative;
+}
+.erweiMatimeOut{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -100px;
+    z-index: 99;
+    display: none;
+}
+.erweiMatimeOut .zheZhaoCeng{
+    width: 200px;
+    height: 200px;
+    background: #ffffff;
+    opacity: 0.9;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.erweiMatimeOut .guoqiMa{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.guoqiMa h3{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #404040;
+    text-align: center;
+    margin-top: 55px;
+    overflow: hidden;
+}
+.guoqiMa button{
+    width: 80px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    text-align: center;
+    border: 0;
+    border-radius: 2px;
+    margin-top: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.erweiMatimeOut a:hover{
+    color: #86b22f;
+}
+/*-----二维码已过期 end-------*/
+
+/*轮播*/
+html,body{
+    height: 100%;
+}
+.img-wraper{
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    background-color: rgba(69, 84, 85, 0.4);
+    position: relative;
+}
+.img-wraper2{
+    background-color: rgba(74, 69, 164, 0.1);
+}
+.img-wraper3{
+    background-color: rgba(40,45,37,0.3);
+}
+.shadow{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgba(69, 84, 85, 0.2);
+}
+.shadow2{
+    background-color: rgba(74, 69, 164, 0.4);
+}
+.shadow3{
+    background-color: rgba(40,45,37,0.2);
+}
+.img-bg{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.2);
+}
+.img-bg.bg1{
+    background: url("../images/login_slider4.jpg ") no-repeat;
+    box-shadow: 0 0 50px rgba(69,84,85,0.4);
+}
+.img-bg.bg2{
+    background: url("../images/login_slider5.jpg ") no-repeat;
+}
+.img-bg.bg3{
+    background: url("../images/login_slider6.jpg ") no-repeat;
+}
+.item-text{
+    color: #fff;
+    position: absolute;
+    bottom:12%;
+    right: 37%;
+}
+@media (max-width: 1250px){
+    .item-text{
+        right: 500px;
+    }
+}
+.item-text .title{
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: right;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+.item-text p{
+    color: #fff;
+    text-align: right;
+    line-height: 1.5em;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+@media (min-width: 950px) {
+    .item-text{
+        font-size: 26px;
+    }
+    .item-text p{
+        font-size: 14px;
+    }
+}
+@media (min-width: 1250px) {
+    .item-text{
+        font-size: 38px;
+    }
+    .item-text p{
+        font-size: 18px;
+    }
+}
+@media (min-width: 1600px) {
+    .item-text{
+        font-size: 42px;
+    }
+    .item-text p{
+        font-size: 20px;
+    }
+}
+@media (min-width: 1900px) {
+    .item-text{
+        font-size: 50px;
+    }
+    .item-text p{
+        font-size: 24px;
+    }
+}
+.construct{
+    position:relative;
+    width:100%;
+    height:auto;
+}
+#lunbo{
+    position:fixed;
+    z-index:-10;
+    left:0;
+    top:0px;
+    height: 100%;
+    width: 100%;
+}
+#lunbo_img1{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-image:url("../images/login_slider4.jpg");
+    background-repeat: no-repeat;
+    background-position: 20% center;
+    background-size: 88% 100%;
+    background-color: #3E3A39;
+}
+#lunbo_img2{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    background-image:url("../images/login_slider5.jpg");
+    background-repeat: no-repeat;
+    background-position: 20% center;
+    background-size: 88% 100%;
+    background-color: #3E3A39;
+}
+#lunbo_img3{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    background-image:url("../images/login_slider6.jpg");
+    background-repeat: no-repeat;
+    background-position: 20% center;
+    background-size: 88% 100%;
+    background-color: #3E3A39;
+}
+.container{
+    position: absolute;
+    left: 28%;
+    margin-left: -40px;
+    bottom: 60px;
+}
+#lunbo_num{
+    float: left;
+}
+.lunbo_num{
+    font-size:0px;
+    margin-right: 15px;
+    padding:5px;
+    border-radius:50%;
+    background-color:rgba(255,255,255,.3);
+}
+.lunbo_num_l{
+    font-size:0px;
+    margin-right: 15px;
+    padding:5px;
+    border-radius:50%;
+    background-color:#fff;
+}

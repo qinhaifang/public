@@ -1,0 +1,225 @@
+.kongZhiTongJi{
+    width: calc(100% - 40px);
+    min-width: 1060px;
+    height: auto;
+    padding: 20px;
+    overflow-y: scroll;
+}
+.kongzhi-title{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.kongzhi-title a{
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #999999;
+    padding-right: 22px;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+}
+.kongzhi-title a:hover{
+    color: #404040;
+}
+.kongzhi-title .titleActive{
+    color: #86b22f;
+}
+.kongzhi-title .titleActive:hover{
+    color: #86b22f;
+}
+.house-status{
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    overflow: hidden;
+}
+.house-status span{
+    width: auto;
+    height: auto;
+    color: #999999;
+    float: left;
+    margin-left: 30px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.house-status span:hover{
+    color: #404040;
+}
+.house-status .houseActive{
+    color: #86b22f;
+}
+.house-status .houseActive:hover{
+    color: #86b22f;
+}
+.kongzhi-con{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+/* 左侧 */
+.leftSide{
+    float: left;
+    width: calc(50% - 10px);
+    height:370px;
+}
+.leftSide > div{
+    width:100%;
+    height:110px;
+}
+.hezuBox{
+    background-color: #5ccf91;
+}
+.zhengzuBox{
+    background-color: #55abe6;
+    margin-top: 20px;
+}
+.jizhongBox{
+    background-color: #f48e5f;
+    margin-top: 20px;
+}
+.leftSide > div > div.conDiv{
+    float: left;
+    height: 100%;
+    width: 22%;
+    text-align: center;
+}
+.leftSide > div > div.conDivFirst{
+    width: 30%;
+    height: 36px;
+    padding-top: 40px;
+    overflow: hidden;
+}
+.conDivFirst label{
+    font-size: 20px;
+    color: white;
+}
+.conDivFirst span{
+    font-size: 12px;
+    color: #EEE;
+}
+.conDiv h3{
+    font-size: 20px;
+    line-height: 50px;
+    margin-top: 10px;
+    color: #FFF;
+}
+.conDiv > p{
+    font-size: 14px;
+    line-height: 20px;
+    color: #EEE;
+}
+
+/* 右侧 */
+.rightSide{
+    float:right;
+    width: calc(50% - 50px);
+    height: 330px;
+    background-color: white;
+    padding: 20px;
+    /*overflow: hidden;*/
+}
+.kongzhifangShowBox{
+    width: 100%;
+    height: 330px;
+   /* overflow: hidden;*/
+}
+.kongzhifangShowBox .showBoxTitle{
+    width: calc(100% - 12px);
+    height: 18px;
+    line-height: 18px;
+    font-size: 16px;
+    color: #86b22f;
+    border-left: 2px solid #86b22f;
+    padding-left: 10px;
+    margin-bottom: 70px;
+    overflow: hidden;
+}
+.kongzhiLv{
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    float: left;
+}
+.kongzhiDataList{
+    width: 50%;
+    height: 200px;
+    float: right;
+    overflow: hidden;
+}
+.kongzhiDataList p{
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    overflow: hidden;
+}
+.kongzhiDataList > p >span{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 20px;
+    overflow: hidden;
+}
+.kongzhiDataList p label{
+    margin: 0 20px;
+}
+.kongzhiDataList p strong{
+     font-weight: normal;
+}
+
+/*--0-7天---*/
+.kongzhiDataList .seven{
+    color: #33c575;
+}
+.kongzhiDataList .seven span{
+    background-color: #33c575;
+}
+/*--8-15天---*/
+.kongzhiDataList .fifteen{
+    color: #39b6fc;
+}
+.kongzhiDataList .fifteen span{
+    background-color: #39b6fc;
+}
+/*--16-20天---*/
+.kongzhiDataList .twenty{
+    color: #ba4deb;
+}
+.kongzhiDataList .twenty span{
+    background-color: #ba4deb;
+}
+/*--21-30天--*/
+.kongzhiDataList .thirfy{
+    color: #fdab3d;
+}
+.kongzhiDataList .thirfy span{
+    background-color: #fdab3d;
+}
+/*--31-50天---*/
+.kongzhiDataList .fifty{
+    color: #f67135;
+}
+.kongzhiDataList .fifty span{
+    background-color: #f67135;
+}
+/*--51天以上--*/
+.kongzhiDataList .others{
+    color: #f05155;
+}
+.kongzhiDataList .others span{
+    background-color: #f05155;
+}
+
+
+
+
+
+
+
+

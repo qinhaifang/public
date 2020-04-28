@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>级联选择框</title>
+    <link rel="stylesheet" href="../libs/layui/css/layui.css">
+    <link rel="stylesheet" href="../libs/layui/css/formSelects-v4.css">
+    <link href="https://cdn.bootcss.com/zTree.v3/3.5.33/css/zTreeStyle/zTreeStyle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/selectList.css">
+
+</head>
+<body>
+<div id="selectList">
+    <ul>
+        <li>
+            <form class="layui-form fl" lay-filter="Address">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">选地址</label>
+                        <div class="layui-input-inline">
+                            <select id="province" name="province" class="border" lay-filter="province">
+                                <option value="">请选择省</option>
+                            </select>
+                        </div>
+                        <div class="layui-input-inline" style="display: none;">
+                            <select id="city" name="city" class="border" lay-filter="city">
+                                <option value="">请选择市</option>
+                            </select>
+                        </div>
+                        <div class="layui-input-inline" style="display: none;">
+                            <select id="area" name="area" class="border" lay-filter="area">
+                                <option value="">请选择县/区</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </li>
+        <li>
+            <form class="layui-form fl" action="" lay-filter="type">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">下拉复选</label>
+                        <div class="layui-input-inline">
+                            <select name="type" id="getColumn" xm-select="selectId">
+                                <option value="0">哈哈</option>
+                                <option value="1">喔喔</option>
+                                <option value="2">咯咯</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </li>
+        <li>
+            <form class="layui-form fl" action="" lay-filter="type">
+                <div class="layui-inline">
+                    <label class="layui-form-label">搜索选择框</label>
+                    <div class="layui-input-inline">
+                        <select name="modules" lay-verify="required" lay-search="">
+                            <option value="">直接选择或搜索选择</option>
+                            <option value="1">layer</option>
+                            <option value="2">form</option>
+                            <option value="3">layim</option>
+                            <option value="4">element</option>
+                            <option value="5">laytpl</option>
+                            <option value="6">upload</option>
+                            <option value="7">laydate</option>
+                            <option value="8">laypage</option>
+                            <option value="9">flow</option>
+                            <option value="10">util</option>
+                            <option value="11">code</option>
+                            <option value="12">tree</option>
+                            <option value="13">layedit</option>
+                            <option value="14">nav</option>
+                            <option value="15">tab</option>
+                            <option value="16">table</option>
+                            <option value="17">select</option>
+                            <option value="18">checkbox</option>
+                            <option value="19">switch</option>
+                            <option value="20">radio</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </li>
+        <li>
+            <label class="layui-form-label">树形选择框</label>
+            <div style="position: relative;margin:90px;">
+                <input id="orgName" class="org-select" onclick="showTree()"  readonly >
+                <!-- 模拟select点击框 以及option的text值显示-->
+                <i class="trg"style="position: absolute;"></i>
+                <!-- 模拟select右侧倒三角 -->
+                <input id="orgCode" type="hidden" name="orgCode" />
+                <!-- 存储 模拟select的value值 -->
+
+                <!-- zTree树状图 相对定位在其下方 -->
+                <div class="ztree"  style="display:none; position: absolute;border:1px solid #4aa5ff;width:200px;">
+                    <ul id="treeDemo"></ul>
+                </div>
+            </div>
+        </li>
+        <li>
+            <label class="layui-form-label">树形选择框</label>
+            <ul id="demo1"></ul>
+        </li>
+        <li>
+            <label class="layui-form-label">树形选择框</label>
+            <ul id="demo2"></ul>
+        </li>
+
+    </ul>
+
+</div>
+
+
+
+<script src="../libs/jquery-1.8.0.min.js"></script>
+<script src="js/dist/jquery.ztree.core.min.js"></script>
+<script src="../libs/layui/layui.all.js"></script>
+<script src="js/dist/formSelects-v4.min.js"></script>
+<script src="js/dist/area.js"></script>
+<script src="js/dist/address.js"></script>
+<!--<script src="js/dist/selectDepartment.js?v=20170827"></script>-->
+<script src="../libs/public.js"></script>
+<script src="js/select1.js"></script>
+</body>
+</html>
