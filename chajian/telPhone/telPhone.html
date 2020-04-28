@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>虚拟数字键盘</title>
+    <link rel="stylesheet" href="css/mynumkb.css">
+    <style>
+        *{padding:0;margin:0;}
+        #btn{
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border:1px solid #efefef;
+            border-right:4px;
+        }
+        input[name=telPhone]{
+            width: 100%;
+            height: 80px;
+            line-height: 80px;
+        }
+    </style>
+</head>
+<body style="position: relative;">
+<div id="btn" onclick="btn('1234567')">点击触发键盘</div>
+<div class="mykb-box" id="mykeyboard1">
+    <input type="number" name="telPhone" maxlength="11" oninput="if(value.length>11)value=value.slice(0,11)">
+    <ul class="num-key clearfix">
+        <li class="num">1</li>
+        <li class="num">2</li>
+        <li class="num">3</li>
+        <li class="func exit">退出</li>
+        <li class="num">4</li>
+        <li class="num">5</li>
+        <li class="num">6</li>
+        <li class="func del">退格</li>
+        <li class="num">7</li>
+        <li class="num">8</li>
+        <li class="num">9</li>
+        <li class="func clearall">清除</li>
+        <li class="num">0</li>
+        <!--<li class="num">.</li>-->
+        <li class="func sure">拨号</li>
+    </ul>
+</div>
+    <script src="../../libs/jquery.min.js"></script>
+    <script>
+        function btn(tel){
+            $('input[name=telPhone]').val(tel);
+            $('#mykeyboard1').show();
+        }
+        $('#mykeyboard1').on('click',function(e){
+            var $target = $(e.target);
+            var inputVal = $('input[name=telPhone]').val();
+            if($target.hasClass('exit') || $target.hasClass('sure')){
+                $('#mykeyboard1').hide();
+            }else if($target.hasClass('clearall')){
+                $('input[name=telPhone]').val('');
+            }else if($target.hasClass('del')){
+                var str = inputVal.toString();
+                var newstr = "";
+                if(str.length != 0){
+                    newstr = str.substr(0,str.length-1)+str.substr(str.length);
+                }else{
+                    newstr = str;
+                }
+                $('input[name=telPhone]').val(newstr);
+            }else{
+                var newstr = inputVal;
+                var str = $target.text();
+                newstr += str;
+                $('input[name=telPhone]').val(newstr.slice(0,11));
+            }
+        })
+
+    </script>
+</body>
+</html>
