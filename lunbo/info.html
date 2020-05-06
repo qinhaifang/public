@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>div内容间隔1秒动态滚动</title>
+</head>
+<body>
+    <div id="demo">
+　　　　<span id="sp">
+　　　　　　<p>恭喜133****1231用户获得100元手机话费</p>
+　　　　　　<p>恭喜134****1232用户获得100元手机话费</p>
+　　　　　　<p>恭喜135****1233用户获得200元手机话费</p>
+　　　　　　<p>恭喜136****1234用户获得100元手机话费</p>
+　　　　　　<p>恭喜137****1235用户获得200元手机话费</p>
+　　　　　　<p>恭喜138****1236用户获得100元手机话费</p>
+　　　　</span>
+    </div>
+    <div id="demo2">
+        <a href="#">第一条新闻</a>
+    　　<a href="#">第二条新闻</a>
+    　　<a href="#">第三条动态</a>
+    </div>
+    <div id="drawLetters" style="overflow:hidden;height:200px;">
+        　　　　<div id="dl">
+        　　　　　　<p>恭喜133****1062用户获得10元手机话费</p>
+        　　　　　　<p>恭喜153****0792用户获得50元助学代金券</p>
+        　　　　　　<p>恭喜153****3890用户获得330元上课大礼包</p>
+        　　　　　　<p>恭喜189****0883用户获得330元上课大礼包</p>
+        　　　　　　<p>恭喜133****6823用户获得1500元现金</p>
+        　　　　　　<p>恭喜153****5050用户获得330元上课大礼包</p>
+        　　　　</div>
+        　　</div>
+    <script src="../libs/jquery.min.js"></script>
+    <script>
+//        $(document).ready(function() {
+//
+//            setInterval('autoScroll("#demo")', 1000);
+//        });
+//
+//        function autoScroll(obj) {
+//            $(obj).find("#sp:first").animate({
+//                marginTop: "-30px"
+//            }, 500, function() {
+//                $(this).css({marginTop:"0px"}).find("p:first").appendTo(this);
+//            });
+//        }
+//        demo2
+        $(function() {
+            $('a:first').siblings().hide();
+            setInterval(function() {
+                $('a:visible').slideUp('slow', function() {
+                    $(this).next('a')[0] === undefined ? $('a:first').fadeIn("slow") : $(this).next('a').fadeIn("slow");
+                });
+            }, 1000*2)
+        });
+//        demo3
+//        var drawLetters = document.getElementById("drawLetters");
+//        var dl = document.getElementById("dl");
+//        var speed = 20; //滚动速度值，值越大速度越慢
+//        function Marquee() {
+//            drawLetters.scrollTop++;
+//            var newNode = document.createElement("div");
+//            newNode.innerHTML = dl.innerHTML;
+//            drawLetters.insertBefore(newNode,null);
+//        }
+//        var MyMar = setInterval(Marquee, speed); //设置定时器
+    </script>
+</body>
+</html>
