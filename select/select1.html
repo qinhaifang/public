@@ -86,7 +86,7 @@
         </li>
         <li>
             <label class="layui-form-label">树形选择框</label>
-            <div style="position: relative;margin:90px;">
+            <div style="position: absolute;left: 10%">
                 <input id="orgName" class="org-select" onclick="showTree()"  readonly >
                 <!-- 模拟select点击框 以及option的text值显示-->
                 <i class="trg"style="position: absolute;"></i>
@@ -95,18 +95,11 @@
                 <!-- 存储 模拟select的value值 -->
 
                 <!-- zTree树状图 相对定位在其下方 -->
-                <div class="ztree"  style="display:none; position: absolute;border:1px solid #4aa5ff;width:200px;">
+                <div class="ztree"  style="">
                     <ul id="treeDemo"></ul>
                 </div>
             </div>
-        </li>
-        <li>
-            <label class="layui-form-label">树形选择框</label>
-            <ul id="demo1"></ul>
-        </li>
-        <li>
-            <label class="layui-form-label">树形选择框</label>
-            <ul id="demo2"></ul>
+            <div class="clear"></div>
         </li>
 
     </ul>

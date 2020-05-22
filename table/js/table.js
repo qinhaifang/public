@@ -30,7 +30,33 @@ layui.use('table', function(){
             ,{field:'score', title: '评分', sort: true, align: 'right'}
             ,{field:'wealth', title: '财富', sort: true, align: 'right'}
         ]]
-        ,page:true
+        //,request: {
+        //    pageName: 'curr' //页码的参数名称，默认：page   可以修改默认的入参page
+        //    ,limitName: 'nums' //每页数据量的参数名，默认：limit
+        //}
+        ,where: {   //入参
+            curr:1,
+            transType:'',
+            startTime:'',
+            endTime:''
+        }
+        ,parseData: function(res) {   //可将接口的数据转成layui table默认的返回格式
+            return {
+                code:0,
+                msg:"",
+                count:res.total,
+                data:res.rows
+            }
+            if (this.first) {
+                this.first = false;
+            }
+        }
+        //,page:true
+        ,page: {
+            limit:20, //默认会选中20页一条
+            limits:[10,20,40,60,80,100]
+        }
+        ,loading: true
         ,totalRow:true
     });
     table.render({

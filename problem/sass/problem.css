@@ -1,5 +1,7 @@
 #problem {
   width: 93%;
-  padding: 20px; }
+  padding: 20px;
+  overflow: auto;
+}
 
 /*# sourceMappingURL=problem.css.map */
