@@ -4,7 +4,105 @@
     <meta charset="UTF-8">
     <title>常用的echarts</title>
 </head>
+<style>
+	#echarts{
+		width: 400px;
+		height: 500px;
+	}
+</style>
 <body>
-
+	<div id="echarts"></div>
 </body>
+<script src="../libs/jquery-1.8.0.min.js"></script>
+<script src="../libs/echarts.js"></script>
+<script>
+	
+	var data1 = [132, 324, 327, 452, 365, 145, 326];
+	var data2 = [7.2, -2.6, 4.7, -3.7, -5.4, -0.5, 3.4];
+	//定义两个上下箭头的矢量路径
+	var up = 'path://M286.031,265l-16.025,3L300,223l29.994,45-16.041-3-13.961,69Z';
+	var down = 'path://M216.969,292l16.025-3L203,334l-29.994-45,16.041,3,13.961-69Z'
+//遍历data2里面元素的正负定义一个矢量路径的数组
+	var path = [up,down,up,down,down,down,up]
+	var myChart = echarts.init(document.getElementById('echarts'));
+	option = {
+	    color: ['#1890ff', '#72ddb3'],
+	    tooltip: {
+	        trigger: 'axis',
+	        axisPointer: {
+	            type: 'shadow'
+	        }
+	    },
+	    legend: {
+	        right: ' 2%',
+	        align: 'left',
+	        itemWidth: 16,
+	        itemHeight: 16,
+	        icon: 'rect',
+	        data: ['未发放', '已发放']
+	    },
+	    grid: {
+	        left: '12%',
+	        right: '2%',
+	        bottom: '10%'
+	    },
+	    xAxis: {
+	        type: 'category',
+	        data: ['农村特困供养人员', '孤儿', '定期定量补助', '计划生育家庭奖扶资金'],
+	        axisLine: {
+	            lineStyle: {
+	                color: '#eaeaea',
+	            }
+	        },
+	        axisLabel: {
+	            color: '#737373',
+	            interval: 0
+	        }
+
+	    },
+	    dataZoom: [{
+	      type: 'slider',
+	      show: true,
+	      xAxisIndex: [0],
+	      left: '9%',
+	      bottom: -5,
+	      start: 10,
+	      end: 90 //初始化滚动条
+	  	}],
+	    yAxis: {
+	        name: '单位（万元）',
+	        type: 'value',
+	        axisLine: {
+	            show: false
+	        },
+	        axisLabel: {
+	            color: '#737373'
+	        },
+	        axisTick: {
+	            show: false
+	        },
+	        splitLine: {
+	            lineStyle: {
+	                color: ['#eaeaea']
+	            }
+	        }
+	    },
+	    series: [{
+	            name: '未发放',
+	            type: 'bar',
+	            stack: '金额',
+	            barWidth: 32,
+	            data: [18203, 23489, 29034, 104970]
+	        },
+	        {
+	            name: '已发放',
+	            type: 'bar',
+	            stack: '金额',
+	            barWidth: 32,
+	            data: [19325, 23438, 31000, 121594]
+	        }
+	    ]
+	}
+	myChart.setOption(option);
+</script>
 </html>
